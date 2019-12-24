@@ -1,3 +1,5 @@
+const path = require('path');
+
 export default {
   plugins: [
     require.resolve('react-static-plugin-reach-router'),

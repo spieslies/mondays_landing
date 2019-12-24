@@ -13,6 +13,11 @@ const plugins = [{
         hooks: {}
       },
 {
+        location: "/Users/user/projects/sati_one_landing/node_modules/react-static-plugin-favicons",
+        plugins: [],
+        hooks: {}
+      },
+{
         location: "/Users/user/projects/sati_one_landing",
         plugins: [],
         hooks: {}

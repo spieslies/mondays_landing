@@ -1,7 +1,7 @@
 import React from 'react'
 import { Root, addPrefetchExcludes } from 'react-static'
 //
-import AppRoot from './core/ui/layouts/AppRoot';
+import AppRoot from './ui/layouts/AppRoot';
 
 // Any routes that start with 'dynamic' will be treated as non-static routes
 
