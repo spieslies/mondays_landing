@@ -129,7 +129,7 @@ export default withTranslation()(Top);
 
 const CustomReactFlagsSelect = styled(ReactFlagsSelect)`
   position: absolute;
-  right: 0;
+  top: 0;
   padding: 15px;
   color: rgba(255, 255, 255, 0.7);
   text-transform: uppercase;
