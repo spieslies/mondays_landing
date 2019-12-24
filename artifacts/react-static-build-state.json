@@ -1,0 +1,55 @@
+{
+  "prefetchRate": 5,
+  "maxThreads": null,
+  "disableRoutePrefixing": false,
+  "outputFileRate": 100,
+  "extensions": [
+    ".js",
+    ".jsx"
+  ],
+  "minLoadTime": 200,
+  "disablePreload": false,
+  "disableRuntime": false,
+  "preloadPollInterval": 300,
+  "productionSourceMaps": false,
+  "entry": "index.js",
+  "plugins": [
+    "/Users/user/projects/sati_one_landing/node_modules/react-static-plugin-reach-router/browser.api.js",
+    "/Users/user/projects/sati_one_landing/node_modules/react-static-plugin-styled-components/node.api.js",
+    "/Users/user/projects/sati_one_landing"
+  ],
+  "paths": {
+    "ROOT": "/Users/user/projects/sati_one_landing",
+    "SRC": "/Users/user/projects/sati_one_landing/src",
+    "DIST": "/Users/user/projects/sati_one_landing/dist",
+    "ASSETS": "/Users/user/projects/sati_one_landing/dist",
+    "PLUGINS": "/Users/user/projects/sati_one_landing/plugins",
+    "TEMP": "/Users/user/projects/sati_one_landing/tmp",
+    "ARTIFACTS": "/Users/user/projects/sati_one_landing/artifacts",
+    "PUBLIC": "/Users/user/projects/sati_one_landing/public",
+    "NODE_MODULES": "/Users/user/projects/sati_one_landing/node_modules",
+    "EXCLUDE_MODULES": "/Users/user/projects/sati_one_landing/node_modules",
+    "PACKAGE": "/Users/user/projects/sati_one_landing/package.json",
+    "HTML_TEMPLATE": "/Users/user/projects/sati_one_landing/dist/index.html",
+    "STATIC_DATA": "/Users/user/projects/sati_one_landing/dist/staticData"
+  },
+  "siteRoot": "/",
+  "basePath": "",
+  "publicPath": "/",
+  "assetsPath": "",
+  "extractCssChunks": false,
+  "inlineCss": false,
+  "babelExcludes": [],
+  "devServer": {
+    "host": "localhost",
+    "port": 3000
+  },
+  "terser": {
+    "terserOptions": {
+      "mangle": {},
+      "parse": {},
+      "compress": {},
+      "output": {}
+    }
+  }
+}
