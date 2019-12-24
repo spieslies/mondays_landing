@@ -1,6 +1,7 @@
 {
-  "name": "react-static-example-basic",
+  "name": "sati_one_landing",
   "private": true,
+  "version": "0.1.0",
   "scripts": {
     "start": "react-static start",
     "stage": "react-static build --staging",
