@@ -27,9 +27,6 @@ import LOGO from 'core/assets/icons/logo_v.png';
 import BG from 'core/assets/images/BgTop.jpg';
 import GOOGLEPLAY from 'core/assets/icons/GooglePlay.png';
 import APPSTORE from 'core/assets/icons/AppStore.png';
-// import PHONE from 'core/assets/images/PhoneTop.png';
-import CLOUDS from 'core/assets/images/CloudsTop.png';
-import CLOUDSTOP from 'core/assets/images/CloudsTopTop.png';
 
 class Top extends PureComponent {
 
@@ -76,17 +73,16 @@ class Top extends PureComponent {
     const { t } = this.props;
     return (
       <CustomSection>
-        {/*<Clouds src={CLOUDS}/>*/}
-        {/*<CloudsTop src={CLOUDSTOP}/>*/}
+        <CustomReactFlagsSelect
+          defaultCountry={{ru: 'RU', en: 'US'}[getLocale()] || 'RU'}
+          countries={["US", "RU"]}
+          className="menu-flags"
+          customLabels={{"US": "EN", "RU": "RU",}}
+          onSelect={this.onSelectFlag}
+        />
         <Container>
-          <CustomReactFlagsSelect
-            defaultCountry={{ru: 'RU', en: 'US'}[getLocale()] || 'RU'}
-            countries={["US", "RU"]}
-            customLabels={{"US": "Eng", "RU": "Рус",}}
-            onSelect={this.onSelectFlag}
-          />
           <TopFlex>
-            <BlockText direction={'column'}>
+            <BlockText>
               <Logo src={LOGO} />
               {/*<Img />*/}
               <Heading white dangerouslySetInnerHTML={{__html: t('Top.title')}}/>
@@ -133,11 +129,27 @@ class Top extends PureComponent {
 export default withTranslation()(Top);
 
 const CustomReactFlagsSelect = styled(ReactFlagsSelect)`
+  position: absolute;
+  right: 0;
   padding: 15px;
-  background: #fff;
-  color: #000;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
   text-align: center;
   cursor: pointer;
+  && {
+    .flag-options {
+      background: rgba(0, 0, 0, 0.3);
+      border: 0;
+    }
+    .flag-option {
+      &:hover {
+        background: rgba(0, 0, 0, .5);
+      }
+    }
+    .arrow-down {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
 `;
 
 const CustomSection = styled(Section)`
@@ -156,43 +168,6 @@ const CustomSection = styled(Section)`
   ${p => p.theme.max('sm')`
     height: 568px;
     padding: 0 10px;
-  `}
-`;
-
-const Img = styled.div`
-  width: 466px;
-  height: 466px;
-  background-image:url(${BG});
-  clip-path: url(#cross);
-  background-size: cover;
-`;
-
-const CloudsTop = styled.img`
-  position: absolute;
-  z-index: ${p => p.theme.zIndex.three};
-  left: 100px;
-  ${p => p.theme.max('lg')`
-  left: -50px;
-  `}
-  ${p => p.theme.max('md')`
-    display: none;
-  `}
-`;
-
-const Clouds = styled.img`
-    position: absolute;
-    height: auto;
-    z-index: ${p => p.theme.zIndex.two};
-  ${p => p.theme.max('lg')`
-    left: -250px;
-  `}
-  ${p => p.theme.max('md')`
-    top: -45px;
-    left: -350px;
-  `}
-  ${p => p.theme.max('sm')`
-    top: -260px;
-    left: 0;
   `}
 `;
 
@@ -240,6 +215,7 @@ const BlockText = styled(Flex)`
   position: relative;
   top: -45px;
   width: 450px;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -250,7 +226,7 @@ const BlockText = styled(Flex)`
     z-index: ${p => p.theme.zIndex.three};
   `}
   ${p => p.theme.max('sm')`
-    width: auto;
+    width: 100%;
     min-width: 274px;
   `}
 `;
