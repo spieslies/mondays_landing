@@ -4,7 +4,7 @@ import { BREAKPOINTS } from 'core/ui/helpers';
 const emSize = pixelValue => `${pixelValue / 16}em`;
 
 export const getCurrentBreakpoint = () => {
-  const { innerWidth } = window;
+  const { innerWidth } = window || {};
   if (innerWidth <= BREAKPOINTS['sm']) {
     return 'xs';
   } else if (innerWidth >= BREAKPOINTS['sm'] && innerWidth < BREAKPOINTS['md']) {

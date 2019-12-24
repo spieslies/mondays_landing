@@ -12,6 +12,12 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
+/******/ 	// object to store loaded chunks
+/******/ 	// "0" means "already loaded"
+/******/ 	var installedChunks = {
+/******/ 		0: 0
+/******/ 	};
+/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/
@@ -89,9 +95,16 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "/";
 /******/
+/******/ 	// uncaught error handler for webpack runtime
+/******/ 	__webpack_require__.oe = function(err) {
+/******/ 		process.nextTick(function() {
+/******/ 			throw err; // catch this error by using import().catch()
+/******/ 		});
+/******/ 	};
+/******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 84);
+/******/ 	return __webpack_require__(__webpack_require__.s = 92);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -170,13 +183,13 @@ module.exports = require("@babel/runtime/helpers/assertThisInitialized");
 /* 12 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-ga");
+module.exports = require("i18next");
 
 /***/ }),
 /* 13 */
 /***/ (function(module, exports) {
 
-module.exports = require("i18next");
+module.exports = require("prop-types");
 
 /***/ }),
 /* 14 */
@@ -188,34 +201,543 @@ module.exports = require("@babel/runtime/helpers/objectWithoutProperties");
 /* 15 */
 /***/ (function(module, exports) {
 
-module.exports = require("prop-types");
+module.exports = require("react-ga");
 
 /***/ }),
 /* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _utils = __webpack_require__(25);
+
+var requireById = function requireById(id) {
+  if (!(0, _utils.isWebpack)() && typeof id === 'string') {
+    return __webpack_require__(97)("" + id);
+  }
+
+  return __webpack_require__('' + id);
+};
+
+exports["default"] = requireById;
+
+/***/ }),
+/* 17 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-dom");
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fb1d656f452aa0084da207d24412cfb2.jpg";
 
 /***/ }),
-/* 18 */
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {
+
+var _typeof = __webpack_require__(24);
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.setHasBabelPlugin = exports.ReportChunks = exports.MODULE_IDS = exports.CHUNK_NAMES = undefined;
+
+var _extends = Object.assign || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];
+
+    for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
+  }
+
+  return target;
+};
+
+var _createClass = function () {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }
+
+  return function (Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) defineProperties(Constructor, staticProps);
+    return Constructor;
+  };
+}();
+
+var _requireUniversalModule = __webpack_require__(96);
+
+Object.defineProperty(exports, 'CHUNK_NAMES', {
+  enumerable: true,
+  get: function get() {
+    return _requireUniversalModule.CHUNK_NAMES;
+  }
+});
+Object.defineProperty(exports, 'MODULE_IDS', {
+  enumerable: true,
+  get: function get() {
+    return _requireUniversalModule.MODULE_IDS;
+  }
+});
+
+var _reportChunks = __webpack_require__(98);
+
+Object.defineProperty(exports, 'ReportChunks', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_reportChunks)["default"];
+  }
+});
+exports["default"] = universal;
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(13);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _hoistNonReactStatics = __webpack_require__(34);
+
+var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
+
+var _vm = __webpack_require__(99);
+
+var _requireUniversalModule2 = _interopRequireDefault(_requireUniversalModule);
+
+var _utils = __webpack_require__(25);
+
+var _helpers = __webpack_require__(100);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    "default": obj
+  };
+}
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+function _possibleConstructorReturn(self, call) {
+  if (!self) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return call && (_typeof(call) === "object" || typeof call === "function") ? call : self;
+}
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function, not " + _typeof(superClass));
+  }
+
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      enumerable: false,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+}
+
+function _objectWithoutProperties(obj, keys) {
+  var target = {};
+
+  for (var i in obj) {
+    if (keys.indexOf(i) >= 0) continue;
+    if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;
+    target[i] = obj[i];
+  }
+
+  return target;
+}
+
+var hasBabelPlugin = false;
+
+var isHMR = function isHMR() {
+  return (// $FlowIgnore
+    module.hot && (false)
+  );
+};
+
+var setHasBabelPlugin = exports.setHasBabelPlugin = function setHasBabelPlugin() {
+  hasBabelPlugin = true;
+};
+
+function universal(asyncModule) {
+  var _class, _temp;
+
+  var opts = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+  var userRender = opts.render,
+      _opts$loading = opts.loading,
+      Loading = _opts$loading === undefined ? _utils.DefaultLoading : _opts$loading,
+      _opts$error = opts.error,
+      Err = _opts$error === undefined ? _utils.DefaultError : _opts$error,
+      _opts$minDelay = opts.minDelay,
+      minDelay = _opts$minDelay === undefined ? 0 : _opts$minDelay,
+      _opts$alwaysDelay = opts.alwaysDelay,
+      alwaysDelay = _opts$alwaysDelay === undefined ? false : _opts$alwaysDelay,
+      _opts$testBabelPlugin = opts.testBabelPlugin,
+      testBabelPlugin = _opts$testBabelPlugin === undefined ? false : _opts$testBabelPlugin,
+      _opts$loadingTransiti = opts.loadingTransition,
+      loadingTransition = _opts$loadingTransiti === undefined ? true : _opts$loadingTransiti,
+      options = _objectWithoutProperties(opts, ['render', 'loading', 'error', 'minDelay', 'alwaysDelay', 'testBabelPlugin', 'loadingTransition']);
+
+  var renderFunc = userRender || (0, _utils.createDefaultRender)(Loading, Err);
+  var isDynamic = hasBabelPlugin || testBabelPlugin;
+  options.isDynamic = isDynamic;
+  options.usesBabelPlugin = hasBabelPlugin;
+  options.modCache = {};
+  options.promCache = {};
+  return _temp = _class = function (_React$Component) {
+    _inherits(UniversalComponent, _React$Component);
+
+    _createClass(UniversalComponent, [{
+      key: 'requireAsyncInner',
+      value: function requireAsyncInner(requireAsync, props, state, context, isMount) {
+        var _this2 = this;
+
+        if (!state.mod && loadingTransition) {
+          this.update({
+            mod: null,
+            props: props
+          }); // display `loading` during componentWillReceiveProps
+        }
+
+        var time = new Date();
+        requireAsync(props, context).then(function (mod) {
+          var state = {
+            mod: mod,
+            props: props,
+            context: context
+          };
+          var timeLapsed = new Date() - time;
+
+          if (timeLapsed < minDelay) {
+            var extraDelay = minDelay - timeLapsed;
+            return setTimeout(function () {
+              return _this2.update(state, isMount);
+            }, extraDelay);
+          }
+
+          _this2.update(state, isMount);
+        })["catch"](function (error) {
+          return _this2.update({
+            error: error,
+            props: props,
+            context: context
+          });
+        });
+      }
+    }, {
+      key: 'handleBefore',
+      value: function handleBefore(isMount, isSync) {
+        var isServer = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+
+        if (this.props.onBefore) {
+          var onBefore = this.props.onBefore;
+          var info = {
+            isMount: isMount,
+            isSync: isSync,
+            isServer: isServer
+          };
+          onBefore(info);
+        }
+      }
+    }, {
+      key: 'handleAfter',
+      value: function handleAfter(state, isMount, isSync, isServer) {
+        var mod = state.mod,
+            error = state.error;
+
+        if (mod && !error) {
+          (0, _hoistNonReactStatics2["default"])(UniversalComponent, mod, {
+            preload: true,
+            preloadWeak: true
+          });
+
+          if (this.props.onAfter) {
+            var onAfter = this.props.onAfter;
+            var info = {
+              isMount: isMount,
+              isSync: isSync,
+              isServer: isServer
+            };
+            onAfter(info, mod);
+          }
+        } else if (error && this.props.onError) {
+          this.props.onError(error);
+        }
+
+        this.setState(state);
+      } // $FlowFixMe
+
+    }, {
+      key: 'init',
+      value: function init(props, context) {
+        var _req = (0, _requireUniversalModule2["default"])(asyncModule, options, props),
+            addModule = _req.addModule,
+            requireSync = _req.requireSync,
+            requireAsync = _req.requireAsync,
+            asyncOnly = _req.asyncOnly;
+
+        var mod = void 0;
+
+        try {
+          mod = requireSync(props, context);
+        } catch (error) {
+          return (0, _helpers.__update)(props, {
+            error: error,
+            props: props,
+            context: context
+          }, this._initialized);
+        }
+
+        this._asyncOnly = asyncOnly;
+        var chunkName = addModule(props); // record the module for SSR flushing :)
+
+        if (context.report) {
+          context.report(chunkName);
+        }
+
+        if (mod || _utils.isServer) {
+          this.handleBefore(true, true, _utils.isServer);
+          return (0, _helpers.__update)(props, {
+            asyncOnly: asyncOnly,
+            props: props,
+            mod: mod,
+            context: context
+          }, this._initialized, true, true, _utils.isServer);
+        }
+
+        this.handleBefore(true, false);
+        this.requireAsyncInner(requireAsync, props, {
+          props: props,
+          asyncOnly: asyncOnly,
+          mod: mod,
+          context: context
+        }, context, true);
+        return {
+          mod: mod,
+          asyncOnly: asyncOnly,
+          context: context,
+          props: props
+        };
+      }
+    }], [{
+      key: 'preload',
+
+      /* eslint-enable react/sort-comp */
+      value: function preload(props) {
+        var context = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+        props = props || {};
+
+        var _req2 = (0, _requireUniversalModule2["default"])(asyncModule, options, props),
+            requireAsync = _req2.requireAsync,
+            requireSync = _req2.requireSync;
+
+        var mod = void 0;
+
+        try {
+          mod = requireSync(props, context);
+        } catch (error) {
+          return Promise.reject(error);
+        }
+
+        return Promise.resolve().then(function () {
+          if (mod) return mod;
+          return requireAsync(props, context);
+        }).then(function (mod) {
+          (0, _hoistNonReactStatics2["default"])(UniversalComponent, mod, {
+            preload: true,
+            preloadWeak: true
+          });
+          return mod;
+        });
+      }
+      /* eslint-disable react/sort-comp */
+
+    }, {
+      key: 'preloadWeak',
+      value: function preloadWeak(props) {
+        var context = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+        props = props || {};
+
+        var _req3 = (0, _requireUniversalModule2["default"])(asyncModule, options, props),
+            requireSync = _req3.requireSync;
+
+        var mod = requireSync(props, context);
+
+        if (mod) {
+          (0, _hoistNonReactStatics2["default"])(UniversalComponent, mod, {
+            preload: true,
+            preloadWeak: true
+          });
+        }
+
+        return mod;
+      }
+    }]);
+
+    function UniversalComponent(props, context) {
+      _classCallCheck(this, UniversalComponent);
+
+      var _this = _possibleConstructorReturn(this, (UniversalComponent.__proto__ || Object.getPrototypeOf(UniversalComponent)).call(this, props, context));
+
+      _this.update = function (state) {
+        var isMount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+        var isSync = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+        var isServer = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
+        if (!_this._initialized) return;
+        if (!state.error) state.error = null;
+
+        _this.handleAfter(state, isMount, isSync, isServer);
+      };
+
+      _this.state = _this.init(_this.props, _this.context); // $FlowFixMe
+
+      _this.state.error = null;
+      return _this;
+    }
+
+    _createClass(UniversalComponent, [{
+      key: 'componentDidMount',
+      value: function componentDidMount() {
+        this._initialized = true;
+      }
+    }, {
+      key: 'componentDidUpdate',
+      value: function componentDidUpdate(prevProps) {
+        var _this3 = this;
+
+        if (isDynamic || this._asyncOnly) {
+          var _req4 = (0, _requireUniversalModule2["default"])(asyncModule, options, this.props, prevProps),
+              requireSync = _req4.requireSync,
+              requireAsync = _req4.requireAsync,
+              shouldUpdate = _req4.shouldUpdate;
+
+          if (shouldUpdate(this.props, prevProps)) {
+            var mod = void 0;
+
+            try {
+              mod = requireSync(this.props, this.context);
+            } catch (error) {
+              return this.update({
+                error: error
+              });
+            }
+
+            this.handleBefore(false, !!mod);
+
+            if (!mod) {
+              return this.requireAsyncInner(requireAsync, this.props, {
+                mod: mod
+              });
+            }
+
+            var state = {
+              mod: mod
+            };
+
+            if (alwaysDelay) {
+              if (loadingTransition) this.update({
+                mod: null
+              }); // display `loading` during componentWillReceiveProps
+
+              setTimeout(function () {
+                return _this3.update(state, false, true);
+              }, minDelay);
+              return;
+            }
+
+            this.update(state, false, true);
+          }
+        }
+      }
+    }, {
+      key: 'componentWillUnmount',
+      value: function componentWillUnmount() {
+        this._initialized = false;
+      }
+    }, {
+      key: 'render',
+      value: function render() {
+        var _props = this.props,
+            isLoading = _props.isLoading,
+            userError = _props.error,
+            props = _objectWithoutProperties(_props, ['isLoading', 'error']);
+
+        var _state = this.state,
+            mod = _state.mod,
+            error = _state.error;
+        return renderFunc(props, mod, isLoading, userError || error);
+      }
+    }], [{
+      key: 'getDerivedStateFromProps',
+      value: function getDerivedStateFromProps(nextProps, currentState) {
+        var _req5 = (0, _requireUniversalModule2["default"])(asyncModule, options, nextProps, currentState.props),
+            requireSync = _req5.requireSync,
+            shouldUpdate = _req5.shouldUpdate;
+
+        if (isHMR() && shouldUpdate(currentState.props, nextProps)) {
+          var mod = requireSync(nextProps, currentState.context);
+          return _extends({}, currentState, {
+            mod: mod
+          });
+        }
+
+        return null;
+      }
+    }]);
+
+    return UniversalComponent;
+  }(_react2["default"].Component), _class.contextTypes = {
+    store: _propTypes2["default"].object,
+    report: _propTypes2["default"].func
+  }, _temp;
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(23)(module)))
+
+/***/ }),
+/* 20 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-scroll-parallax");
 
 /***/ }),
-/* 19 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "22c350db79946bd18c18e1abf0b8e5b5.png";
 
 /***/ }),
-/* 20 */
+/* 22 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -225,7 +747,7 @@ var external_react_ = __webpack_require__(1);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
 // EXTERNAL MODULE: external "react-static"
-var external_react_static_ = __webpack_require__(21);
+var external_react_static_ = __webpack_require__(26);
 
 // EXTERNAL MODULE: external "@babel/runtime/helpers/classCallCheck"
 var classCallCheck_ = __webpack_require__(3);
@@ -252,25 +774,25 @@ var external_styled_components_ = __webpack_require__(2);
 var external_styled_components_default = /*#__PURE__*/__webpack_require__.n(external_styled_components_);
 
 // EXTERNAL MODULE: external "react-ga"
-var external_react_ga_ = __webpack_require__(12);
+var external_react_ga_ = __webpack_require__(15);
 var external_react_ga_default = /*#__PURE__*/__webpack_require__.n(external_react_ga_);
 
 // EXTERNAL MODULE: external "react-i18next"
 var external_react_i18next_ = __webpack_require__(9);
 
 // EXTERNAL MODULE: external "react-scroll-parallax"
-var external_react_scroll_parallax_ = __webpack_require__(18);
+var external_react_scroll_parallax_ = __webpack_require__(20);
 
 // EXTERNAL MODULE: external "@babel/runtime/helpers/taggedTemplateLiteral"
 var taggedTemplateLiteral_ = __webpack_require__(0);
 var taggedTemplateLiteral_default = /*#__PURE__*/__webpack_require__.n(taggedTemplateLiteral_);
 
 // EXTERNAL MODULE: external "@babel/runtime/regenerator"
-var regenerator_ = __webpack_require__(22);
+var regenerator_ = __webpack_require__(27);
 var regenerator_default = /*#__PURE__*/__webpack_require__.n(regenerator_);
 
 // EXTERNAL MODULE: external "@babel/runtime/helpers/asyncToGenerator"
-var asyncToGenerator_ = __webpack_require__(32);
+var asyncToGenerator_ = __webpack_require__(40);
 var asyncToGenerator_default = /*#__PURE__*/__webpack_require__.n(asyncToGenerator_);
 
 // EXTERNAL MODULE: external "@babel/runtime/helpers/assertThisInitialized"
@@ -282,27 +804,27 @@ var defineProperty_ = __webpack_require__(10);
 var defineProperty_default = /*#__PURE__*/__webpack_require__.n(defineProperty_);
 
 // EXTERNAL MODULE: external "prop-types"
-var external_prop_types_ = __webpack_require__(15);
+var external_prop_types_ = __webpack_require__(13);
 
 // EXTERNAL MODULE: external "react-flags-select"
-var external_react_flags_select_ = __webpack_require__(33);
+var external_react_flags_select_ = __webpack_require__(41);
 var external_react_flags_select_default = /*#__PURE__*/__webpack_require__.n(external_react_flags_select_);
 
 // EXTERNAL MODULE: external "react-flags-select/css/react-flags-select.css"
-var react_flags_select_css_ = __webpack_require__(95);
+var react_flags_select_css_ = __webpack_require__(107);
 
 // EXTERNAL MODULE: external "i18next"
-var external_i18next_ = __webpack_require__(13);
+var external_i18next_ = __webpack_require__(12);
 var external_i18next_default = /*#__PURE__*/__webpack_require__.n(external_i18next_);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/i18n/locales/en.json
-var en = __webpack_require__(34);
+var en = __webpack_require__(42);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/i18n/locales/ru.json
-var ru = __webpack_require__(35);
+var ru = __webpack_require__(43);
 
 // EXTERNAL MODULE: external "i18next-browser-languagedetector"
-var external_i18next_browser_languagedetector_ = __webpack_require__(36);
+var external_i18next_browser_languagedetector_ = __webpack_require__(44);
 var external_i18next_browser_languagedetector_default = /*#__PURE__*/__webpack_require__.n(external_i18next_browser_languagedetector_);
 
 // CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/i18n/constants.js
@@ -345,7 +867,7 @@ if (external_i18next_default.a.language.includes('-')) {
 
 /* harmony default export */ var i18n = (external_i18next_default.a);
 // EXTERNAL MODULE: external "react-device-detect"
-var external_react_device_detect_ = __webpack_require__(23);
+var external_react_device_detect_ = __webpack_require__(28);
 
 // CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/responsiveUtils.js
 
@@ -388,8 +910,8 @@ var emSize = function emSize(pixelValue) {
 };
 
 var responsiveUtils_getCurrentBreakpoint = function getCurrentBreakpoint() {
-  var _window = window,
-      innerWidth = _window.innerWidth;
+  var _ref = window || {},
+      innerWidth = _ref.innerWidth;
 
   if (innerWidth <= BREAKPOINTS['sm']) {
     return 'xs';
@@ -675,8 +1197,8 @@ var getColorRule = function getColorRule(color) {
 };
 
 var helpers_getCurrentBreakpoint = function getCurrentBreakpoint() {
-  var _window = window,
-      innerWidth = _window.innerWidth;
+  var _ref = window || {},
+      innerWidth = _ref.innerWidth;
 
   if (innerWidth <= BREAKPOINTS['sm']) {
     return 'xs';
@@ -1247,7 +1769,7 @@ var InputErrorMessage = external_styled_components_default.a.span(InputErrorMess
 });
 /* harmony default export */ var atoms_InputErrorMessage = (InputErrorMessage);
 // EXTERNAL MODULE: external "react-form-validator-core"
-var external_react_form_validator_core_ = __webpack_require__(37);
+var external_react_form_validator_core_ = __webpack_require__(45);
 
 // CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/ValidatedInput.js
 
@@ -1929,14 +2451,14 @@ var Grid = external_styled_components_default.a.section(Grid_templateObject(), f
 });
 /* harmony default export */ var atoms_Grid = (Grid);
 // EXTERNAL MODULE: external "react-dom"
-var external_react_dom_ = __webpack_require__(16);
+var external_react_dom_ = __webpack_require__(17);
 var external_react_dom_default = /*#__PURE__*/__webpack_require__.n(external_react_dom_);
 
 // EXTERNAL MODULE: external "react-transition-group"
-var external_react_transition_group_ = __webpack_require__(38);
+var external_react_transition_group_ = __webpack_require__(46);
 
 // EXTERNAL MODULE: external "polished"
-var external_polished_ = __webpack_require__(39);
+var external_polished_ = __webpack_require__(47);
 
 // CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/Modal.js
 
@@ -3041,7 +3563,7 @@ var Textarea = external_styled_components_default.a.textarea(Textarea_templateOb
 
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/iphone.png
-var iphone = __webpack_require__(40);
+var iphone = __webpack_require__(48);
 var iphone_default = /*#__PURE__*/__webpack_require__.n(iphone);
 
 // CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/components/top/Phone.js
@@ -3205,26 +3727,26 @@ var Title = external_styled_components_default()(atoms_Text)(Phone_templateObjec
 var PlayIcon = external_styled_components_default.a.div(Phone_templateObject7());
 /* harmony default export */ var top_Phone = (Phone_Phone);
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/icons/logo_v.png
-var logo_v = __webpack_require__(41);
+var logo_v = __webpack_require__(49);
 var logo_v_default = /*#__PURE__*/__webpack_require__.n(logo_v);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/BgTop.jpg
-var BgTop = __webpack_require__(17);
+var BgTop = __webpack_require__(18);
 var BgTop_default = /*#__PURE__*/__webpack_require__.n(BgTop);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/icons/GooglePlay.png
-var GooglePlay = __webpack_require__(24);
+var GooglePlay = __webpack_require__(29);
 var GooglePlay_default = /*#__PURE__*/__webpack_require__.n(GooglePlay);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/icons/AppStore.png
-var AppStore = __webpack_require__(25);
+var AppStore = __webpack_require__(30);
 var AppStore_default = /*#__PURE__*/__webpack_require__.n(AppStore);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/CloudsTop.png
-var CloudsTop = __webpack_require__(96);
+var CloudsTop = __webpack_require__(108);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/CloudsTopTop.png
-var CloudsTopTop = __webpack_require__(97);
+var CloudsTopTop = __webpack_require__(109);
 
 // CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/components/top/Top.js
 
@@ -3836,19 +4358,19 @@ var ButtonDownloadSm = external_styled_components_default.a.img(_templateObject3
   return p.theme.max('sm')(_templateObject36());
 });
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/marketing1.png
-var marketing1 = __webpack_require__(42);
+var marketing1 = __webpack_require__(50);
 var marketing1_default = /*#__PURE__*/__webpack_require__.n(marketing1);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/marketing2.png
-var marketing2 = __webpack_require__(43);
+var marketing2 = __webpack_require__(51);
 var marketing2_default = /*#__PURE__*/__webpack_require__.n(marketing2);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/marketing3.png
-var marketing3 = __webpack_require__(44);
+var marketing3 = __webpack_require__(52);
 var marketing3_default = /*#__PURE__*/__webpack_require__.n(marketing3);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/top_wave.png
-var top_wave = __webpack_require__(19);
+var top_wave = __webpack_require__(21);
 var top_wave_default = /*#__PURE__*/__webpack_require__.n(top_wave);
 
 // CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/components/marketing/Marketing.js
@@ -4252,39 +4774,39 @@ var Marketing_Title = external_styled_components_default()(atoms_Text)(Marketing
 });
 /* harmony default export */ var marketing_Marketing = (Object(external_react_i18next_["withTranslation"])()(Marketing_Marketing));
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/screenshots/screenshot1.png
-var screenshot1 = __webpack_require__(45);
+var screenshot1 = __webpack_require__(53);
 var screenshot1_default = /*#__PURE__*/__webpack_require__.n(screenshot1);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/screenshots/screenshot2.png
-var screenshot2 = __webpack_require__(46);
+var screenshot2 = __webpack_require__(54);
 var screenshot2_default = /*#__PURE__*/__webpack_require__.n(screenshot2);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/screenshots/screenshot3.png
-var screenshot3 = __webpack_require__(47);
+var screenshot3 = __webpack_require__(55);
 var screenshot3_default = /*#__PURE__*/__webpack_require__.n(screenshot3);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/screenshots/screenshot4.png
-var screenshot4 = __webpack_require__(48);
+var screenshot4 = __webpack_require__(56);
 var screenshot4_default = /*#__PURE__*/__webpack_require__.n(screenshot4);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/screenshots/screenshot5.png
-var screenshot5 = __webpack_require__(49);
+var screenshot5 = __webpack_require__(57);
 var screenshot5_default = /*#__PURE__*/__webpack_require__.n(screenshot5);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/screenshots/flower1.png
-var flower1 = __webpack_require__(50);
+var flower1 = __webpack_require__(58);
 var flower1_default = /*#__PURE__*/__webpack_require__.n(flower1);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/screenshots/flower2.png
-var flower2 = __webpack_require__(51);
+var flower2 = __webpack_require__(59);
 var flower2_default = /*#__PURE__*/__webpack_require__.n(flower2);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/screenshots/flower3.png
-var flower3 = __webpack_require__(52);
+var flower3 = __webpack_require__(60);
 var flower3_default = /*#__PURE__*/__webpack_require__.n(flower3);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/sati_app_logo.jpg
-var sati_app_logo = __webpack_require__(53);
+var sati_app_logo = __webpack_require__(61);
 var sati_app_logo_default = /*#__PURE__*/__webpack_require__.n(sati_app_logo);
 
 // CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/components/how/How.js
@@ -5057,27 +5579,27 @@ var How_SectionHeading = external_styled_components_default()(atoms_SectionHeadi
 });
 /* harmony default export */ var how_How = (Object(external_react_i18next_["withTranslation"])()(How_How));
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/bg_inside.jpg
-var bg_inside = __webpack_require__(54);
+var bg_inside = __webpack_require__(62);
 var bg_inside_default = /*#__PURE__*/__webpack_require__.n(bg_inside);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/icons/meditation.png
-var meditation = __webpack_require__(55);
+var meditation = __webpack_require__(63);
 var meditation_default = /*#__PURE__*/__webpack_require__.n(meditation);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/icons/brain.png
-var brain = __webpack_require__(56);
+var brain = __webpack_require__(64);
 var brain_default = /*#__PURE__*/__webpack_require__.n(brain);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/icons/books.png
-var books = __webpack_require__(57);
+var books = __webpack_require__(65);
 var books_default = /*#__PURE__*/__webpack_require__.n(books);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/icons/buddhism.png
-var buddhism = __webpack_require__(58);
+var buddhism = __webpack_require__(66);
 var buddhism_default = /*#__PURE__*/__webpack_require__.n(buddhism);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/wave2.png
-var wave2 = __webpack_require__(59);
+var wave2 = __webpack_require__(67);
 var wave2_default = /*#__PURE__*/__webpack_require__.n(wave2);
 
 // CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/components/inside/Inside.js
@@ -5576,19 +6098,19 @@ var NumberCont = external_styled_components_default.a.p(Advantages_templateObjec
 });
 /* harmony default export */ var advantages_Advantages = (Object(external_react_i18next_["withTranslation"])()(Advantages_Advantages));
 // EXTERNAL MODULE: external "react-compare-image"
-var external_react_compare_image_ = __webpack_require__(60);
+var external_react_compare_image_ = __webpack_require__(68);
 var external_react_compare_image_default = /*#__PURE__*/__webpack_require__.n(external_react_compare_image_);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/positive_brain.png
-var positive_brain = __webpack_require__(61);
+var positive_brain = __webpack_require__(69);
 var positive_brain_default = /*#__PURE__*/__webpack_require__.n(positive_brain);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/negative_brain.png
-var negative_brain = __webpack_require__(62);
+var negative_brain = __webpack_require__(70);
 var negative_brain_default = /*#__PURE__*/__webpack_require__.n(negative_brain);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/icons/sati_green.png
-var sati_green = __webpack_require__(63);
+var sati_green = __webpack_require__(71);
 var sati_green_default = /*#__PURE__*/__webpack_require__.n(sati_green);
 
 // CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/components/fits/Fits.js
@@ -5694,39 +6216,39 @@ var Item = external_styled_components_default.a.li(Fits_templateObject4(), funct
 }, sati_green_default.a);
 /* harmony default export */ var fits_Fits = (Object(external_react_i18next_["withTranslation"])()(Fits_Fits));
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/app_icons/aura.jpg
-var aura = __webpack_require__(64);
+var aura = __webpack_require__(72);
 var aura_default = /*#__PURE__*/__webpack_require__.n(aura);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/app_icons/breathe.jpg
-var breathe = __webpack_require__(65);
+var breathe = __webpack_require__(73);
 var breathe_default = /*#__PURE__*/__webpack_require__.n(breathe);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/app_icons/budhify.jpg
-var budhify = __webpack_require__(66);
+var budhify = __webpack_require__(74);
 var budhify_default = /*#__PURE__*/__webpack_require__.n(budhify);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/app_icons/calm.jpg
-var calm = __webpack_require__(67);
+var calm = __webpack_require__(75);
 var calm_default = /*#__PURE__*/__webpack_require__.n(calm);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/app_icons/headspace.jpg
-var headspace = __webpack_require__(68);
+var headspace = __webpack_require__(76);
 var headspace_default = /*#__PURE__*/__webpack_require__.n(headspace);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/app_icons/insight.jpg
-var insight = __webpack_require__(69);
+var insight = __webpack_require__(77);
 var insight_default = /*#__PURE__*/__webpack_require__.n(insight);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/app_icons/meditopia.jpg
-var meditopia = __webpack_require__(70);
+var meditopia = __webpack_require__(78);
 var meditopia_default = /*#__PURE__*/__webpack_require__.n(meditopia);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/app_icons/percent.jpg
-var percent = __webpack_require__(71);
+var percent = __webpack_require__(79);
 var percent_default = /*#__PURE__*/__webpack_require__.n(percent);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/app_icons/simple.jpg
-var simple = __webpack_require__(72);
+var simple = __webpack_require__(80);
 var simple_default = /*#__PURE__*/__webpack_require__.n(simple);
 
 // CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/components/nofit/NoFit.js
@@ -6128,7 +6650,7 @@ var AngleDown = external_styled_components_default.a.div(Faq_templateObject8(), 
 });
 /* harmony default export */ var faq_Faq = (Object(external_react_i18next_["withTranslation"])()(Faq_Faq));
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/footer_b.jpg
-var footer_b = __webpack_require__(73);
+var footer_b = __webpack_require__(81);
 var footer_b_default = /*#__PURE__*/__webpack_require__.n(footer_b);
 
 // CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/components/cost/Cost.js
@@ -6255,9 +6777,8 @@ var Cost_Desc = external_styled_components_default()(atoms_Text)(Cost_templateOb
 // import Ask from '../components/ask/Ask';
 // import Question from '../components/question/Question';
 // import Bottom from '../components/bottom/Bottom';
-
-external_react_ga_default.a.initialize('');
-external_react_ga_default.a.pageview(window.location.pathname);
+// ReactGA.initialize('');
+// ReactGA.pageview(window.location.pathname);
 
 var Landing_Landing =
 /*#__PURE__*/
@@ -6282,43 +6803,43 @@ function (_PureComponent) {
 
 /* harmony default export */ var pages_Landing = (Object(external_react_i18next_["withTranslation"])()(Landing_Landing));
 // EXTERNAL MODULE: external "styled-normalize"
-var external_styled_normalize_ = __webpack_require__(74);
+var external_styled_normalize_ = __webpack_require__(82);
 var external_styled_normalize_default = /*#__PURE__*/__webpack_require__.n(external_styled_normalize_);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/fonts/TT-Norms-Pro-Thin.ttf
-var TT_Norms_Pro_Thin = __webpack_require__(75);
+var TT_Norms_Pro_Thin = __webpack_require__(83);
 var TT_Norms_Pro_Thin_default = /*#__PURE__*/__webpack_require__.n(TT_Norms_Pro_Thin);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/fonts/TT-Norms-Pro-ExtraLight.ttf
-var TT_Norms_Pro_ExtraLight = __webpack_require__(76);
+var TT_Norms_Pro_ExtraLight = __webpack_require__(84);
 var TT_Norms_Pro_ExtraLight_default = /*#__PURE__*/__webpack_require__.n(TT_Norms_Pro_ExtraLight);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/fonts/TT-Norms-Pro-Light.ttf
-var TT_Norms_Pro_Light = __webpack_require__(77);
+var TT_Norms_Pro_Light = __webpack_require__(85);
 var TT_Norms_Pro_Light_default = /*#__PURE__*/__webpack_require__.n(TT_Norms_Pro_Light);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/fonts/TT-Norms-Pro-Normal.ttf
-var TT_Norms_Pro_Normal = __webpack_require__(78);
+var TT_Norms_Pro_Normal = __webpack_require__(86);
 var TT_Norms_Pro_Normal_default = /*#__PURE__*/__webpack_require__.n(TT_Norms_Pro_Normal);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/fonts/TT-Norms-Pro-Medium.ttf
-var TT_Norms_Pro_Medium = __webpack_require__(79);
+var TT_Norms_Pro_Medium = __webpack_require__(87);
 var TT_Norms_Pro_Medium_default = /*#__PURE__*/__webpack_require__.n(TT_Norms_Pro_Medium);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/fonts/TT-Norms-Pro-DemiBold.ttf
-var TT_Norms_Pro_DemiBold = __webpack_require__(80);
+var TT_Norms_Pro_DemiBold = __webpack_require__(88);
 var TT_Norms_Pro_DemiBold_default = /*#__PURE__*/__webpack_require__.n(TT_Norms_Pro_DemiBold);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/fonts/TT-Norms-Pro-Bold.ttf
-var TT_Norms_Pro_Bold = __webpack_require__(81);
+var TT_Norms_Pro_Bold = __webpack_require__(89);
 var TT_Norms_Pro_Bold_default = /*#__PURE__*/__webpack_require__.n(TT_Norms_Pro_Bold);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/fonts/TT-Norms-Pro-ExtraBold.ttf
-var TT_Norms_Pro_ExtraBold = __webpack_require__(82);
+var TT_Norms_Pro_ExtraBold = __webpack_require__(90);
 var TT_Norms_Pro_ExtraBold_default = /*#__PURE__*/__webpack_require__.n(TT_Norms_Pro_ExtraBold);
 
 // EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/fonts/TT-Norms-Pro-Black.ttf
-var TT_Norms_Pro_Black = __webpack_require__(83);
+var TT_Norms_Pro_Black = __webpack_require__(91);
 var TT_Norms_Pro_Black_default = /*#__PURE__*/__webpack_require__.n(TT_Norms_Pro_Black);
 
 // CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/globalStyles.js
@@ -6416,37 +6937,7 @@ function App() {
 /* harmony default export */ var src_App = __webpack_exports__["a"] = (App);
 
 /***/ }),
-/* 21 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-static");
-
-/***/ }),
-/* 22 */
-/***/ (function(module, exports) {
-
-module.exports = require("@babel/runtime/regenerator");
-
-/***/ }),
 /* 23 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-device-detect");
-
-/***/ }),
-/* 24 */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/png;base64,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"
-
-/***/ }),
-/* 25 */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/png;base64,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"
-
-/***/ }),
-/* 26 */
 /***/ (function(module, exports) {
 
 module.exports = function (module) {
@@ -6475,12 +6966,214 @@ module.exports = function (module) {
 };
 
 /***/ }),
+/* 24 */
+/***/ (function(module, exports) {
+
+module.exports = require("@babel/runtime/helpers/typeof");
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _typeof2 = __webpack_require__(24);
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.cacheProm = exports.loadFromPromiseCache = exports.cacheExport = exports.loadFromCache = exports.callForString = exports.createDefaultRender = exports.createElement = exports.findExport = exports.resolveExport = exports.tryRequire = exports.DefaultError = exports.DefaultLoading = exports.babelInterop = exports.isWebpack = exports.isServer = exports.isTest = undefined;
+
+var _extends = Object.assign || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];
+
+    for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
+  }
+
+  return target;
+};
+
+var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+  return _typeof2(obj);
+} : function (obj) {
+  return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : _typeof2(obj);
+};
+
+var _react = __webpack_require__(1);
+
+var React = _interopRequireWildcard(_react);
+
+var _requireById = __webpack_require__(16);
+
+var _requireById2 = _interopRequireDefault(_requireById);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    "default": obj
+  };
+}
+
+function _interopRequireWildcard(obj) {
+  if (obj && obj.__esModule) {
+    return obj;
+  } else {
+    var newObj = {};
+
+    if (obj != null) {
+      for (var key in obj) {
+        if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];
+      }
+    }
+
+    newObj["default"] = obj;
+    return newObj;
+  }
+}
+
+var isTest = exports.isTest = "production" === 'test';
+var isServer = exports.isServer = !(typeof window !== 'undefined' && window.document && window.document.createElement);
+
+var isWebpack = exports.isWebpack = function isWebpack() {
+  return typeof __webpack_require__ !== 'undefined';
+};
+
+var babelInterop = exports.babelInterop = function babelInterop(mod) {
+  return mod && (typeof mod === 'undefined' ? 'undefined' : _typeof(mod)) === 'object' && mod.__esModule ? mod["default"] : mod;
+};
+
+var DefaultLoading = exports.DefaultLoading = function DefaultLoading() {
+  return React.createElement('div', null, 'Loading...');
+};
+
+var DefaultError = exports.DefaultError = function DefaultError(_ref) {
+  var error = _ref.error;
+  return React.createElement('div', null, 'Error: ', error && error.message);
+};
+
+var tryRequire = exports.tryRequire = function tryRequire(id) {
+  try {
+    return (0, _requireById2["default"])(id);
+  } catch (err) {
+    // warn if there was an error while requiring the chunk during development
+    // this can sometimes lead the server to render the loading component.
+    if (false) {}
+  }
+
+  return null;
+};
+
+var resolveExport = exports.resolveExport = function resolveExport(mod, key, onLoad, chunkName, props, context, modCache) {
+  var isSync = arguments.length > 7 && arguments[7] !== undefined ? arguments[7] : false;
+  var exp = findExport(mod, key);
+
+  if (onLoad && mod) {
+    var _isServer = typeof window === 'undefined';
+
+    var info = {
+      isServer: _isServer,
+      isSync: isSync
+    };
+    onLoad(mod, info, props, context);
+  }
+
+  if (chunkName && exp) cacheExport(exp, chunkName, props, modCache);
+  return exp;
+};
+
+var findExport = exports.findExport = function findExport(mod, key) {
+  if (typeof key === 'function') {
+    return key(mod);
+  } else if (key === null) {
+    return mod;
+  }
+
+  return mod && (typeof mod === 'undefined' ? 'undefined' : _typeof(mod)) === 'object' && key ? mod[key] : babelInterop(mod);
+};
+
+var createElement = exports.createElement = function createElement(Component, props) {
+  return React.isValidElement(Component) ? React.cloneElement(Component, props) : React.createElement(Component, props);
+};
+
+var createDefaultRender = exports.createDefaultRender = function createDefaultRender(Loading, Err) {
+  return function (props, mod, isLoading, error) {
+    if (isLoading) {
+      return createElement(Loading, props);
+    } else if (error) {
+      return createElement(Err, _extends({}, props, {
+        error: error
+      }));
+    } else if (mod) {
+      // primary usage (for async import loading + errors):
+      return createElement(mod, props);
+    }
+
+    return createElement(Loading, props);
+  };
+};
+
+var callForString = exports.callForString = function callForString(strFun, props) {
+  return typeof strFun === 'function' ? strFun(props) : strFun;
+};
+
+var loadFromCache = exports.loadFromCache = function loadFromCache(chunkName, props, modCache) {
+  return !isServer && modCache[callForString(chunkName, props)];
+};
+
+var cacheExport = exports.cacheExport = function cacheExport(exp, chunkName, props, modCache) {
+  return modCache[callForString(chunkName, props)] = exp;
+};
+
+var loadFromPromiseCache = exports.loadFromPromiseCache = function loadFromPromiseCache(chunkName, props, promisecache) {
+  return promisecache[callForString(chunkName, props)];
+};
+
+var cacheProm = exports.cacheProm = function cacheProm(pr, chunkName, props, promisecache) {
+  return promisecache[callForString(chunkName, props)] = pr;
+};
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-static");
+
+/***/ }),
 /* 27 */
+/***/ (function(module, exports) {
+
+module.exports = require("@babel/runtime/regenerator");
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-device-detect");
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,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"
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,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"
+
+/***/ }),
+/* 31 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Users_user_projects_sati_one_landing_node_modules_react_static_plugin_reach_router_browser_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(30);
+/* harmony import */ var _Users_user_projects_sati_one_landing_node_modules_react_static_plugin_reach_router_browser_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(36);
 /* harmony import */ var _Users_user_projects_sati_one_landing_node_modules_react_static_plugin_reach_router_browser_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Users_user_projects_sati_one_landing_node_modules_react_static_plugin_reach_router_browser_api_js__WEBPACK_IMPORTED_MODULE_0__);
 // Imports
  // Plugins
@@ -6502,26 +7195,81 @@ var plugins = [{
 /* harmony default export */ __webpack_exports__["default"] = (plugins);
 
 /***/ }),
-/* 28 */
+/* 32 */
 /***/ (function(module, exports) {
 
 module.exports = require("/Users/user/projects/sati_one_landing/node_modules/react-static/lib/browser");
 
 /***/ }),
-/* 29 */
+/* 33 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "notFoundTemplate", function() { return notFoundTemplate; });
-// Template Map
+/* WEBPACK VAR INJECTION */(function(__dirname) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "notFoundTemplate", function() { return notFoundTemplate; });
+/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(37);
+/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(path__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(38);
+/* harmony import */ var babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Users_user_projects_sati_one_landing_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(19);
+/* harmony import */ var _Users_user_projects_sati_one_landing_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_Users_user_projects_sati_one_landing_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+Object(_Users_user_projects_sati_one_landing_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3__["setHasBabelPlugin"])();
+var universalOptions = {
+  loading: function loading() {
+    return null;
+  },
+  error: function error(props) {
+    console.error(props.error);
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", null, "An error occurred loading this page's template. More information is available in the console.");
+  },
+  ignoreBabelRename: true
+};
+var t_0 = _Users_user_projects_sati_one_landing_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3___default()(babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1___default()({
+  id: "/Users/user/projects/sati_one_landing/node_modules/react-static/lib/browser/components/Default404",
+  load: function load() {
+    return Promise.all([Promise.resolve(/* import() */).then(__webpack_require__.t.bind(null, 35, 7))]).then(function (proms) {
+      return proms[0];
+    });
+  },
+  path: function path() {
+    return path__WEBPACK_IMPORTED_MODULE_0___default.a.join(__dirname, '/Users/user/projects/sati_one_landing/node_modules/react-static/lib/browser/components/Default404');
+  },
+  resolve: function resolve() {
+    return /*require.resolve*/(35);
+  },
+  chunkName: function chunkName() {
+    return "Users/user/projects/sati_one_landing/node_modules/react-static/lib/browser/components/Default404";
+  }
+}), universalOptions);
+t_0.template = '/Users/user/projects/sati_one_landing/node_modules/react-static/lib/browser/components/Default404'; // Template Map
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-  '/Users/user/projects/sati_one_landing/node_modules/react-static/lib/browser/components/Default404': __webpack_require__(88)["default"]
-});
-var notFoundTemplate = '/Users/user/projects/sati_one_landing/node_modules/react-static/lib/browser/components/Default404';
+  '/Users/user/projects/sati_one_landing/node_modules/react-static/lib/browser/components/Default404': t_0
+}); // Not Found Template
+
+var notFoundTemplate = "/Users/user/projects/sati_one_landing/node_modules/react-static/lib/browser/components/Default404";
+/* WEBPACK VAR INJECTION */}.call(this, "/"))
 
 /***/ }),
-/* 30 */
+/* 34 */
+/***/ (function(module, exports) {
+
+module.exports = require("hoist-non-react-statics");
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports) {
+
+module.exports = require("/Users/user/projects/sati_one_landing/node_modules/react-static/lib/browser/components/Default404");
+
+/***/ }),
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6534,9 +7282,9 @@ exports["default"] = void 0;
 
 var _react = _interopRequireDefault(__webpack_require__(1));
 
-var _reactStatic = __webpack_require__(21);
+var _reactStatic = __webpack_require__(26);
 
-var _router = __webpack_require__(86);
+var _router = __webpack_require__(94);
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : {
@@ -6647,372 +7395,384 @@ var _default = function _default(_ref) {
 exports["default"] = _default;
 
 /***/ }),
-/* 31 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-hot-loader");
-
-/***/ }),
-/* 32 */
-/***/ (function(module, exports) {
-
-module.exports = require("@babel/runtime/helpers/asyncToGenerator");
-
-/***/ }),
-/* 33 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-flags-select");
-
-/***/ }),
-/* 34 */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"Top\":{\"title\":\"40-day meditation <br/>retreat in your pocket\",\"description\":\"Your first step towards mindfulness!\"},\"Marketing\":{\"description\":\"Мы подготовили для вас самый полный <strong>40-дневный курс осознанности</strong>, основанный на слиянии восточных знаний с современной нейронаукой. Всего <strong>10-20 минут в день</strong>, в течение сорока дней, и вы:\",\"box-1\":{\"title\":\"Will learn how to meditate right\"},\"box-2\":{\"title\":\"Understand the essentials of buddhism\"},\"box-3\":{\"title\":\"Bring mindfulness to your normal life\"}},\"How\":{\"title\":\"How the app works?\",\"box-1\":{\"title\":\"Daily audio sessions\",\"text-1\":\"Each session starts with a theoretical part, and then we get to guided meditation practice\",\"text-2\":\"We'll start from approximately 10 minutes, and reach 20-30 minutes in the end of the course\"},\"box-2\":{\"title\":\"Small assessments\",\"text-1\":\"During the day, you will need to complete a tiny assessments and write that down. This can be just an exploration, or something to think about\",\"text-2\":\"Only passing the knowledge through yourself, you can get the real learning.\"},\"box-3\":{\"title\":\"Smart notifications\",\"text-1\":\"During the day, you will get an unobtrusive notifications, that will help you integrate the knowledge to your life\"},\"box-4\":{\"title\":\"Track your minds condition\",\"text-1\":\"As you meditate, your Flower of life will be harmonic, if you pass the days, it will get dissolved\",\"text-2\":\"Algorithm is based on the real research and reflects the true state of your mind\"}},\"Inside\":{\"title\":\"Whats inside the course?\",\"box-1\":{\"title\":\"Most effective authentic meditation techniques\",\"description\":\"We extracted the best from the teachings of various eastern practicioners, such as Tick Naht Ton, Dogen, Ekhart Tolle etc\"},\"box-2\":{\"title\":\"Essentials of buddhist philosophy, free of cosmology and religion\",\"description\":\"We translate the core of buddhism as a logical and harmonic philosophical system. We extracted the main and overlapping from the top schools, like zen, theravada and mahayana.\"},\"box-3\":{\"title\":\"Effective scientific learning methods\",\"description\":\"Course is structured with respect to the recent advances in the neuroscience of learning. Methods used guarantee, that our course is the shortest path to mindful living\"},\"box-4\":{\"title\":\"Precise neuroscientific basis of every aspect of knowledge\",\"description\":\"Our course is a unique junction of advanced neuroscience and ancient knowledge. Every aspect of buddhism is backed by neuroiscience, and you see the knowledge from various angles\"}},\"Advantages\":{\"title\":\"\",\"box-1\":{\"title\":\"Authentic techniques, no marketing catches\",\"description\":\"Forget about useless meditations like meditatio of sleep, relaxation etc. Its not true. We are giving to you only the authentic techniques, without any transformation.\"},\"box-2\":{\"title\":\"You get the whole mindset, not only the skill\",\"description\":\"Without the philosophical framework, meditation is just a relaxation technique. By shaping your picture of the world and mindset, you are dissolving the core of your mental problems and obstacles.\"},\"box-3\":{\"title\":\"Course is free from esotherics, ritualism, religion and cosmology\",\"description\":\"We see buddhism as a philosophy, not the religion\"},\"box-4\":{\"title\":\"Our goal is bringing mindfulness to your life\",\"description\":\"We do not teach you how to meditate with a phone, we teach you to bring mindfulness into your real life, to unleash your true potential\"}},\"Fits\":{\"title\":\"Our app is a perfect fit, if you:\",\"text-1\":\"heard a lot about mindfulness and meditation, but don't know what to start with\",\"text-2\":\"tried meditating with another apps, but the courses they give you were not effective\",\"text-3\":\"practice meditation already, but need a strong theoretical basis and systematised knowledge\",\"text-4\":\"look for an all-in-one meditation app to fit your needs\"},\"NoFit\":{\"title\":\"It can not fit you in some cases:\",\"text-1\":\"This course is created for people who have a strong decision to change. You need to have at least 10-30 minutes each day\",\"text-2\":\"The skill can be learned all your life, so if you see meditation as a simple relaxation technique, there are several apps that do the job pretty good.\"},\"Faq\":{\"title\":\"People usually ask\",\"question-1\":{\"title\":\"Why 40 days?\",\"text\":\"According to the recent research, 40 days is guaranteed to get the new skill developed to automatism. Beside that, 40 is a sacral number in many traditions, who knows maybe that has something\"},\"question-2\":{\"title\":\"I'm a member of a religious confession (an atheist). Does it fit me?\",\"text\":\"Yes, totally! We reduce buddhism to a well structured, logical and scientifically proven philosophical system. It does not contradict with any mainstream religion. If you are an atheist, its also a great fit, as we have a scientific prove under all the aspects\"},\"question-3\":{\"title\":\"There are dozen of other apps, why should I pick that one?\",\"text\":\"Most other apps just scratch the surface of the real mindfulness practice, and pay no attention to the philosophical aspect. Most of them have a very short introductory courses (3-10 days), which is not sufficient for a new skill development (need at least 21). Contrary, beside practice, we give a strong theoretical framework and building a new skill together.\"},\"question-4\":{\"title\":\"How fast will i get the result?\",\"text\":\"It is all individual, and generally its a mistake to think about end result, you just need to practice, the result will come in its own time. By anticipating fast results you only slow that down. We can guaranty, that after pasing this skill, you will get s strong basement and all the tools and direction, to move further on your spiritual path.\"}},\"Cost\":{\"title\":\"How much is the app?\",\"description\":\"The regular price for such an apps starts from 35$ annual, but we believe in the consciousness of our users, so we let you <strong>pick the price for yourself</strong>. During the passing of the course, you will be able to pay whatever amount you think is sufficient. <strong>Help us build a new business, based on value and trust!</strong>\"}}");
-
-/***/ }),
-/* 35 */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"Top\":{\"title\":\"40-дневный медитационный <br/>ретрит в вашем смартфоне \",\"description\":\"Ваш первый шаг на пути к осознанности!\"},\"Marketing\":{\"description\":\"Мы подготовили для вас самый полный <strong>40-дневный курс осознанности</strong>, основанный на слиянии восточных знаний с современной нейронаукой. Всего <strong>10-20 минут в день</strong>, в течение сорока дней, и вы:\",\"box-1\":{\"title\":\"Привьете привычку медитировать\"},\"box-2\":{\"title\":\"Поймете суть буддистской философии\"},\"box-3\":{\"title\":\"Запустите процесс углубления осознанности\"}},\"How\":{\"title\":\"Как работает наш курс?\",\"box-1\":{\"title\":\"Каждожневные медитации\",\"text-1\":\"Каждый день вы будете получать аудио лекцию, начало которой будет состоять из теоретичесткой части, а остальная - из практики медитации.\",\"text-2\":\"Начнем с 10 минут в начале, и дойдем до 20-30 ближе к концу курса\"},\"box-2\":{\"title\":\"Небольшие задания на день\",\"text-1\":\"После медитации вам нужно будет выполнить небольшое задание, и записать ответ в виде текста. Это может быть наблюдение за определенными вещами в течение ня, оценка своего состояния и много другое.\",\"text-2\":\"Только пропустив знания и практику через себя, можно действительно усвоить материал.\"},\"box-3\":{\"title\":\"Напоминания в течение дня\",\"text-1\":\"После практики мы будем слать вам ненавязчивые но очень емкие и нужные push-оповещения, чтобы вы могли плавно и без напрягов интегрировать практику в смою жизнь\"},\"box-4\":{\"title\":\"Отслеживайте состояние ума\",\"text-1\":\"Вы можете отследить ваш прогресс и текущее состояние с помощью уникальной геймификации - Цветок жизни. Если вы медитируется без пропусков и стабильно, то цветок гармоничен и полон, если нет, то он становится негармоничным.\",\"text-2\":\"Алгоритм составлен на основе реальных исследований\"}},\"Inside\":{\"title\":\"Что входит в курс?\",\"box-1\":{\"title\":\"Самые эффективные медитационыые практики с подробным объяснением каждой детали\",\"description\":\"Мы выделили лучшее из книг таких известных мастеров дзен как Тик Фон Нхат, Сузуки Конзо, Аджан По, и структурировали это с помощью современных исследований в области науки осознанности\"},\"box-2\":{\"title\":\"Основы буддистского мировоззрения, лишенного космологии и мистицизма\",\"description\":\"В основе буддистской философии - очень мудрый и взвешанный подход к жизни, и мы передадим его вам как последовательную систему и логичную философскую систему. Мы взяли главное из различных школ, таких как дзен и випассана, и выделели только главное.\"},\"box-3\":{\"title\":\"Лучшие  проверенные научные методы по плавной интеграции осонанности в вашу жизнь\",\"description\":\"Курс разработан с учетом инновационных методов обучения, с оглядкой на последние открытия в физиологии обучения. В курс внедрены все самые современные техники, которые гарантируют понимание и усвоение теоретического материала, а также гарантируют кратчайший и эффективный путь к развитию навыка осознанности.\"},\"box-4\":{\"title\":\"Подробное объяснение работы Вашего мозга и того как он может некорректно работать\",\"description\":\"Все буддистские утверждения подкреплены конкретными научными исследованиями. Наш курс - уникальный симбиоз восточной мудрости и современной науки. С научной стороны, мы пираемся на работы Антонио Дамасио, Йон Кабат Зинн и других ученых.\"}},\"Advantages\":{\"title\":\"Что отличает нас от других\",\"box-1\":{\"title\":\"Оригинальные восточные техники, никаких маркетинговых уловок\",\"description\":\"Мы разработали курс для тех кто хочет действительно углубиться в эту технику, и по-этому наши медитации явщяются проверенными и взятыми из первоисточников, от лучших буддистских мастеров, таких как, улучшенные с помощью современной науки об обучении. Здесь вы не найдете медитаций сна, стресса и других уловок.\"},\"box-2\":{\"title\":\"Помимо медитации, мы объясняем основы буддистского мировоззрения\",\"description\":\"Без философии и изменения взглядов на жизнь, практика медитации будет простым психологическим упражнением, которое не раскроет всей своей прелести, если не будет подкреплено стройным и структурированным знанием.\"},\"box-3\":{\"title\":\"Курс абсолютно светский, без космологии и мистицизма, подкрепленный современной психологией и нейрофизиологией\",\"description\":\"Мы рассматриваем буддизм как философию, а не как религию. Каждый тезис который мы даем, мы подкрепляем современными научными исследованиями в области когнитивных наук и нейрофизиологии.\"},\"box-4\":{\"title\":\"Наша цель - интеграция осознанности в вашу жизнь.\",\"description\":\"Наш курс направлен не на то чтобы приучить вас к медитации с телефоном, а но то, чтобы вы привили себе привычку быть осознанным, и интегрировали буддистское мировоззрение в свою жизнь.\"}},\"Fits\":{\"title\":\"Курс подходит вам, если:\",\"text-1\":\"много слышали о медитации и осознанности, но не знаете с чего начать\",\"text-2\":\"пытались начать медитировать с помощью других прилодений иили курсов, но они для вас оказались недостаточно полными\",\"text-3\":\"вы уже практикуете медитацию какое-то время, но вам нехватает полной и структурированной системы базовых знаний\",\"text-4\":\"ищите что-то новое в жизни, что поможет вам поднться на новый уровень\"},\"NoFit\":{\"title\":\"Курс также может вам не подойти:\",\"text-1\":\"Этот курс предназначен для тех кто действительно решил встать на путь изменений и осознанности. Это требуем времени и усилий, как минимум 40 дней постоянной практики по 10-20 минут, но и после этого вам нужно развиваться дальше.\",\"text-2\":\"Этот навык можно развиватьвсю жизнь. Так что если вы рассматриваете медитацию как сугубо психологическую практику релаксации, то мы можем порекомендовать вам ряд других прилодений, которые справляются с задачей очень хорошо.\"},\"Faq\":{\"title\":\"Нас спрашивают\",\"question-1\":{\"title\":\"Почему именно 40 дней?\",\"text\":\"Согласно современным исследованиям, 40 дней - это гарантированно достаточное время чтобы сформировать новый навык, усвоить его на таком уровне, который не требует усилий и является частью вас. Помимо этого, число 40 является сакральным для многих религий\"},\"question-2\":{\"title\":\"Я исповедую другую религию (я атеист). Подходит ли мне это?\",\"text\":\"Наш курс является абсолюно светским, не сожержит ничего религиозного или эзотерического. Мы рассматриваем буддизм как стройную философскую систему, которая не противоречит никаким другим религиям или верованиям. Вы смело можете прохдить курс, если исповедуете другую религию, так как техники, и мировоззрение помогут вам достигать добродетелей вашего учения. Если вы атеист, то также вам пожходит этот курс, так как в основе его исключительно логика и наука\"},\"question-3\":{\"title\":\"Есть много других приложение, почему я должен использовать именно ваше?\",\"text\":\"Большинство популярных приложений очень поверхностно подходят к искусству осознанности, практически не касаются теории буддисткого мировоззрения и вцелом расчитаны на людей, не стремящихся сильно углубиться в практику. Большинство из них имеют короткие вводные программы (7-10 дней), чего физически недостаточно для формирования какого дибо навыка. Мы же, напротив, стремимся познакомить вас со всей полнотой осознанности, медитации, и буддистского мировоззрения\"},\"question-4\":{\"title\":\"Как быстро я почувствую результат?\",\"text\":\"Это все сугубо индивидуально, и вообще лучше не думать о результате, а просто практиковать. Мы можем гарантировать вам, что по прохождении этого курса вы будете обладать всеми навыками и знаниями, достаточными для продолжения своего пути к более осознанной жизни, но чтобы получить действительно озутимые результаты, нужно продолжать, и практика должна стать естественной частью жизни. Только тогда возможен хорогий рещультат, и именно в этом и цель нашего курса - сделать практику осознанности естественной и органичной частью вашей жизни\"}},\"Cost\":{\"title\":\"Сколько это стоит?\",\"description\":\"Обычно такие приложения являются платными и стоят от 3000р, но мы верим в сознательность наших пользователей, и по-этому мы даем вам возможность <strong>самим выбрать стоимость</strong>. Во время прохождения курса мы попросим вас самим назначить любую стоимость за курс, насколько он был вам полезен. <strong>Помогите нам построить компанию на новых основах</strong>\"}}");
-
-/***/ }),
-/* 36 */
-/***/ (function(module, exports) {
-
-module.exports = require("i18next-browser-languagedetector");
-
-/***/ }),
 /* 37 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-form-validator-core");
+module.exports = require("path");
 
 /***/ }),
 /* 38 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-transition-group");
+module.exports = require("babel-plugin-universal-import/universalImport");
 
 /***/ }),
 /* 39 */
 /***/ (function(module, exports) {
 
-module.exports = require("polished");
+module.exports = require("react-hot-loader");
 
 /***/ }),
 /* 40 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-module.exports = __webpack_require__.p + "0ee41cfa966ea781275f2012056bfce8.png";
+module.exports = require("@babel/runtime/helpers/asyncToGenerator");
 
 /***/ }),
 /* 41 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-module.exports = __webpack_require__.p + "9539e03b9397b3eb254f5b6cd22d475a.png";
+module.exports = require("react-flags-select");
 
 /***/ }),
 /* 42 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module) {
 
-module.exports = __webpack_require__.p + "f360f693e83072c47934f9d8146d9cd6.png";
+module.exports = JSON.parse("{\"Top\":{\"title\":\"40-day meditation <br/>retreat in your pocket\",\"description\":\"Your first step towards mindfulness!\"},\"Marketing\":{\"description\":\"Мы подготовили для вас самый полный <strong>40-дневный курс осознанности</strong>, основанный на слиянии восточных знаний с современной нейронаукой. Всего <strong>10-20 минут в день</strong>, в течение сорока дней, и вы:\",\"box-1\":{\"title\":\"Will learn how to meditate right\"},\"box-2\":{\"title\":\"Understand the essentials of buddhism\"},\"box-3\":{\"title\":\"Bring mindfulness to your normal life\"}},\"How\":{\"title\":\"How the app works?\",\"box-1\":{\"title\":\"Daily audio sessions\",\"text-1\":\"Each session starts with a theoretical part, and then we get to guided meditation practice\",\"text-2\":\"We'll start from approximately 10 minutes, and reach 20-30 minutes in the end of the course\"},\"box-2\":{\"title\":\"Small assessments\",\"text-1\":\"During the day, you will need to complete a tiny assessments and write that down. This can be just an exploration, or something to think about\",\"text-2\":\"Only passing the knowledge through yourself, you can get the real learning.\"},\"box-3\":{\"title\":\"Smart notifications\",\"text-1\":\"During the day, you will get an unobtrusive notifications, that will help you integrate the knowledge to your life\"},\"box-4\":{\"title\":\"Track your minds condition\",\"text-1\":\"As you meditate, your Flower of life will be harmonic, if you pass the days, it will get dissolved\",\"text-2\":\"Algorithm is based on the real research and reflects the true state of your mind\"}},\"Inside\":{\"title\":\"Whats inside the course?\",\"box-1\":{\"title\":\"Most effective authentic meditation techniques\",\"description\":\"We extracted the best from the teachings of various eastern practicioners, such as Tick Naht Ton, Dogen, Ekhart Tolle etc\"},\"box-2\":{\"title\":\"Essentials of buddhist philosophy, free of cosmology and religion\",\"description\":\"We translate the core of buddhism as a logical and harmonic philosophical system. We extracted the main and overlapping from the top schools, like zen, theravada and mahayana.\"},\"box-3\":{\"title\":\"Effective scientific learning methods\",\"description\":\"Course is structured with respect to the recent advances in the neuroscience of learning. Methods used guarantee, that our course is the shortest path to mindful living\"},\"box-4\":{\"title\":\"Precise neuroscientific basis of every aspect of knowledge\",\"description\":\"Our course is a unique junction of advanced neuroscience and ancient knowledge. Every aspect of buddhism is backed by neuroiscience, and you see the knowledge from various angles\"}},\"Advantages\":{\"title\":\"\",\"box-1\":{\"title\":\"Authentic techniques, no marketing catches\",\"description\":\"Forget about useless meditations like meditatio of sleep, relaxation etc. Its not true. We are giving to you only the authentic techniques, without any transformation.\"},\"box-2\":{\"title\":\"You get the whole mindset, not only the skill\",\"description\":\"Without the philosophical framework, meditation is just a relaxation technique. By shaping your picture of the world and mindset, you are dissolving the core of your mental problems and obstacles.\"},\"box-3\":{\"title\":\"Course is free from esotherics, ritualism, religion and cosmology\",\"description\":\"We see buddhism as a philosophy, not the religion\"},\"box-4\":{\"title\":\"Our goal is bringing mindfulness to your life\",\"description\":\"We do not teach you how to meditate with a phone, we teach you to bring mindfulness into your real life, to unleash your true potential\"}},\"Fits\":{\"title\":\"Our app is a perfect fit, if you:\",\"text-1\":\"heard a lot about mindfulness and meditation, but don't know what to start with\",\"text-2\":\"tried meditating with another apps, but the courses they give you were not effective\",\"text-3\":\"practice meditation already, but need a strong theoretical basis and systematised knowledge\",\"text-4\":\"look for an all-in-one meditation app to fit your needs\"},\"NoFit\":{\"title\":\"It can not fit you in some cases:\",\"text-1\":\"This course is created for people who have a strong decision to change. You need to have at least 10-30 minutes each day\",\"text-2\":\"The skill can be learned all your life, so if you see meditation as a simple relaxation technique, there are several apps that do the job pretty good.\"},\"Faq\":{\"title\":\"People usually ask\",\"question-1\":{\"title\":\"Why 40 days?\",\"text\":\"According to the recent research, 40 days is guaranteed to get the new skill developed to automatism. Beside that, 40 is a sacral number in many traditions, who knows maybe that has something\"},\"question-2\":{\"title\":\"I'm a member of a religious confession (an atheist). Does it fit me?\",\"text\":\"Yes, totally! We reduce buddhism to a well structured, logical and scientifically proven philosophical system. It does not contradict with any mainstream religion. If you are an atheist, its also a great fit, as we have a scientific prove under all the aspects\"},\"question-3\":{\"title\":\"There are dozen of other apps, why should I pick that one?\",\"text\":\"Most other apps just scratch the surface of the real mindfulness practice, and pay no attention to the philosophical aspect. Most of them have a very short introductory courses (3-10 days), which is not sufficient for a new skill development (need at least 21). Contrary, beside practice, we give a strong theoretical framework and building a new skill together.\"},\"question-4\":{\"title\":\"How fast will i get the result?\",\"text\":\"It is all individual, and generally its a mistake to think about end result, you just need to practice, the result will come in its own time. By anticipating fast results you only slow that down. We can guaranty, that after pasing this skill, you will get s strong basement and all the tools and direction, to move further on your spiritual path.\"}},\"Cost\":{\"title\":\"How much is the app?\",\"description\":\"The regular price for such an apps starts from 35$ annual, but we believe in the consciousness of our users, so we let you <strong>pick the price for yourself</strong>. During the passing of the course, you will be able to pay whatever amount you think is sufficient. <strong>Help us build a new business, based on value and trust!</strong>\"}}");
 
 /***/ }),
 /* 43 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module) {
 
-module.exports = __webpack_require__.p + "a5481dba7ac7ff6fbda7cfca0e9f59fa.png";
+module.exports = JSON.parse("{\"Top\":{\"title\":\"40-дневный медитационный <br/>ретрит в вашем смартфоне \",\"description\":\"Ваш первый шаг на пути к осознанности!\"},\"Marketing\":{\"description\":\"Мы подготовили для вас самый полный <strong>40-дневный курс осознанности</strong>, основанный на слиянии восточных знаний с современной нейронаукой. Всего <strong>10-20 минут в день</strong>, в течение сорока дней, и вы:\",\"box-1\":{\"title\":\"Привьете привычку медитировать\"},\"box-2\":{\"title\":\"Поймете суть буддистской философии\"},\"box-3\":{\"title\":\"Запустите процесс углубления осознанности\"}},\"How\":{\"title\":\"Как работает наш курс?\",\"box-1\":{\"title\":\"Каждожневные медитации\",\"text-1\":\"Каждый день вы будете получать аудио лекцию, начало которой будет состоять из теоретичесткой части, а остальная - из практики медитации.\",\"text-2\":\"Начнем с 10 минут в начале, и дойдем до 20-30 ближе к концу курса\"},\"box-2\":{\"title\":\"Небольшие задания на день\",\"text-1\":\"После медитации вам нужно будет выполнить небольшое задание, и записать ответ в виде текста. Это может быть наблюдение за определенными вещами в течение ня, оценка своего состояния и много другое.\",\"text-2\":\"Только пропустив знания и практику через себя, можно действительно усвоить материал.\"},\"box-3\":{\"title\":\"Напоминания в течение дня\",\"text-1\":\"После практики мы будем слать вам ненавязчивые но очень емкие и нужные push-оповещения, чтобы вы могли плавно и без напрягов интегрировать практику в смою жизнь\"},\"box-4\":{\"title\":\"Отслеживайте состояние ума\",\"text-1\":\"Вы можете отследить ваш прогресс и текущее состояние с помощью уникальной геймификации - Цветок жизни. Если вы медитируется без пропусков и стабильно, то цветок гармоничен и полон, если нет, то он становится негармоничным.\",\"text-2\":\"Алгоритм составлен на основе реальных исследований\"}},\"Inside\":{\"title\":\"Что входит в курс?\",\"box-1\":{\"title\":\"Самые эффективные медитационыые практики с подробным объяснением каждой детали\",\"description\":\"Мы выделили лучшее из книг таких известных мастеров дзен как Тик Фон Нхат, Сузуки Конзо, Аджан По, и структурировали это с помощью современных исследований в области науки осознанности\"},\"box-2\":{\"title\":\"Основы буддистского мировоззрения, лишенного космологии и мистицизма\",\"description\":\"В основе буддистской философии - очень мудрый и взвешанный подход к жизни, и мы передадим его вам как последовательную систему и логичную философскую систему. Мы взяли главное из различных школ, таких как дзен и випассана, и выделели только главное.\"},\"box-3\":{\"title\":\"Лучшие  проверенные научные методы по плавной интеграции осонанности в вашу жизнь\",\"description\":\"Курс разработан с учетом инновационных методов обучения, с оглядкой на последние открытия в физиологии обучения. В курс внедрены все самые современные техники, которые гарантируют понимание и усвоение теоретического материала, а также гарантируют кратчайший и эффективный путь к развитию навыка осознанности.\"},\"box-4\":{\"title\":\"Подробное объяснение работы Вашего мозга и того как он может некорректно работать\",\"description\":\"Все буддистские утверждения подкреплены конкретными научными исследованиями. Наш курс - уникальный симбиоз восточной мудрости и современной науки. С научной стороны, мы пираемся на работы Антонио Дамасио, Йон Кабат Зинн и других ученых.\"}},\"Advantages\":{\"title\":\"Что отличает нас от других\",\"box-1\":{\"title\":\"Оригинальные восточные техники, никаких маркетинговых уловок\",\"description\":\"Мы разработали курс для тех кто хочет действительно углубиться в эту технику, и по-этому наши медитации явщяются проверенными и взятыми из первоисточников, от лучших буддистских мастеров, таких как, улучшенные с помощью современной науки об обучении. Здесь вы не найдете медитаций сна, стресса и других уловок.\"},\"box-2\":{\"title\":\"Помимо медитации, мы объясняем основы буддистского мировоззрения\",\"description\":\"Без философии и изменения взглядов на жизнь, практика медитации будет простым психологическим упражнением, которое не раскроет всей своей прелести, если не будет подкреплено стройным и структурированным знанием.\"},\"box-3\":{\"title\":\"Курс абсолютно светский, без космологии и мистицизма, подкрепленный современной психологией и нейрофизиологией\",\"description\":\"Мы рассматриваем буддизм как философию, а не как религию. Каждый тезис который мы даем, мы подкрепляем современными научными исследованиями в области когнитивных наук и нейрофизиологии.\"},\"box-4\":{\"title\":\"Наша цель - интеграция осознанности в вашу жизнь.\",\"description\":\"Наш курс направлен не на то чтобы приучить вас к медитации с телефоном, а но то, чтобы вы привили себе привычку быть осознанным, и интегрировали буддистское мировоззрение в свою жизнь.\"}},\"Fits\":{\"title\":\"Курс подходит вам, если:\",\"text-1\":\"много слышали о медитации и осознанности, но не знаете с чего начать\",\"text-2\":\"пытались начать медитировать с помощью других прилодений иили курсов, но они для вас оказались недостаточно полными\",\"text-3\":\"вы уже практикуете медитацию какое-то время, но вам нехватает полной и структурированной системы базовых знаний\",\"text-4\":\"ищите что-то новое в жизни, что поможет вам поднться на новый уровень\"},\"NoFit\":{\"title\":\"Курс также может вам не подойти:\",\"text-1\":\"Этот курс предназначен для тех кто действительно решил встать на путь изменений и осознанности. Это требуем времени и усилий, как минимум 40 дней постоянной практики по 10-20 минут, но и после этого вам нужно развиваться дальше.\",\"text-2\":\"Этот навык можно развиватьвсю жизнь. Так что если вы рассматриваете медитацию как сугубо психологическую практику релаксации, то мы можем порекомендовать вам ряд других прилодений, которые справляются с задачей очень хорошо.\"},\"Faq\":{\"title\":\"Нас спрашивают\",\"question-1\":{\"title\":\"Почему именно 40 дней?\",\"text\":\"Согласно современным исследованиям, 40 дней - это гарантированно достаточное время чтобы сформировать новый навык, усвоить его на таком уровне, который не требует усилий и является частью вас. Помимо этого, число 40 является сакральным для многих религий\"},\"question-2\":{\"title\":\"Я исповедую другую религию (я атеист). Подходит ли мне это?\",\"text\":\"Наш курс является абсолюно светским, не сожержит ничего религиозного или эзотерического. Мы рассматриваем буддизм как стройную философскую систему, которая не противоречит никаким другим религиям или верованиям. Вы смело можете прохдить курс, если исповедуете другую религию, так как техники, и мировоззрение помогут вам достигать добродетелей вашего учения. Если вы атеист, то также вам пожходит этот курс, так как в основе его исключительно логика и наука\"},\"question-3\":{\"title\":\"Есть много других приложение, почему я должен использовать именно ваше?\",\"text\":\"Большинство популярных приложений очень поверхностно подходят к искусству осознанности, практически не касаются теории буддисткого мировоззрения и вцелом расчитаны на людей, не стремящихся сильно углубиться в практику. Большинство из них имеют короткие вводные программы (7-10 дней), чего физически недостаточно для формирования какого дибо навыка. Мы же, напротив, стремимся познакомить вас со всей полнотой осознанности, медитации, и буддистского мировоззрения\"},\"question-4\":{\"title\":\"Как быстро я почувствую результат?\",\"text\":\"Это все сугубо индивидуально, и вообще лучше не думать о результате, а просто практиковать. Мы можем гарантировать вам, что по прохождении этого курса вы будете обладать всеми навыками и знаниями, достаточными для продолжения своего пути к более осознанной жизни, но чтобы получить действительно озутимые результаты, нужно продолжать, и практика должна стать естественной частью жизни. Только тогда возможен хорогий рещультат, и именно в этом и цель нашего курса - сделать практику осознанности естественной и органичной частью вашей жизни\"}},\"Cost\":{\"title\":\"Сколько это стоит?\",\"description\":\"Обычно такие приложения являются платными и стоят от 3000р, но мы верим в сознательность наших пользователей, и по-этому мы даем вам возможность <strong>самим выбрать стоимость</strong>. Во время прохождения курса мы попросим вас самим назначить любую стоимость за курс, насколько он был вам полезен. <strong>Помогите нам построить компанию на новых основах</strong>\"}}");
 
 /***/ }),
 /* 44 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-module.exports = __webpack_require__.p + "3e0309dfd9a4c62c39db656d0df22cac.png";
+module.exports = require("i18next-browser-languagedetector");
 
 /***/ }),
 /* 45 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-module.exports = __webpack_require__.p + "729e37290bd509b6fa2c3ddb694f2ec4.png";
+module.exports = require("react-form-validator-core");
 
 /***/ }),
 /* 46 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-module.exports = __webpack_require__.p + "d577fede16bd48ae611bfd8fe471c203.png";
+module.exports = require("react-transition-group");
 
 /***/ }),
 /* 47 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-module.exports = __webpack_require__.p + "c92887241122100da8c91539c3d0d967.png";
+module.exports = require("polished");
 
 /***/ }),
 /* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "358b89b8e1db297a63574a72266cd081.png";
+module.exports = __webpack_require__.p + "0ee41cfa966ea781275f2012056bfce8.png";
 
 /***/ }),
 /* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "165aa657a31e0f7f1ffc350e151fa6d3.png";
+module.exports = __webpack_require__.p + "9539e03b9397b3eb254f5b6cd22d475a.png";
 
 /***/ }),
 /* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "66a445eefc37546192cd6a1bd7e8bcfb.png";
+module.exports = __webpack_require__.p + "f360f693e83072c47934f9d8146d9cd6.png";
 
 /***/ }),
 /* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "f043b9f2154158d1e97f25e9a1861ba2.png";
+module.exports = __webpack_require__.p + "a5481dba7ac7ff6fbda7cfca0e9f59fa.png";
 
 /***/ }),
 /* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "0b31b1e9f0d8caf031427224e7f7ed62.png";
+module.exports = __webpack_require__.p + "3e0309dfd9a4c62c39db656d0df22cac.png";
 
 /***/ }),
 /* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "1a9f38a377f3638bcb3d214adb0d2a01.jpg";
+module.exports = __webpack_require__.p + "729e37290bd509b6fa2c3ddb694f2ec4.png";
 
 /***/ }),
 /* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "1eb9f577c40dbfb15ce57501d814165d.jpg";
+module.exports = __webpack_require__.p + "d577fede16bd48ae611bfd8fe471c203.png";
 
 /***/ }),
 /* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "8cceed63e308eeb2baf16014091dcb14.png";
+module.exports = __webpack_require__.p + "c92887241122100da8c91539c3d0d967.png";
 
 /***/ }),
 /* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "7a4560d2f3c4b7750841069104f16251.png";
+module.exports = __webpack_require__.p + "358b89b8e1db297a63574a72266cd081.png";
 
 /***/ }),
 /* 57 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjgAAAIRCAYAAABH1scIAAAACXBIWXMAAAsSAAALEgHS3X78AAAZSElEQVR42u3d0XUjx5WA4Tt75p3cCAhFQDoCtiIYKoKBIhA3AkERLBWBwQjMicDNCExGYDADMALuQ2NWx+eQQF8QnEZVfd85enLJu74Sev6uLjQ+vby8BABATf7LCAAAgQMAIHAAAAQOAIDAAQAQOACAwAEAEDgAAAIHAEDgAAAIHABA4AAACBwAAIEDACBwAAAEDgAgcAAABA4AgMABABA4AAACBwBA4AAAAgcAQOAAAAgcAACBAwAgcAAAgQMAIHAAAAQOAIDAAQAQOACAwAEAEDgAAAIHAEDgAAAIHABA4AAACBwAAIEDACBwAAAEDgBARER8NoJRriLiwhgAqrKKiLuIWBtFfT69vLyYwtsuImIZEedGAVCl54i43lzrEThNmEXEQ0ScGAVA9X6JYTeHSjiD87aFuAFoxjIiTo2hHnZw3mYwAG25jYi5MdTBDs7rOiMAaM5X13+BAwA1WhhBHTyiepvBALTJgeMK2MF5260RADTpxggETs2uY3g/AgBtOQuHjQVOxdYxHDa7NwqA5iyMoGzO4IxzEcPPNbxmFsPJ+7G+xfACQQB+rN+T63+OiN7YBE7L1jH+pYB/xvD4C4Afa5m8Ib0PXxsXOI27i4gvI9c+xbDrA8CPNYuIfyf/np9i+FFOCuMMzuECZ6wzgQMwiVXkvyG7MDaB07I+ub4zMoBJZIPlKvxGlcBp/K7gUeAAFHG9/pZYfxJvf8kEgdOEPrH2wrgAJpN9kZ/AKZBDxodzFRH/SKz/7xi+fQXAj7eK4UzkWA4bF8YOzuH0yfV2cQCmYxdH4DDSOoavgI/VGRnAZJbJ9XMjEzgt6xNr7eAATHtTmjlsfB6+TSVwGpb5CQaBAzCtu+R6j6kEjsAZ4cy4ACa1FDgCh8MHToRzOABTyzymcs0WOM3KHjSeGRnApDKPqU7C8QKB07CVwAGoMnAi7OIInIb1ibXuBACmtQ4/tSNwGP1hGctXDgHKujEVOAKnWb4qDlBv4JyE4wUCp1Gr5AcFgHICx82pwBE4PigARch+A9Z1W+A0K/NBcQ4HYHqZ4wWdcQmcVq0EDkC1gTMzLoHDbrY6AabXJ9b6qR2B44MCQBFWbk4FDoflERVAeYHj2i1wcBcAUITMG41duwVOk3ojACiON9ELHACoTuabVAJH4ABAETI7OB5RCRx2mBkBAAic2nifAsBxeDACgcN2KyMAKM7aCAQOAgegZc7gCBwAqM6JEQgcAACBAwAgcAAABA4AIHDI6owAoGr3RiBw2O7ZCABA4NTGmzMBjoN32wgcAKiOXwgXOADQtJURCJwWzYwAoDiZR1QCR+AIHB8SgCJ4RCVwOCCBA3AcMjs4vXEJnBbNjACgOH5AU+BwwMBZGRfA5Lrk+t7IBA4CB6CmG1MvaBU4zbo0AoBqA8cLWgUOI/RGADC5TuAIHLbzqm+Auq/dK+MSOC3KvEfh0bgAJjeL3Deo7OAInCZ1ibVr4wIo6rod4WiBwGlUZgfHXQBAWYFj513gNCvzHNcODkBZgdMbl8AROD4oAMduFhFnrtsCh+1OI3dQbWVkAJO6Sq53tEDgNCn7FXGBAzCtLrH20XVb4Aic3e6NC2BSpxHxJbG+NzKBI3B2cxcAMK3s4ymBI3AEzgie4wKUEzjPEXFnZAKnVecCB6AIHk8JHEbqkut9WACmk308ZfdG4AicEbwJE2Ba1wJH4DCO8zcAZZhF7kjBt/DmeYHTsE7gABRhkVy/NLLyfHp5eTGF97uIiH8l1v9N5ABM4jSG13SMfev8c+R+RJkjYQfnMLrE2mdxAzCZq8j9pI6zNwJH4IzUGxfAZBbJ9TdGJnBa5l0KAMdvHrlfDn8MO+4Cp2Fdcr3AAZgucDLs3hTssxGMNtv89d4PzOkeUQTA+6/hl4n1z+HbUwKnctebv84O9N/3TyMFOHp2bwrna+LbLSPiqzEANOenGL5OTqGcwXnbtbgBaNKtuCmfHZy3reJwj6UAKIfdmwrYwXndhbgBaJLdG4FTNa/lBmjTwggETs3UO0B77N5UxBmctz1ExLkxADTD2ZuK2MF528IIAJrxp7gROK24i4hfjQGgercxvBoEgdOMZUT8HBHfYnhtNwD1uN/cyM6Noj7O4AAA1bGDAwAIHAAAgQMAIHAAAAQOAIDAAQAEDgCAwAEAEDgAAAIHAEDgAAACBwBA4AAACBwAAIEDACBwAACBAwBQic9GUKzTiLgwBoBqrDZ/IXCadBURi4g4NwqA6jxFxHJznecdPr28vJhCOeYR8XdjAKje7eaaz56cwSlHJ24AmvE17OK8ix2cctxFxBdjAGjK3yLiwRgETs3WEXFiDABNuY9hB58kj6jKIW4A2nMZzuLsxQ5OOVYRcWYMAM15ioiZMeTYwSlHbwQATToLuzhpdnDKMYvhoJlHVQDtsYuTZAenHKuIuI6IZ6MAaI5dnCQ7OOWZxfBuhC6cyQFoiV0cgdO8VSJ+vsXw8w/AXxYR8fvItX9Emy9ky/zh8cm/Uq863VyvM0cPfo3hpxzYwSOqOvWJtZ1xAUxiHRE3yb/n2tgETsvuEmtPRA7AZG4id7byPCIujE3gCJxxBA7ANOziCByS7gUOQBGyuzhXMZzfQeA0KbOLc2lcAJNZR+7g8En4cojAaVj212c90wWYjsdUAoeR+uT6zsgAJrOK4bUdY52Hd+IInIZlzuHYwQGY1jK53mMqgdOsXuAAFOMucoeN50YmcFqVOYdzblwAk1smr9u+TSVwBM4InZEBFBM4ER5TCZxGrSK33TkzMoDJb0yf3JgKHMZ9WAQOQDky7zGzgyNwBI47AYAi9Im1J+FLIgKnUavEWofVAKbn9wQFDiP4JhVAebzHTOCwwyq53i4OwPT6xNrOuASOwHEnAFBb4Jy5ORU4rXpMrPUhASgrcNycCpxmrX1IAIqTOYfTGZfAadHKCACK4z1mAocDBo4dHIDyrt0CR+CwgzM4AMchs4Pj5lTgNKk3AoCqA+fEuAQO7gIASrBOru+MTODgLgCgBPdGIHB424MRAFRvZgQCpzVrIwCo/gZV4AgcAHCDKnBojYPGAOXxmg+Bgw8JQBH81I7AAYDq+JKIwAEAEDiteTICAAQOtVkZAQACh9o4fAaAwKE6foIBAIEDACBwqIk3ZwIcB8cLBA4H5L0LAMch8+JV126BAwDVsfsucACgCH46R+CwhWe4APVfv+3gCBx3AFs8GxdAkZzBETj4gAAU4dIIBA5v8wwXoP5rtxtUgdMcZ3AA6r92O4MjcNiiNwKAozBLrL03LoHjLgCA2q7ddm8ETpMyz3FXxgVQXOA4fyNwmjQTOADFyXyDSuAInCadCRyAomSPFggcgeNDInAAjl6XWPvs2i1wWpQ5f/NkXADF3ZzavRE47gJ2cAcAUN61uzcugdOizA6OuwCA6V1E7uykwBE4zX5QxvIeBYDpdcn1AkfgNOnShwSgKFeJtd5gLHCaNEuuXxkZwKRO3ZgKHHbLPJ7yNUOA6V0l198ZmcARONs5YAxQVuA8u3YLnFZ1AgegGKcR8SWx3u6NwGmWHRyAcng8JXAYYRYRJwIHoBjXibXPAkfgtKpLrhc4ANPelJ4n1osbgSNwRvAeBYBpXSfXCxyBI3BG6I0LYDKnETFPrPd4SuA0axZ+xwSgFFeROzO5NDKB06ouud75G4DpLJLrBY7AETgjPIYf2QSYylXkdtwf3ZQKHIEzTm9cAJPJHi6+MTKB06qLcP4GoJSb0cwPaz6Hx1OjfTaCIs1j2NY8feU/O93j7uHaSOE/zIzgoNxIHebfM7s3AqdaF5t6Pz/gf+elsQIfzHXmMJZGIHBqdBrDew/OjAKgObcRsTKG8ZzBKce1uAFo1sIIBE6t5kYA0CS7NwKnanZvANq0MAKBAwA1sXsjcKrnF78B2rMwAoFTu6URADTF7o3AaSZwbo0BoAmP4SWsAqch84j4I4bXdQNQp28x/IyDH0J+By/6K88ihtd1X2z+OjUSOLguvH33kP4wglH6GB5JrYxC4LRqvfkg9EYBH3YjIXAOO0/4oTyiAgAEDgCAwAEAEDgAAAIHAEDgAAACBwBA4AAACBwAAIEDACBwAACBAwAgcAAABA4AgMABABA4AByJlyP9axURy4iY+UdUn89GsFMXEdcR8cUoAKpyFhFfI+Jqc51fGkk97OBst4iIf4obgKqdRMTfI+LCKAROC64i4ndjAGjG0ggETgtujACgKecxPKpC4FRrFsOzWQDasoiIU2MQODUHDgDtOdlEDgKnSisjAGjWb250BU7NgfNkDADNWhiBwKmVQ8YA7foadnEETsWBc2sMAM1aGEG5vMl4u3lE9Jt/yX2rCmA/Px/J/x9d5N5vdhXDN6rW/hGW59PLy4spvN8qEUDfNh8a4Ljv3Mf+QfhHo3f6mT88PhV6vW75n2/xPKI6jLvkHQQA08VrxtzIBI7AGedE5ABMZhm5b8mehV13gdOwPrle4ABMZ5FcPzcygdOyb4m1frEWYDrLiHhOrP8SvjIucBrWJ9Z2xgUwqey7zjymEjjNekisPQm7OABTWibXz41M4LSqT64XOADTWUXuaMF5eEwlcBp2L3AAirFMrveYSuA0K/OYSuAATOsucoeN50YmcASOwAEoJXLG8phK4AicEU58UACKCpwI34IVOAJnFIED7GMWw+OShT9wDxI4mcdU5i1wmnXvgwJ8YNj0EfHviPh7DD8I+s8Yfu16bjx76123BQ67rRJrT40LGHmtuNmEzeUr//nJJnge/AG8l8xjqrOw+y5wBM5ODhoDu1xvriu/jVh7HsOOzp0/hFP65HoRKXCalDmH4wIEbPtDdBUR/xvDDk3Glxh2exZhp3jsjelT8p8NAqc568TaM+MCXrnx6WPYiXnvNeL3zR/ec2PdqU+stfsucHxIRnB3BXy/Fmw7Z7Mv53MOf+0+Ny6BgzsBYLfMOZt9OZ+zXfY1H2JR4DTp3giAkX9IrmK/czb7cj7nMIEjEgUO7gKAV/5w7OMw52z25XzO+25OBY7AadLKCIBXfNQ5m305n7P/tdvxAoHjQwIQP+aczb6cz8lfuz3eEzjs4K4J6v+Mr+Lw52yeI+LxwP+/tn4+p0+svfSvtsBxFwC0aBYfd87mz81//0VE/BK5l9SN4XwOAgeBA/yHjzxncx8RP8XwuOv7S0W/P1b6I3K/ir1Li+dz+uR653AEDkATPuqczVNE/Bx/Pe56zWITOrcH/r/tfM72mEXg8AYXDCjf9/D4iHM2/xN/Pe7aZR3DY6W/xeHfx9XK+Zwn/zoLHA7D71FB2a7jY8/Z3Ozx935/rPSR53Nqlfnf5gZV4DTnwQigGYd+A/Fr52z29ZHncxA4AqdBayMAksacs9nXIj7mfA4IHABelT1n854br3l8zPkcEDgA/L/3nLPZ10eez6lBbwQCB4D9HPKczb4+6nwOCByAxnzkOZt9LcL5HAQOAHv4Ueds9uV8DgIHgJQpztnsy/kcP4AscNhqZgTQvGM4Z7Mv53MQOAgc4D8c4zmbfS3C+RwEDu+4ywOOyz47Lsd+zuY9s5jH/udzan7U5a31AgegKMvIPZop6ZzNe/4w7yJ/PmdZ2P/Oiw8OYQQOwGTWMZyd2aXkczb7ypzPeYzhMVdJ/M6WwOFAdwDAcVpGxK9v/CFe0zmbfS3ir/M5r83oNsr7RtJpcr1HVEfssxFM/iFZGRccdeTcbf6g/n7j0ofX+X/3/XxObGbUFT6fiz3+9yNwEDhQ7B/id5u/eFsN4Ze5OfX1+SPnEdXHmBkBQHEyOzgeTwkcgbPDyrgAXLsROLXxIQE4DpkdHNdugdOkSyMAKM55Yq1HVAKHHXojAJhc9htUAkfgNKczAoDqA2dlZAKnNZmvGfodKoDybk5duwWOuwAAqgscj6cETpNmibW9cQEcxXX7zLVb4HC4wPGab4Dpdcn1dnAETpMufUgAqg2cp3DAWOA0aOYuAKA4V4m1vXEJHIGz3XN4RAUwtYuIOBE4AoftusRauzcA05sn1/tVeYHT7J2AwAEoR+bx1GPYeRc4AkfgABRwzc58PXxpZAKnRafJD4rAAZjWPLm+N7JyfHp5eTGFw7iKiH9kZm9kAJNax/gDxk+R/6YsE7KDcziZx1N+xwRg+pvSzLenHC4WOM3qEms9ngKY1jy5/sbIBE6rMm8w7o0LYDKziPiSWP8Y3l4scBrVJdfbwQGYznVy/dLIBI7A2c3vmABM5zTyj6cEjsBplt8xASjnep05XHwbXu4ncBq+GzgXOABFWCTXL41M4LR8N5AhcACmMY/cC1mfXLPL9dkIRrnYEjLdHh8wAKYJnIyFkZXLm4y3m8WwPXlpFABNed78GeD8TaHs4LztNIavc58YBUBzbsRN2ZzB2f4vt7gBaM9zeHOxwKnYVyMAaNJd2L0ROJXqjACgWQsjEDgAUJPb8Lb5KvgW1dsMBqAtvjlVETs42ysegHb45lRF7OC8bRa+Jg7QiscYzl8KnErYwXnbavMv+5NRAFTtXtzUxw7OOFcx/FwDAHXpw+9NCRwAgBJ4RAUACBwAAIEDACBwAAAEDgCAwAEABA4AgMABABA4AAACBwBA4AAAAgcAQOAAAAgcAACBAwAw0mcjKFZnBADVeYiItTEInBZdR8QiIk6MAqBKf26u80LnHT69vLyYQjmWEfHVGACq9xjDTr3I2ZMzOOXoxA1AM85j2MVB4FTv2ggAmvJbOG+5N4+oyuEfFEB7niJiZgx5dnAA4HidhR38vdjBKcdq8y86AG15jmEXx4HjBDs45bgzAoAmnYRdnDQ7OOU4jWEXx/tvANpjFyfJDk451jGcpn82CoDm2MVJsoNTntOImEfE1ZY1l4n/vqcYdoYA+PHX8/PEers4Aqd5qxh/IPk+vGcBYKrAWUXu6MGvMbzVnh08oqpT5kDypXEBTGIdETfJv2dhbAKnZdm674wMYBI3kTtbeeaaLXBa9pD8wPiwAExjn10ch40FTtN6gQNQhOwuzpcYzu8gcATODs7hAExnHfmjBXNjEzgCZ5zOyAAmk31MJXAETrOy53AujAxgMqsYXtsx1nn4lXGB07Be4AAUY5lcf2VkAqdVDwIHoKjAyey8z41M4LSqT6w9Ny6AyWVe1OoxlcBp1kNyfWdkAMUEjuu2wGnWOoYf0xzLnQDA9IGTeUzlHI7AadZK4AAUFzljdcYlcFrV+6AAVHvdPglfEhE4jVol1nr1N8D0nMMROBw4cHyTCmB664h4FDgCh+365PqZkQEUde32iErgNCtzIl/gAJQVOGeu3QKnVZn34fiQAJR13XbtFjj4kAAUYRW595h1RiZwWtQbAUCRkePmVOBwIO4CAMq7ORU4AqdJD0YAUPW1+9K4BE6L1kYA4NotcGiZ9ykAHIc+ub4zMoHTmlVi7YlxASBwqC1wADge94m1duAFDgBUxw8mCxwAKMLKCAQOh9MZAUBxgWMHR+AAQHWcwRE4Tbo3AgAEDgCAwAEAEDgAAAIHAEDgAAACh6pdGgEAAoeWrY0AAIFDbR6MAMC1W+AAAB9hllhr913gAEB1gYPA8QEBoDp2cASOwNni2bgAjkbmBzSdwRE4+IAAFOHECAQObzs1AoDiXCTX90YmcHxI3uYZLsBxmBmBwOFwPKICKO/m9N64BI4PCQC1XbtXxiVwWpQ5g2MHB+A4zASOwOFwHxJncACO48b0PLG+NzKB06IzdwEARckeLXDtFjg+JD4kAEevS6x9du0WOC3KnL95Mi6A4gKnNy6B40OynTsAgONwmVjryyECp0kzHxKAam9MI+zgCByBs9PKuAAmdyVwBA672eYEKEuXWOsNxgKnSbPkeoEDMP11O/P+mzsjEzgtynxF/Dm85A9gah5PCRwOHDh2bwCmN0+sfXLtFjit6twFABRjFn6eQeAwih0cgHJkH085f7PFp5eXF1OoN27+lVj/U/iaOMCUVjH+twOfI/em+ubYwak7cCLxQRE3ANPpIvfDyHZvBE7TH5axeuMCmNQ8uX5pZAJH4Ozm/A3AdE4j4mti/ZMbU4HTqlnktjp9UACmc51cvzQygdOqLrle4ABMZy5wBA7jZL5q6HdMAKaNm8yO+334UojAaViXWNsbF8BkFsn1N0YmcFp1EREnAgfg6M0jt3vzFL4ePtpnIyjOaQwH0ro3/vPZB989AHC4G9KMpZGN503G5X0Y+sjt0ABQvufNDezaKMbxiKocM3ED0KyluBE4tVqIG4BmOVwscKrVGQFAk27DV8PTnMEph39QAG36SeDk2cEBgONl90bgVO+bEQA0Z2EEAqd2DpgBtOWPsHsjcBrQR8SfxgDQhEc3tgKnJdcR8UsMr+sGoD7PMezcdOG9N+/iW1TluojhZxsAqEdvBAIHAOBVHlEBAAIHAEDgAAAIHAAAgQMAIHAAAIEDACBwAAAEDgCAwAEAEDgAgMABABA4AAACBwBA4AAACBwAQOAAAAgcAACBAwAgcAAABA4AgMABAAQOAIDAAQAQOAAAAgcAQOAAAAIHAEDgAAAIHAAAgQMAIHAAAIEDACBwAAAEDgCAwAEAEDgAgMABABA4AAACBwBA4AAACBwAAIEDAAgcAACBAwAgcAAABA4AgMABAAQOAECB/g/zsyjrPzXCGQAAAABJRU5ErkJggg=="
+module.exports = __webpack_require__.p + "165aa657a31e0f7f1ffc350e151fa6d3.png";
 
 /***/ }),
 /* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "ee3c268d1c23619b2031e0710707fe9e.png";
+module.exports = __webpack_require__.p + "66a445eefc37546192cd6a1bd7e8bcfb.png";
 
 /***/ }),
 /* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "cb6cd48cc2c2fd67ffdd5783bd7c93e6.png";
+module.exports = __webpack_require__.p + "f043b9f2154158d1e97f25e9a1861ba2.png";
 
 /***/ }),
 /* 60 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = require("react-compare-image");
+module.exports = __webpack_require__.p + "0b31b1e9f0d8caf031427224e7f7ed62.png";
 
 /***/ }),
 /* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "585da359ff2fc6ded4b39185a89d1c56.png";
+module.exports = __webpack_require__.p + "1a9f38a377f3638bcb3d214adb0d2a01.jpg";
 
 /***/ }),
 /* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "a8fa334acf89a7461a76737c5b481f56.png";
+module.exports = __webpack_require__.p + "1eb9f577c40dbfb15ce57501d814165d.jpg";
 
 /***/ }),
 /* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "b7641340abaf6a5db5e610b957d0f9bc.png";
+module.exports = __webpack_require__.p + "8cceed63e308eeb2baf16014091dcb14.png";
 
 /***/ }),
 /* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "31bbd92304869447352d3b754c71f001.jpg";
+module.exports = __webpack_require__.p + "7a4560d2f3c4b7750841069104f16251.png";
 
 /***/ }),
 /* 65 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-module.exports = __webpack_require__.p + "ebb85e27b525b7cbb532fec99933bb33.jpg";
+module.exports = "data:image/png;base64,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"
 
 /***/ }),
 /* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "51f674bd7dab6377b42b8b0ce69c00e3.jpg";
+module.exports = __webpack_require__.p + "ee3c268d1c23619b2031e0710707fe9e.png";
 
 /***/ }),
 /* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "f73e67f67f91f1d96f2a0834ed050468.jpg";
+module.exports = __webpack_require__.p + "cb6cd48cc2c2fd67ffdd5783bd7c93e6.png";
 
 /***/ }),
 /* 68 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-module.exports = __webpack_require__.p + "d0dc292f346324a02e28f6d9c3e84c3e.jpg";
+module.exports = require("react-compare-image");
 
 /***/ }),
 /* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "2f8262caad82ada5e2e7a25ffe1010d0.jpg";
+module.exports = __webpack_require__.p + "585da359ff2fc6ded4b39185a89d1c56.png";
 
 /***/ }),
 /* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "02cccfec9b80ed0b40a3b5cc4aaf5b17.jpg";
+module.exports = __webpack_require__.p + "a8fa334acf89a7461a76737c5b481f56.png";
 
 /***/ }),
 /* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "906e819f61a6ce8ef0a4bd16197631e1.jpg";
+module.exports = __webpack_require__.p + "b7641340abaf6a5db5e610b957d0f9bc.png";
 
 /***/ }),
 /* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "de7f0f9ff3445fa773fbb06149e4de20.jpg";
+module.exports = __webpack_require__.p + "31bbd92304869447352d3b754c71f001.jpg";
 
 /***/ }),
 /* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "8f1faf29d07ef13f87212dd34128dbf8.jpg";
+module.exports = __webpack_require__.p + "ebb85e27b525b7cbb532fec99933bb33.jpg";
 
 /***/ }),
 /* 74 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = require("styled-normalize");
+module.exports = __webpack_require__.p + "51f674bd7dab6377b42b8b0ce69c00e3.jpg";
 
 /***/ }),
 /* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "a3484902ac0cf6f03d265260c0e24e0e.ttf";
+module.exports = __webpack_require__.p + "f73e67f67f91f1d96f2a0834ed050468.jpg";
 
 /***/ }),
 /* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "f3beb0957abf56c707e56498f0903619.ttf";
+module.exports = __webpack_require__.p + "d0dc292f346324a02e28f6d9c3e84c3e.jpg";
 
 /***/ }),
 /* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "1b413af308adece662cdce87748edbf2.ttf";
+module.exports = __webpack_require__.p + "2f8262caad82ada5e2e7a25ffe1010d0.jpg";
 
 /***/ }),
 /* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "1a2ffa72728bda6c1a3228d46c4bab13.ttf";
+module.exports = __webpack_require__.p + "02cccfec9b80ed0b40a3b5cc4aaf5b17.jpg";
 
 /***/ }),
 /* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "f53f50bf86ed0285a386f516d19e6a2a.ttf";
+module.exports = __webpack_require__.p + "906e819f61a6ce8ef0a4bd16197631e1.jpg";
 
 /***/ }),
 /* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "62618b593c97353490bcf112a4ea546d.ttf";
+module.exports = __webpack_require__.p + "de7f0f9ff3445fa773fbb06149e4de20.jpg";
 
 /***/ }),
 /* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "33a327aaeb24b268c2b496ffc2d295f2.ttf";
+module.exports = __webpack_require__.p + "8f1faf29d07ef13f87212dd34128dbf8.jpg";
 
 /***/ }),
 /* 82 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-module.exports = __webpack_require__.p + "20790586fa1d70412d8683f90c0a2ce6.ttf";
+module.exports = require("styled-normalize");
 
 /***/ }),
 /* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "aa4b73e3917aed58f4222ed05f197fc8.ttf";
+module.exports = __webpack_require__.p + "a3484902ac0cf6f03d265260c0e24e0e.ttf";
 
 /***/ }),
 /* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(85);
-__webpack_require__(87);
-module.exports = __webpack_require__(89);
-
+module.exports = __webpack_require__.p + "f3beb0957abf56c707e56498f0903619.ttf";
 
 /***/ }),
 /* 85 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "1b413af308adece662cdce87748edbf2.ttf";
+
+/***/ }),
+/* 86 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "1a2ffa72728bda6c1a3228d46c4bab13.ttf";
+
+/***/ }),
+/* 87 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "f53f50bf86ed0285a386f516d19e6a2a.ttf";
+
+/***/ }),
+/* 88 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "62618b593c97353490bcf112a4ea546d.ttf";
+
+/***/ }),
+/* 89 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "33a327aaeb24b268c2b496ffc2d295f2.ttf";
+
+/***/ }),
+/* 90 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "20790586fa1d70412d8683f90c0a2ce6.ttf";
+
+/***/ }),
+/* 91 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "aa4b73e3917aed58f4222ed05f197fc8.ttf";
+
+/***/ }),
+/* 92 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(93);
+__webpack_require__(95);
+module.exports = __webpack_require__(101);
+
+
+/***/ }),
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(module) {
 /* eslint-disable import/no-dynamic-require */
 
-var plugins = __webpack_require__(27)["default"];
+var plugins = __webpack_require__(31)["default"];
 
-var _require = __webpack_require__(28),
+var _require = __webpack_require__(32),
     registerPlugins = _require.registerPlugins;
 
 registerPlugins(plugins);
 
 if (typeof document !== 'undefined' && module && module.hot) {
   module.hot.accept("/Users/user/projects/sati_one_landing/artifacts/react-static-browser-plugins.js", function () {
-    registerPlugins(__webpack_require__(27)["default"]);
+    registerPlugins(__webpack_require__(31)["default"]);
   });
 }
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(26)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(23)(module)))
 
 /***/ }),
-/* 86 */
+/* 94 */
 /***/ (function(module, exports) {
 
 module.exports = require("@reach/router");
 
 /***/ }),
-/* 87 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(module) {
 /* eslint-disable import/no-dynamic-require */
 
-var _require = __webpack_require__(28),
+var _require = __webpack_require__(32),
     registerTemplates = _require.registerTemplates;
 
-var _require2 = __webpack_require__(29),
+var _require2 = __webpack_require__(33),
     templates = _require2["default"],
     notFoundTemplate = _require2.notFoundTemplate;
 
@@ -7020,31 +7780,449 @@ registerTemplates(templates, notFoundTemplate);
 
 if (typeof document !== 'undefined' && module && module.hot) {
   module.hot.accept("/Users/user/projects/sati_one_landing/artifacts/react-static-templates.js", function () {
-    var _require3 = __webpack_require__(29),
+    var _require3 = __webpack_require__(33),
         templates = _require3["default"],
         notFoundTemplate = _require3.notFoundTemplate;
 
     registerTemplates(templates, notFoundTemplate);
   });
 }
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(26)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(23)(module)))
 
 /***/ }),
-/* 88 */
-/***/ (function(module, exports) {
-
-module.exports = require("/Users/user/projects/sati_one_landing/node_modules/react-static/lib/browser/components/Default404");
-
-/***/ }),
-/* 89 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _interopRequireWildcard = __webpack_require__(90);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.clearChunks = exports.flushModuleIds = exports.flushChunkNames = exports.MODULE_IDS = exports.CHUNK_NAMES = undefined;
 
-var _interopRequireDefault = __webpack_require__(91);
+var _extends = Object.assign || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];
+
+    for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
+  }
+
+  return target;
+};
+
+exports["default"] = requireUniversalModule;
+
+var _utils = __webpack_require__(25);
+
+var CHUNK_NAMES = exports.CHUNK_NAMES = new Set();
+var MODULE_IDS = exports.MODULE_IDS = new Set();
+
+function requireUniversalModule(universalConfig, options, props, prevProps) {
+  var key = options.key,
+      _options$timeout = options.timeout,
+      timeout = _options$timeout === undefined ? 15000 : _options$timeout,
+      onLoad = options.onLoad,
+      onError = options.onError,
+      isDynamic = options.isDynamic,
+      modCache = options.modCache,
+      promCache = options.promCache,
+      usesBabelPlugin = options.usesBabelPlugin;
+  var config = getConfig(isDynamic, universalConfig, options, props);
+  var chunkName = config.chunkName,
+      path = config.path,
+      resolve = config.resolve,
+      load = config.load;
+  var asyncOnly = !path && !resolve || typeof chunkName === 'function';
+
+  var requireSync = function requireSync(props, context) {
+    var exp = (0, _utils.loadFromCache)(chunkName, props, modCache);
+
+    if (!exp) {
+      var mod = void 0;
+
+      if (!(0, _utils.isWebpack)() && path) {
+        var modulePath = (0, _utils.callForString)(path, props) || '';
+        mod = (0, _utils.tryRequire)(modulePath);
+      } else if ((0, _utils.isWebpack)() && resolve) {
+        var weakId = (0, _utils.callForString)(resolve, props);
+
+        if (__webpack_require__.m[weakId]) {
+          mod = (0, _utils.tryRequire)(weakId);
+        }
+      }
+
+      if (mod) {
+        exp = (0, _utils.resolveExport)(mod, key, onLoad, chunkName, props, context, modCache, true);
+      }
+    }
+
+    return exp;
+  };
+
+  var requireAsync = function requireAsync(props, context) {
+    var exp = (0, _utils.loadFromCache)(chunkName, props, modCache);
+    if (exp) return Promise.resolve(exp);
+    var cachedPromise = (0, _utils.loadFromPromiseCache)(chunkName, props, promCache);
+    if (cachedPromise) return cachedPromise;
+    var prom = new Promise(function (res, rej) {
+      var reject = function reject(error) {
+        error = error || new Error('timeout exceeded');
+        clearTimeout(timer);
+
+        if (onError) {
+          var _isServer = typeof window === 'undefined';
+
+          var info = {
+            isServer: _isServer
+          };
+          onError(error, info);
+        }
+
+        rej(error);
+      }; // const timer = timeout && setTimeout(reject, timeout)
+
+
+      var timer = timeout && setTimeout(reject, timeout);
+
+      var resolve = function resolve(mod) {
+        clearTimeout(timer);
+        var exp = (0, _utils.resolveExport)(mod, key, onLoad, chunkName, props, context, modCache);
+        if (exp) return res(exp);
+        reject(new Error('export not found'));
+      };
+
+      var request = load(props, {
+        resolve: resolve,
+        reject: reject
+      }); // if load doesn't return a promise, it must call resolveImport
+      // itself. Most common is the promise implementation below.
+
+      if (!request || typeof request.then !== 'function') return;
+      request.then(resolve)["catch"](reject);
+    });
+    (0, _utils.cacheProm)(prom, chunkName, props, promCache);
+    return prom;
+  };
+
+  var addModule = function addModule(props) {
+    if (_utils.isServer || _utils.isTest) {
+      if (chunkName) {
+        var name = (0, _utils.callForString)(chunkName, props);
+
+        if (usesBabelPlugin) {
+          // if ignoreBabelRename is true, don't apply regex
+          var shouldKeepName = options && !!options.ignoreBabelRename;
+
+          if (!shouldKeepName) {
+            name = name.replace(/\//g, '-');
+          }
+        }
+
+        if (name) CHUNK_NAMES.add(name);
+        if (!_utils.isTest) return name; // makes tests way smaller to run both kinds
+      }
+
+      if ((0, _utils.isWebpack)()) {
+        var weakId = (0, _utils.callForString)(resolve, props);
+        if (weakId) MODULE_IDS.add(weakId);
+        return weakId;
+      }
+
+      if (!(0, _utils.isWebpack)()) {
+        var modulePath = (0, _utils.callForString)(path, props);
+        if (modulePath) MODULE_IDS.add(modulePath);
+        return modulePath;
+      }
+    }
+  };
+
+  var shouldUpdate = function shouldUpdate(next, prev) {
+    var cacheKey = (0, _utils.callForString)(chunkName, next);
+    var config = getConfig(isDynamic, universalConfig, options, prev);
+    var prevCacheKey = (0, _utils.callForString)(config.chunkName, prev);
+    return cacheKey !== prevCacheKey;
+  };
+
+  return {
+    requireSync: requireSync,
+    requireAsync: requireAsync,
+    addModule: addModule,
+    shouldUpdate: shouldUpdate,
+    asyncOnly: asyncOnly
+  };
+}
+
+var flushChunkNames = exports.flushChunkNames = function flushChunkNames() {
+  var chunks = Array.from(CHUNK_NAMES);
+  CHUNK_NAMES.clear();
+  return chunks;
+};
+
+var flushModuleIds = exports.flushModuleIds = function flushModuleIds() {
+  var ids = Array.from(MODULE_IDS);
+  MODULE_IDS.clear();
+  return ids;
+};
+
+var clearChunks = exports.clearChunks = function clearChunks() {
+  CHUNK_NAMES.clear();
+  MODULE_IDS.clear();
+};
+
+var getConfig = function getConfig(isDynamic, universalConfig, options, props) {
+  if (isDynamic) {
+    var resultingConfig = typeof universalConfig === 'function' ? universalConfig(props) : universalConfig;
+
+    if (options) {
+      resultingConfig = _extends({}, resultingConfig, options);
+    }
+
+    return resultingConfig;
+  }
+
+  var load = typeof universalConfig === 'function' ? universalConfig : // $FlowIssue
+  function () {
+    return universalConfig;
+  };
+  return {
+    file: 'default',
+    id: options.id || 'default',
+    chunkName: options.chunkName || 'default',
+    resolve: options.resolve || '',
+    path: options.path || '',
+    load: load,
+    ignoreBabelRename: true
+  };
+};
+
+/***/ }),
+/* 97 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	".": 16,
+	"./": 16,
+	"./index": 16,
+	"./index.js": 16
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 97;
+
+/***/ }),
+/* 98 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _typeof = __webpack_require__(24);
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }
+
+  return function (Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) defineProperties(Constructor, staticProps);
+    return Constructor;
+  };
+}();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(13);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    "default": obj
+  };
+}
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+function _possibleConstructorReturn(self, call) {
+  if (!self) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return call && (_typeof(call) === "object" || typeof call === "function") ? call : self;
+}
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function, not " + _typeof(superClass));
+  }
+
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      enumerable: false,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+}
+
+var ReportChunks = function (_React$Component) {
+  _inherits(ReportChunks, _React$Component);
+
+  function ReportChunks() {
+    _classCallCheck(this, ReportChunks);
+
+    return _possibleConstructorReturn(this, (ReportChunks.__proto__ || Object.getPrototypeOf(ReportChunks)).apply(this, arguments));
+  }
+
+  _createClass(ReportChunks, [{
+    key: 'getChildContext',
+    value: function getChildContext() {
+      return {
+        report: this.props.report
+      };
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2["default"].Children.only(this.props.children);
+    }
+  }]);
+
+  return ReportChunks;
+}(_react2["default"].Component);
+
+ReportChunks.propTypes = {
+  report: _propTypes2["default"].func.isRequired
+};
+ReportChunks.childContextTypes = {
+  report: _propTypes2["default"].func.isRequired
+};
+exports["default"] = ReportChunks;
+
+/***/ }),
+/* 99 */
+/***/ (function(module, exports) {
+
+module.exports = require("vm");
+
+/***/ }),
+/* 100 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.__handleAfter = exports.__update = undefined;
+
+var _hoistNonReactStatics = __webpack_require__(34);
+
+var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
+
+var _index = __webpack_require__(19);
+
+var _index2 = _interopRequireDefault(_index);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    "default": obj
+  };
+}
+
+var __update = exports.__update = function __update(props, state, isInitialized) {
+  var isMount = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
+  var isSync = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : false;
+  var isServer = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : false;
+  if (!isInitialized) return state;
+
+  if (!state.error) {
+    state.error = null;
+  }
+
+  return __handleAfter(props, state, isMount, isSync, isServer);
+};
+/* eslint class-methods-use-this: ["error", { "exceptMethods": ["__handleAfter"] }] */
+
+
+var __handleAfter = exports.__handleAfter = function __handleAfter(props, state, isMount, isSync, isServer) {
+  var mod = state.mod,
+      error = state.error;
+
+  if (mod && !error) {
+    (0, _hoistNonReactStatics2["default"])(_index2["default"], mod, {
+      preload: true,
+      preloadWeak: true
+    });
+
+    if (props.onAfter) {
+      var onAfter = props.onAfter;
+      var info = {
+        isMount: isMount,
+        isSync: isSync,
+        isServer: isServer
+      };
+      onAfter(info, mod);
+    }
+  } else if (error && props.onError) {
+    props.onError(error);
+  }
+
+  return state;
+};
+
+/***/ }),
+/* 101 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireWildcard = __webpack_require__(102);
+
+var _interopRequireDefault = __webpack_require__(103);
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -7057,7 +8235,7 @@ var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(14));
 
 var React = _interopRequireWildcard(__webpack_require__(1));
 
-var _useStaticInfo = __webpack_require__(92);
+var _useStaticInfo = __webpack_require__(104);
 /* eslint-disable import/no-dynamic-require */
 
 
@@ -7078,7 +8256,7 @@ function Suspense(_ref) {
 React.Suspense = Suspense;
 React["default"].Suspense = Suspense;
 
-var App = __webpack_require__(93)["default"];
+var App = __webpack_require__(105)["default"];
 
 var _default = function _default(staticInfo) {
   return function (props) {
@@ -7091,36 +8269,36 @@ var _default = function _default(staticInfo) {
 exports["default"] = _default;
 
 /***/ }),
-/* 90 */
+/* 102 */
 /***/ (function(module, exports) {
 
 module.exports = require("@babel/runtime/helpers/interopRequireWildcard");
 
 /***/ }),
-/* 91 */
+/* 103 */
 /***/ (function(module, exports) {
 
 module.exports = require("@babel/runtime/helpers/interopRequireDefault");
 
 /***/ }),
-/* 92 */
+/* 104 */
 /***/ (function(module, exports) {
 
 module.exports = require("/Users/user/projects/sati_one_landing/node_modules/react-static/lib/browser/hooks/useStaticInfo");
 
 /***/ }),
-/* 93 */
+/* 105 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(16);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(17);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_hot_loader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(31);
+/* harmony import */ var react_hot_loader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(39);
 /* harmony import */ var react_hot_loader__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_hot_loader__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(20);
+/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(22);
 
 
  // Your top level component
@@ -7146,10 +8324,10 @@ if (typeof document !== 'undefined') {
     });
   }
 }
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(94)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(106)(module)))
 
 /***/ }),
-/* 94 */
+/* 106 */
 /***/ (function(module, exports) {
 
 module.exports = function (originalModule) {
@@ -7179,19 +8357,19 @@ module.exports = function (originalModule) {
 };
 
 /***/ }),
-/* 95 */
+/* 107 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-flags-select/css/react-flags-select.css");
 
 /***/ }),
-/* 96 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "1042e1d58ac392e0cd31749c4992fd75.png";
 
 /***/ }),
-/* 97 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "74f056749c745c39601b3f649c125adf.png";

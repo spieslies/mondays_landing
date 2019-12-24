@@ -46,7 +46,7 @@ export const theme = (path, displayError) => props =>
 const getColorRule = color => `color: ${color};`;
 
 export const getCurrentBreakpoint = () => {
-  const { innerWidth } = window;
+  const { innerWidth } = window || {};
   if (innerWidth <= BREAKPOINTS['sm']) {
     return 'xs';
   } else if (innerWidth >= BREAKPOINTS['sm'] && innerWidth < BREAKPOINTS['md']) {

@@ -19,8 +19,8 @@ import Cost from '../components/cost/Cost';
 // import Question from '../components/question/Question';
 // import Bottom from '../components/bottom/Bottom';
 
-ReactGA.initialize('');
-ReactGA.pageview(window.location.pathname);
+// ReactGA.initialize('');
+// ReactGA.pageview(window.location.pathname);
 
 class Landing extends PureComponent {
   render() {
