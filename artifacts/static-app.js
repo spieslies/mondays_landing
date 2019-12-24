@@ -111,19 +111,19 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 0 */
 /***/ (function(module, exports) {
 
-module.exports = require("@babel/runtime/helpers/taggedTemplateLiteral");
+module.exports = require("react");
 
 /***/ }),
 /* 1 */
 /***/ (function(module, exports) {
 
-module.exports = require("react");
+module.exports = require("styled-components");
 
 /***/ }),
 /* 2 */
 /***/ (function(module, exports) {
 
-module.exports = require("styled-components");
+module.exports = require("@babel/runtime/helpers/taggedTemplateLiteral");
 
 /***/ }),
 /* 3 */
@@ -236,12 +236,6 @@ module.exports = require("react-dom");
 /* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "fb1d656f452aa0084da207d24412cfb2.jpg";
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports, __webpack_require__) {
-
 "use strict";
 /* WEBPACK VAR INJECTION */(function(module) {
 
@@ -309,7 +303,7 @@ Object.defineProperty(exports, 'ReportChunks', {
 });
 exports["default"] = universal;
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -725,16 +719,22 @@ function universal(asyncModule) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(23)(module)))
 
 /***/ }),
-/* 20 */
+/* 19 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-scroll-parallax");
 
 /***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/BgTop.fb1d656f.jpg";
+
+/***/ }),
 /* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "22c350db79946bd18c18e1abf0b8e5b5.png";
+module.exports = __webpack_require__.p + "static/top_wave.22c350db.png";
 
 /***/ }),
 /* 22 */
@@ -743,7 +743,7 @@ module.exports = __webpack_require__.p + "22c350db79946bd18c18e1abf0b8e5b5.png";
 "use strict";
 
 // EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__(1);
+var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
 // EXTERNAL MODULE: external "react-static"
@@ -770,7 +770,7 @@ var inherits_ = __webpack_require__(7);
 var inherits_default = /*#__PURE__*/__webpack_require__.n(inherits_);
 
 // EXTERNAL MODULE: external "styled-components"
-var external_styled_components_ = __webpack_require__(2);
+var external_styled_components_ = __webpack_require__(1);
 var external_styled_components_default = /*#__PURE__*/__webpack_require__.n(external_styled_components_);
 
 // EXTERNAL MODULE: external "react-ga"
@@ -781,10 +781,10 @@ var external_react_ga_default = /*#__PURE__*/__webpack_require__.n(external_reac
 var external_react_i18next_ = __webpack_require__(9);
 
 // EXTERNAL MODULE: external "react-scroll-parallax"
-var external_react_scroll_parallax_ = __webpack_require__(20);
+var external_react_scroll_parallax_ = __webpack_require__(19);
 
 // EXTERNAL MODULE: external "@babel/runtime/helpers/taggedTemplateLiteral"
-var taggedTemplateLiteral_ = __webpack_require__(0);
+var taggedTemplateLiteral_ = __webpack_require__(2);
 var taggedTemplateLiteral_default = /*#__PURE__*/__webpack_require__.n(taggedTemplateLiteral_);
 
 // EXTERNAL MODULE: external "@babel/runtime/regenerator"
@@ -869,39 +869,7 @@ if (external_i18next_default.a.language.includes('-')) {
 // EXTERNAL MODULE: external "react-device-detect"
 var external_react_device_detect_ = __webpack_require__(28);
 
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/responsiveUtils.js
-
-
-function _templateObject3() {
-  var data = taggedTemplateLiteral_default()(["\n  @media (min-width: ", ") and (max-width: ", ") {\n    ", ";\n  }\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = taggedTemplateLiteral_default()(["\n  @media (max-width: ", ") {\n    ", ";\n  }\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  @media (min-width: ", ") {\n    ", ";\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/responsiveUtils.js
 
 
 
@@ -935,17 +903,17 @@ var responsiveUtils_getSizeFromBreakpoint = function getSizeFromBreakpoint(break
 };
 var responsiveUtils_min = function min(breakpoint) {
   return function () {
-    return Object(external_styled_components_["css"])(_templateObject(), responsiveUtils_getSizeFromBreakpoint(breakpoint, BREAKPOINTS), external_styled_components_["css"].apply(void 0, arguments));
+    return Object(external_styled_components_["css"])(["@media (min-width:", "){", ";}"], responsiveUtils_getSizeFromBreakpoint(breakpoint, BREAKPOINTS), external_styled_components_["css"].apply(void 0, arguments));
   };
 };
 var responsiveUtils_max = function max(breakpoint) {
   return function () {
-    return Object(external_styled_components_["css"])(_templateObject2(), responsiveUtils_getSizeFromBreakpoint(breakpoint, BREAKPOINTS), external_styled_components_["css"].apply(void 0, arguments));
+    return Object(external_styled_components_["css"])(["@media (max-width:", "){", ";}"], responsiveUtils_getSizeFromBreakpoint(breakpoint, BREAKPOINTS), external_styled_components_["css"].apply(void 0, arguments));
   };
 };
 var responsiveUtils_between = function between(firstBreakpoint, secondBreakpoint) {
   return function () {
-    return Object(external_styled_components_["css"])(_templateObject3(), responsiveUtils_getSizeFromBreakpoint(firstBreakpoint, BREAKPOINTS), responsiveUtils_getSizeFromBreakpoint(secondBreakpoint, BREAKPOINTS), external_styled_components_["css"].apply(void 0, arguments));
+    return Object(external_styled_components_["css"])(["@media (min-width:", ") and (max-width:", "){", ";}"], responsiveUtils_getSizeFromBreakpoint(firstBreakpoint, BREAKPOINTS), responsiveUtils_getSizeFromBreakpoint(secondBreakpoint, BREAKPOINTS), external_styled_components_["css"].apply(void 0, arguments));
   };
 };
 var media = {
@@ -953,7 +921,7 @@ var media = {
   max: responsiveUtils_max,
   between: responsiveUtils_between
 };
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/theme.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/theme.js
 
 var BIG_SHADOW = 'rgba(118, 152, 207, 0.5)';
 var SMALLER_SHADOW = 'rgba(0, 0, 0, 0.24)';
@@ -1064,51 +1032,11 @@ var theme = {
   getCurrentBreakpoint: responsiveUtils_getCurrentBreakpoint
 };
 /* harmony default export */ var ui_theme = (theme);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/helpers.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/helpers.js
 
-
-function _templateObject8() {
-  var data = taggedTemplateLiteral_default()(["\n    ", ": calc(", "", ");\n  "]);
-
-  _templateObject8 = function _templateObject8() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject7() {
-  var data = taggedTemplateLiteral_default()(["\n    ", ": calc(", "", ");\n  "]);
-
-  _templateObject7 = function _templateObject7() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject6() {
-  var data = taggedTemplateLiteral_default()(["\n    ", ": calc(", "", ");\n  "]);
-
-  _templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject5() {
-  var data = taggedTemplateLiteral_default()(["\n    ", ": calc(", "", ");\n  "]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
 
 function _templateObject4() {
-  var data = taggedTemplateLiteral_default()(["\n  ", "\n  ", "\n  ", "\n  ", "\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    ", ": calc(", "", ");\n  "]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -1117,30 +1045,30 @@ function _templateObject4() {
   return data;
 }
 
-function helpers_templateObject3() {
-  var data = taggedTemplateLiteral_default()(["\n  @media (min-width: ", ") and (max-width: ", ") {\n    ", ";\n  }\n"]);
+function _templateObject3() {
+  var data = taggedTemplateLiteral_default()(["\n    ", ": calc(", "", ");\n  "]);
 
-  helpers_templateObject3 = function _templateObject3() {
+  _templateObject3 = function _templateObject3() {
     return data;
   };
 
   return data;
 }
 
-function helpers_templateObject2() {
-  var data = taggedTemplateLiteral_default()(["\n  @media (max-width: ", ") {\n    ", ";\n  }\n"]);
+function _templateObject2() {
+  var data = taggedTemplateLiteral_default()(["\n    ", ": calc(", "", ");\n  "]);
 
-  helpers_templateObject2 = function _templateObject2() {
+  _templateObject2 = function _templateObject2() {
     return data;
   };
 
   return data;
 }
 
-function helpers_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  @media (min-width: ", ") {\n    ", ";\n  }\n"]);
+function _templateObject() {
+  var data = taggedTemplateLiteral_default()(["\n    ", ": calc(", "", ");\n  "]);
 
-  helpers_templateObject = function _templateObject() {
+  _templateObject = function _templateObject() {
     return data;
   };
 
@@ -1362,17 +1290,17 @@ var helpers_getSizeFromBreakpoint = function getSizeFromBreakpoint(breakpointVal
 };
 var helpers_min = function min(breakpoint) {
   return function () {
-    return Object(external_styled_components_["css"])(helpers_templateObject(), helpers_getSizeFromBreakpoint(breakpoint, BREAKPOINTS), external_styled_components_["css"].apply(void 0, arguments));
+    return Object(external_styled_components_["css"])(["@media (min-width:", "){", ";}"], helpers_getSizeFromBreakpoint(breakpoint, BREAKPOINTS), external_styled_components_["css"].apply(void 0, arguments));
   };
 };
 var helpers_max = function max(breakpoint) {
   return function () {
-    return Object(external_styled_components_["css"])(helpers_templateObject2(), helpers_getSizeFromBreakpoint(breakpoint, BREAKPOINTS), external_styled_components_["css"].apply(void 0, arguments));
+    return Object(external_styled_components_["css"])(["@media (max-width:", "){", ";}"], helpers_getSizeFromBreakpoint(breakpoint, BREAKPOINTS), external_styled_components_["css"].apply(void 0, arguments));
   };
 };
 var helpers_between = function between(firstBreakpoint, secondBreakpoint) {
   return function () {
-    return Object(external_styled_components_["css"])(helpers_templateObject3(), helpers_getSizeFromBreakpoint(firstBreakpoint, BREAKPOINTS), helpers_getSizeFromBreakpoint(secondBreakpoint, BREAKPOINTS), external_styled_components_["css"].apply(void 0, arguments));
+    return Object(external_styled_components_["css"])(["@media (min-width:", ") and (max-width:", "){", ";}"], helpers_getSizeFromBreakpoint(firstBreakpoint, BREAKPOINTS), helpers_getSizeFromBreakpoint(secondBreakpoint, BREAKPOINTS), external_styled_components_["css"].apply(void 0, arguments));
   };
 };
 var helpers_media = {
@@ -1401,115 +1329,16 @@ var helpers_itemSideByBreakpoint = function itemSideByBreakpoint(breakpoint) {
 
 var helpers_getItemDimensions = function getItemDimensions(rule, afterCalc) {
   return function (p) {
-    return Object(external_styled_components_["css"])(_templateObject4(), p.theme.min('lg')(_templateObject5(), rule, helpers_itemSideByBreakpoint('lg'), afterCalc && " ".concat(afterCalc)), p.theme.max('lg')(_templateObject6(), rule, helpers_itemSideByBreakpoint('md'), afterCalc && " ".concat(afterCalc)), p.theme.max('md')(_templateObject7(), rule, helpers_itemSideByBreakpoint('sm'), afterCalc && " ".concat(afterCalc)), p.theme.max('sm')(_templateObject8(), rule, helpers_itemSideByBreakpoint('xs'), afterCalc && " ".concat(afterCalc)));
+    return Object(external_styled_components_["css"])(["", " ", " ", " ", ""], p.theme.min('lg')(_templateObject(), rule, helpers_itemSideByBreakpoint('lg'), afterCalc && " ".concat(afterCalc)), p.theme.max('lg')(_templateObject2(), rule, helpers_itemSideByBreakpoint('md'), afterCalc && " ".concat(afterCalc)), p.theme.max('md')(_templateObject3(), rule, helpers_itemSideByBreakpoint('sm'), afterCalc && " ".concat(afterCalc)), p.theme.max('sm')(_templateObject4(), rule, helpers_itemSideByBreakpoint('xs'), afterCalc && " ".concat(afterCalc)));
   };
 };
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/Button.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/Button.js
 
 
-function _templateObject10() {
-  var data = taggedTemplateLiteral_default()(["\n    background-color: ", ";\n    border-color: ", ";\n    color: white;\n  "]);
-
-  _templateObject10 = function _templateObject10() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject9() {
-  var data = taggedTemplateLiteral_default()(["\n    background: ", ";\n    border-color: ", ";\n    &:hover {\n      box-shadow: none;\n      cursor: not-allowed;\n    }\n  "]);
-
-  _templateObject9 = function _templateObject9() {
-    return data;
-  };
-
-  return data;
-}
-
-function Button_templateObject8() {
-  var data = taggedTemplateLiteral_default()(["\n    background: transparent;\n    color: ", ";\n    border-color: ", ";\n    &:hover {\n      background: ", ";\n      color: white;\n    }\n  "]);
-
-  Button_templateObject8 = function _templateObject8() {
-    return data;
-  };
-
-  return data;
-}
-
-function Button_templateObject7() {
-  var data = taggedTemplateLiteral_default()(["\n    position:relative;\n    &:after {\n      content: \"\";\n      position:absolute;\n      display: block;\n      width: 5px;\n      height: 5px;\n      border-radius: 50%;\n      background: ", ";\n      top: 50%;\n      left: 10px;\n      transform: translate(0, -50%);\n    }\n  "]);
-
-  Button_templateObject7 = function _templateObject7() {
-    return data;
-  };
-
-  return data;
-}
-
-function Button_templateObject6() {
-  var data = taggedTemplateLiteral_default()(["\n    background: transparent;\n    border: transparent;\n    font-weight: normal;\n    &:hover {\n      box-shadow: none;\n    }\n  "]);
-
-  Button_templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function Button_templateObject5() {
-  var data = taggedTemplateLiteral_default()(["\n    background: transparent;\n    border: 0;\n    margin: 0;\n    padding: 0;\n    font-weight: 300;\n    &:hover {\n      text-decoration: underline;\n      box-shadow: none;\n    }\n  "]);
-
-  Button_templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function Button_templateObject4() {
-  var data = taggedTemplateLiteral_default()(["\n    background: transparent;\n    border: 0;\n    margin: 0;\n    padding: 0;\n    &:hover {\n      box-shadow: none;\n    }\n  "]);
-
-  Button_templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function Button_templateObject3() {
-  var data = taggedTemplateLiteral_default()(["\n    font-size: 15px;\n    font-weight: bold;\n    padding: 1em 6em;\n  "]);
-
-  Button_templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function Button_templateObject2() {
-  var data = taggedTemplateLiteral_default()(["\n    border-radius: 100px;\n  "]);
-
-  Button_templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function Button_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  background: ", ";\n  color: white;\n  width: 279px;\n  height: 48px;\n  border-radius: 24px;\n  font-size: ", ";\n  padding: 0.7em 5em;\n  font-weight: 900;\n  cursor: pointer;\n  outline: none;\n  border: 0\n  &:hover {\n    box-shadow: ", ";\n  }\n  &:disabled {\n    border-color: ", ";\n    background-color: ", ";\n  }\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", ";\n  ", "\n  ", ";\n  ", "\n"]);
-
-  Button_templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-
-var Button = external_styled_components_default.a.button(Button_templateObject(), function (p) {
+var Button = external_styled_components_default.a.button.withConfig({
+  displayName: "Button",
+  componentId: "sc-1qkz7ei-0"
+})(["background:", ";color:white;width:279px;height:48px;border-radius:24px;font-size:", ";padding:0.7em 5em;font-weight:900;cursor:pointer;outline:none;border:0 &:hover{box-shadow:", ";}&:disabled{border-color:", ";background-color:", ";}", " ", " ", " ", " ", " ", " ", ";", " ", ";", ""], function (p) {
   return p.theme.colors.gradientBlue;
 }, function (p) {
   return p.theme.font.size.smaller;
@@ -1520,21 +1349,21 @@ var Button = external_styled_components_default.a.button(Button_templateObject()
 }, function (p) {
   return p.theme.colors.grays.light;
 }, function (p) {
-  return p.rounded && Object(external_styled_components_["css"])(Button_templateObject2());
+  return p.rounded && Object(external_styled_components_["css"])(["border-radius:100px;"]);
 }, function (p) {
-  return p.huge && Object(external_styled_components_["css"])(Button_templateObject3());
+  return p.huge && Object(external_styled_components_["css"])(["font-size:15px;font-weight:bold;padding:1em 6em;"]);
 }, function (p) {
-  return p.unstyled && Object(external_styled_components_["css"])(Button_templateObject4());
+  return p.unstyled && Object(external_styled_components_["css"])(["background:transparent;border:0;margin:0;padding:0;&:hover{box-shadow:none;}"]);
 }, function (p) {
-  return p.link && Object(external_styled_components_["css"])(Button_templateObject5());
+  return p.link && Object(external_styled_components_["css"])(["background:transparent;border:0;margin:0;padding:0;font-weight:300;&:hover{text-decoration:underline;box-shadow:none;}"]);
 }, function (p) {
-  return p["default"] && Object(external_styled_components_["css"])(Button_templateObject6());
+  return p["default"] && Object(external_styled_components_["css"])(["background:transparent;border:transparent;font-weight:normal;&:hover{box-shadow:none;}"]);
 }, function (p) {
-  return p.dangerDot && Object(external_styled_components_["css"])(Button_templateObject7(), function (p) {
+  return p.dangerDot && Object(external_styled_components_["css"])(["position:relative;&:after{content:\"\";position:absolute;display:block;width:5px;height:5px;border-radius:50%;background:", ";top:50%;left:10px;transform:translate(0,-50%);}"], function (p) {
     return p.theme.colors.danger;
   });
 }, function (p) {
-  return p.outline && Object(external_styled_components_["css"])(Button_templateObject8(), function (p) {
+  return p.outline && Object(external_styled_components_["css"])(["background:transparent;color:", ";border-color:", ";&:hover{background:", ";color:white;}"], function (p) {
     return p.theme.colors.black;
   }, function (p) {
     return p.theme.colors.black;
@@ -1542,13 +1371,13 @@ var Button = external_styled_components_default.a.button(Button_templateObject()
     return p.theme.colors.black;
   });
 }, function (p) {
-  return p.disabled && Object(external_styled_components_["css"])(_templateObject9(), function (p) {
+  return p.disabled && Object(external_styled_components_["css"])(["background:", ";border-color:", ";&:hover{box-shadow:none;cursor:not-allowed;}"], function (p) {
     return p.theme.colors.grays.light;
   }, function (p) {
     return p.theme.colors.grays.light;
   });
 }, function (p) {
-  return p.black && Object(external_styled_components_["css"])(_templateObject10(), function (p) {
+  return p.black && Object(external_styled_components_["css"])(["background-color:", ";border-color:", ";color:white;"], function (p) {
     return p.theme.colors.black;
   }, function (p) {
     return p.theme.colors.black;
@@ -1563,7 +1392,7 @@ var extends_default = /*#__PURE__*/__webpack_require__.n(extends_);
 var objectWithoutProperties_ = __webpack_require__(14);
 var objectWithoutProperties_default = /*#__PURE__*/__webpack_require__.n(objectWithoutProperties_);
 
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/Icon.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/Icon.js
 
 
 
@@ -1601,7 +1430,7 @@ function (_PureComponent) {
 }(external_react_["PureComponent"]);
 
 /* harmony default export */ var atoms_Icon = (Icon_Icon);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/Checkbox.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/Checkbox.js
 
 
 
@@ -1609,39 +1438,9 @@ function (_PureComponent) {
 
 
 
-
-function Checkbox_templateObject5() {
-  var data = taggedTemplateLiteral_default()(["\n  position:absolute;\n  width: 100%;\n  height: 100%;\n  top: 0;\n  left: 0;\n  opacity: 0;\n  cursor: pointer;\n"]);
-
-  Checkbox_templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function Checkbox_templateObject4() {
-  var data = taggedTemplateLiteral_default()(["\n    font-size: 35px;\n  "]);
-
-  Checkbox_templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function Checkbox_templateObject3() {
-  var data = taggedTemplateLiteral_default()(["\n  position: absolute;\n  left: 15%;\n  top: -27%;\n  font-size: 20px;\n  line-height: 1;\n  pointer-events: none;\n  color: ", ";\n  ", "\n"]);
-
-  Checkbox_templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
 
 function Checkbox_templateObject2() {
-  var data = taggedTemplateLiteral_default()(["\n    width: 32px;\n    height: 32px;\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n    font-size: 35px;\n  "]);
 
   Checkbox_templateObject2 = function _templateObject2() {
     return data;
@@ -1651,7 +1450,7 @@ function Checkbox_templateObject2() {
 }
 
 function Checkbox_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  position: relative;\n  display:inline-block;\n  width: 18px;\n  height: 18px;\n  border: 1px solid ", ";\n  text-align: center;\n  flex-grow: 0;\n  flex-shrink: 0;\n  ", "\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    width: 32px;\n    height: 32px;\n  "]);
 
   Checkbox_templateObject = function _templateObject() {
     return data;
@@ -1690,47 +1489,37 @@ function (_PureComponent) {
   return Checkbox;
 }(external_react_["PureComponent"]);
 
-var CheckboxCont = external_styled_components_default.a.div(Checkbox_templateObject(), function (p) {
+var CheckboxCont = external_styled_components_default.a.div.withConfig({
+  displayName: "Checkbox__CheckboxCont",
+  componentId: "alw87u-0"
+})(["position:relative;display:inline-block;width:18px;height:18px;border:1px solid ", ";text-align:center;flex-grow:0;flex-shrink:0;", ""], function (p) {
   return p.theme.colors.grays.regular;
 }, function (p) {
-  return p.theme.max('md')(Checkbox_templateObject2());
+  return p.theme.max('md')(Checkbox_templateObject());
 });
 var CheckIcon = external_styled_components_default()(function (p) {
   return external_react_default.a.createElement(atoms_Icon, extends_default()({
     icon: "check"
   }, p));
-})(Checkbox_templateObject3(), function (p) {
+}).withConfig({
+  displayName: "Checkbox__CheckIcon",
+  componentId: "alw87u-1"
+})(["position:absolute;left:15%;top:-27%;font-size:20px;line-height:1;pointer-events:none;color:", ";", ""], function (p) {
   return p.theme.colors.black;
 }, function (p) {
-  return p.theme.max('md')(Checkbox_templateObject4());
+  return p.theme.max('md')(Checkbox_templateObject2());
 });
-var Input = external_styled_components_default.a.input(Checkbox_templateObject5());
+var Input = external_styled_components_default.a.input.withConfig({
+  displayName: "Checkbox__Input",
+  componentId: "alw87u-2"
+})(["position:absolute;width:100%;height:100%;top:0;left:0;opacity:0;cursor:pointer;"]);
 /* harmony default export */ var atoms_Checkbox = (Checkbox_Checkbox);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/Input.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/Input.js
 
-
-function Input_templateObject2() {
-  var data = taggedTemplateLiteral_default()(["\n      border-color: ", ";\n    "]);
-
-  Input_templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function Input_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  display: block;\n  border: 0;\n  width: 100%;\n  line-height: 1.7;\n  background: transparent;\n  font-weight: 700;\n  padding-left: 8px;\n  :read-only {\n    border-color: ", ";\n    color: ", ";\n  }\n  ::-webkit-input-placeholder {\n    /* Chrome/Opera/Safari */\n    color: ", ";\n  }\n  ::-moz-placeholder {\n    /* Firefox 19+ */\n    color: ", ";\n  }\n  :-ms-input-placeholder {\n    /* IE 10+ */\n    color: ", ";\n  }\n  :-moz-placeholder {\n    /* Firefox 18- */\n    color: ", ";\n  }\n  ", ";\n"]);
-
-  Input_templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-var Input_Input = external_styled_components_default.a.input(Input_templateObject(), function (p) {
+var Input_Input = external_styled_components_default.a.input.withConfig({
+  displayName: "Input",
+  componentId: "icu8o2-0"
+})(["display:block;border:0;width:100%;line-height:1.7;background:transparent;font-weight:700;padding-left:8px;:read-only{border-color:", ";color:", ";}::-webkit-input-placeholder{color:", ";}::-moz-placeholder{color:", ";}:-ms-input-placeholder{color:", ";}:-moz-placeholder{color:", ";}", ";"], function (p) {
   return p.theme.colors.grays.light;
 }, function (p) {
   return p.theme.colors.grays.regular;
@@ -1743,26 +1532,17 @@ var Input_Input = external_styled_components_default.a.input(Input_templateObjec
 }, function (p) {
   return p.theme.colors.grays.regular;
 }, function (p) {
-  return p.error && Object(external_styled_components_["css"])(Input_templateObject2(), function (p) {
+  return p.error && Object(external_styled_components_["css"])(["border-color:", ";"], function (p) {
     return p.theme.colors.red;
   });
 });
 /* harmony default export */ var atoms_Input = (Input_Input);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/InputErrorMessage.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/InputErrorMessage.js
 
-
-function InputErrorMessage_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  position: absolute;\n  top: 53px;\n  font-size: 10px;\n  color: ", ";\n  padding-left: 15px;\n  &:before {\n    content: \"\";\n    display: block;\n    position: absolute;\n    width: 1px;\n    height: 57px;\n    left: -10px;\n    top: -67px;\n    background-color: ", ";\n  }\n  &:after {\n    content: \"c\";\n    margin-left: 5px;\n    display: none;\n  }\n"]);
-
-  InputErrorMessage_templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-var InputErrorMessage = external_styled_components_default.a.span(InputErrorMessage_templateObject(), function (p) {
+var InputErrorMessage = external_styled_components_default.a.span.withConfig({
+  displayName: "InputErrorMessage",
+  componentId: "sc-14qbbmf-0"
+})(["position:absolute;top:53px;font-size:10px;color:", ";padding-left:15px;&:before{content:\"\";display:block;position:absolute;width:1px;height:57px;left:-10px;top:-67px;background-color:", ";}&:after{content:\"c\";margin-left:5px;display:none;}"], function (p) {
   return p.theme.colors.danger;
 }, function (p) {
   return p.theme.colors.danger;
@@ -1771,25 +1551,13 @@ var InputErrorMessage = external_styled_components_default.a.span(InputErrorMess
 // EXTERNAL MODULE: external "react-form-validator-core"
 var external_react_form_validator_core_ = __webpack_require__(45);
 
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/ValidatedInput.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/ValidatedInput.js
 
 
 
 
 
 
-
-
-
-function ValidatedInput_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  position: relative;\n"]);
-
-  ValidatedInput_templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
 
 
 
@@ -1831,121 +1599,33 @@ function (_ValidatorComponent) {
   return ValidatedInput;
 }(external_react_form_validator_core_["ValidatorComponent"]);
 
-var InputCont = external_styled_components_default.a.div(ValidatedInput_templateObject());
+var InputCont = external_styled_components_default.a.div.withConfig({
+  displayName: "ValidatedInput__InputCont",
+  componentId: "sc-1aj8wyx-0"
+})(["position:relative;"]);
 /* harmony default export */ var atoms_ValidatedInput = (ValidatedInput_ValidatedInput);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/Label.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/Label.js
 
-
-function Label_templateObject4() {
-  var data = taggedTemplateLiteral_default()(["\n    font-weight: 500;\n  "]);
-
-  Label_templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function Label_templateObject3() {
-  var data = taggedTemplateLiteral_default()(["\n      &:after {\n        content: '*';\n        position: relative;\n        color: ", ";\n        left: 5px;\n      }\n    "]);
-
-  Label_templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function Label_templateObject2() {
-  var data = taggedTemplateLiteral_default()(["\n      display: block !important;\n    "]);
-
-  Label_templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function Label_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  font-size: 14px;\n  ", "\n  ", " ", "\n  > small {\n    display: block;\n    font-weight: 300;\n  }\n"]);
-
-  Label_templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-var Label = external_styled_components_default.a.label(Label_templateObject(), function (p) {
-  return p.block && Object(external_styled_components_["css"])(Label_templateObject2());
+var Label = external_styled_components_default.a.label.withConfig({
+  displayName: "Label",
+  componentId: "sc-7bapqi-0"
+})(["font-size:14px;", " ", " ", " > small{display:block;font-weight:300;}"], function (p) {
+  return p.block && Object(external_styled_components_["css"])(["display:block !important;"]);
 }, function (p) {
-  return p.required && Object(external_styled_components_["css"])(Label_templateObject3(), function (p) {
+  return p.required && Object(external_styled_components_["css"])(["&:after{content:'*';position:relative;color:", ";left:5px;}"], function (p) {
     return p.theme.colors.danger;
   });
 }, function (p) {
-  return p.bold && Object(external_styled_components_["css"])(Label_templateObject4());
+  return p.bold && Object(external_styled_components_["css"])(["font-weight:500;"]);
 });
 /* harmony default export */ var atoms_Label = (Label);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/Select.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/Select.js
 
 
 
 
 
 
-
-
-
-function Select_templateObject5() {
-  var data = taggedTemplateLiteral_default()(["\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0;\n  left: 0;\n  opacity: 0;\n"]);
-
-  Select_templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function Select_templateObject4() {
-  var data = taggedTemplateLiteral_default()(["\n  position: absolute;\n  font-size: 10px;\n  top: 19px;\n  right: 0;\n"]);
-
-  Select_templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function Select_templateObject3() {
-  var data = taggedTemplateLiteral_default()(["\n      border-color: ", " !important;\n      color: ", " !important;\n    "]);
-
-  Select_templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function Select_templateObject2() {
-  var data = taggedTemplateLiteral_default()(["\n  width: 100%;\n  border-bottom: ", " solid white;\n  background: transparent;\n  font-weight: 300;\n  padding: 10px 0;\n  color: white;\n  line-height: 1.5;\n  ", "\n"]);
-
-  Select_templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function Select_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  position: relative;\n"]);
-
-  Select_templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
 
 
 
@@ -2032,31 +1712,33 @@ function (_PureComponent) {
   return Select;
 }(external_react_["PureComponent"]);
 
-var SelectCont = external_styled_components_default.a.div(Select_templateObject()); // FIXME: color: black and border-bottom-color: black are leaking in and overriding these styles
+var SelectCont = external_styled_components_default.a.div.withConfig({
+  displayName: "Select__SelectCont",
+  componentId: "btb6io-0"
+})(["position:relative;"]); // FIXME: color: black and border-bottom-color: black are leaking in and overriding these styles
 
-var Selected = external_styled_components_default.a.p(Select_templateObject2(), function (props) {
+var Selected = external_styled_components_default.a.p.withConfig({
+  displayName: "Select__Selected",
+  componentId: "btb6io-1"
+})(["width:100%;border-bottom:", " solid white;background:transparent;font-weight:300;padding:10px 0;color:white;line-height:1.5;", ""], function (props) {
   return props.theme.general.borderWidth;
 }, function (p) {
-  return p.readOnly && Object(external_styled_components_["css"])(Select_templateObject3(), p.theme.colors.grays.light, p.theme.colors.grays.regular);
+  return p.readOnly && Object(external_styled_components_["css"])(["border-color:", " !important;color:", " !important;"], p.theme.colors.grays.light, p.theme.colors.grays.regular);
 });
-var Select_Icon = external_styled_components_default()(atoms_Icon)(Select_templateObject4());
-var Select_Input = external_styled_components_default.a.select(Select_templateObject5());
+var Select_Icon = external_styled_components_default()(atoms_Icon).withConfig({
+  displayName: "Select__Icon",
+  componentId: "btb6io-2"
+})(["position:absolute;font-size:10px;top:19px;right:0;"]);
+var Select_Input = external_styled_components_default.a.select.withConfig({
+  displayName: "Select__Input",
+  componentId: "btb6io-3"
+})(["position:absolute;width:100%;height:100%;top:0;left:0;opacity:0;"]);
 /* harmony default export */ var atoms_Select = (Select_Select);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/SideLabel.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/SideLabel.js
 
-
-function SideLabel_templateObject2() {
-  var data = taggedTemplateLiteral_default()(["\n    margin-bottom: 30px;\n    > label {\n      margin-top: 6px;\n      font-size: 18px;\n      margin-left: 15px;\n    }\n  "]);
-
-  SideLabel_templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
 
 function SideLabel_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  display: flex;\n  align-items: flex-start;\n  margin-bottom: 20px;\n  > label {\n    margin-left: 10px;\n    > span {\n      display: block;\n      color: ", ";\n    }\n  }\n  ", "\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    margin-bottom: 30px;\n    > label {\n      margin-top: 6px;\n      font-size: 18px;\n      margin-left: 15px;\n    }\n  "]);
 
   SideLabel_templateObject = function _templateObject() {
     return data;
@@ -2066,27 +1748,20 @@ function SideLabel_templateObject() {
 }
 
 
-var SideLabel = external_styled_components_default.a.div(SideLabel_templateObject(), function (p) {
+var SideLabel = external_styled_components_default.a.div.withConfig({
+  displayName: "SideLabel",
+  componentId: "sc-1fdmdif-0"
+})(["display:flex;align-items:flex-start;margin-bottom:20px;> label{margin-left:10px;> span{display:block;color:", ";}}", ""], function (p) {
   return p.theme.colors.grays.regular;
 }, function (p) {
-  return p.theme.max('md')(SideLabel_templateObject2());
+  return p.theme.max('md')(SideLabel_templateObject());
 });
 /* harmony default export */ var atoms_SideLabel = (SideLabel);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/SectionHeading.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/SectionHeading.js
 
-
-function SectionHeading_templateObject3() {
-  var data = taggedTemplateLiteral_default()(["\n    font-size: 38px;\n    margin-bottom: 20px;\n    margin-top: -15px;\n    padding: 0 ", ";\n  "]);
-
-  SectionHeading_templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
 
 function SectionHeading_templateObject2() {
-  var data = taggedTemplateLiteral_default()(["\n    margin-top: 10px;\n    margin-bottom: 20px;\n    font-size: 50px;\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n    font-size: 38px;\n    margin-bottom: 20px;\n    margin-top: -15px;\n    padding: 0 ", ";\n  "]);
 
   SectionHeading_templateObject2 = function _templateObject2() {
     return data;
@@ -2096,7 +1771,7 @@ function SectionHeading_templateObject2() {
 }
 
 function SectionHeading_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  font-weight: 100;\n  font-family: ", ";\n  color: ", ";\n  opacity: 0.7;\n  text-align: center;\n  font-size: 58px;\n  margin-top: 20px;\n  margin-bottom: 50px;\n  ", "\n  ", "\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    margin-top: 10px;\n    margin-bottom: 20px;\n    font-size: 50px;\n  "]);
 
   SectionHeading_templateObject = function _templateObject() {
     return data;
@@ -2106,103 +1781,36 @@ function SectionHeading_templateObject() {
 }
 
 
-var SectionHeading = external_styled_components_default.a.h2(SectionHeading_templateObject(), function (p) {
+var SectionHeading = external_styled_components_default.a.h2.withConfig({
+  displayName: "SectionHeading",
+  componentId: "sc-1jy4qeg-0"
+})(["font-weight:100;font-family:", ";color:", ";opacity:0.7;text-align:center;font-size:58px;margin-top:20px;margin-bottom:50px;", " ", ""], function (p) {
   return p.theme.font.family.header;
 }, function (p) {
   return p.theme.colors.black;
 }, function (p) {
-  return p.theme.between('sm', 'md')(SectionHeading_templateObject2());
+  return p.theme.between('sm', 'md')(SectionHeading_templateObject());
 }, function (p) {
-  return p.theme.max('sm')(SectionHeading_templateObject3(), function (p) {
+  return p.theme.max('sm')(SectionHeading_templateObject2(), function (p) {
     return p.theme.general.mobilePadding;
   });
 });
 /* harmony default export */ var atoms_SectionHeading = (SectionHeading);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/Form.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/Form.js
 
-
-function Form_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  display: block;\n  width: 100%;\n"]);
-
-  Form_templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-var Form = external_styled_components_default.a.form(Form_templateObject());
+var Form = external_styled_components_default.a.form.withConfig({
+  displayName: "Form",
+  componentId: "u4lzp1-0"
+})(["display:block;width:100%;"]);
 /* harmony default export */ var atoms_Form = (Form);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/FormGroup.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/FormGroup.js
 
-
-function FormGroup_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  padding: 5px 0;\n  margin-bottom: 18px;\n  > label {\n    margin-bottom: 5px;\n  }\n"]);
-
-  FormGroup_templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-var FormGroup = external_styled_components_default.a.div(FormGroup_templateObject());
+var FormGroup = external_styled_components_default.a.div.withConfig({
+  displayName: "FormGroup",
+  componentId: "sc-1nf62to-0"
+})(["padding:5px 0;margin-bottom:18px;> label{margin-bottom:5px;}"]);
 /* harmony default export */ var atoms_FormGroup = (FormGroup);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/Box.js
-
-
-function Box_templateObject5() {
-  var data = taggedTemplateLiteral_default()(["\n    display:flex;\n    flex-direction: column;\n    align-items: ", ";\n    justify-content: ", ";\n  "]);
-
-  Box_templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function Box_templateObject4() {
-  var data = taggedTemplateLiteral_default()(["\n    flex-grow: 0;\n    flex-shrink: 0;\n  "]);
-
-  Box_templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function Box_templateObject3() {
-  var data = taggedTemplateLiteral_default()(["\n    padding-left: ", ";\n    padding-right: ", ";\n  "]);
-
-  Box_templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function Box_templateObject2() {
-  var data = taggedTemplateLiteral_default()(["width: ", ";"]);
-
-  Box_templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function Box_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  display: block;\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"]);
-
-  Box_templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/Box.js
 
 
 
@@ -2216,83 +1824,24 @@ var getAlignment = function getAlignment(align) {
   return 'flex-start';
 };
 
-var Box = external_styled_components_default.a.div(Box_templateObject(), function (p) {
-  return p.width && Object(external_styled_components_["css"])(Box_templateObject2(), p.width);
+var Box = external_styled_components_default.a.div.withConfig({
+  displayName: "Box",
+  componentId: "r0y1u0-0"
+})(["display:block;", " ", " ", " ", " ", " ", " ", ""], function (p) {
+  return p.width && Object(external_styled_components_["css"])(["width:", ";"], p.width);
 }, flexChildMixin, buildResponsiveWidthMixin, function (p) {
-  return p.padded && Object(external_styled_components_["css"])(Box_templateObject3(), p.theme.general.gridGap, p.theme.general.gridGap);
+  return p.padded && Object(external_styled_components_["css"])(["padding-left:", ";padding-right:", ";"], p.theme.general.gridGap, p.theme.general.gridGap);
 }, function (p) {
-  return p.exact && Object(external_styled_components_["css"])(Box_templateObject4());
+  return p.exact && Object(external_styled_components_["css"])(["flex-grow:0;flex-shrink:0;"]);
 }, function (p) {
-  return (p.alignX || p.alignY) && Object(external_styled_components_["css"])(Box_templateObject5(), getAlignment(p.alignX), getAlignment(p.alignY));
+  return (p.alignX || p.alignY) && Object(external_styled_components_["css"])(["display:flex;flex-direction:column;align-items:", ";justify-content:", ";"], getAlignment(p.alignX), getAlignment(p.alignY));
 }, hiddenMixin);
 /* harmony default export */ var atoms_Box = (Box);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/HeaderClose.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/HeaderClose.js
 
 
 
 
-
-
-
-function HeaderClose_templateObject6() {
-  var data = taggedTemplateLiteral_default()(["\n    background: white;\n  "]);
-
-  HeaderClose_templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function HeaderClose_templateObject5() {
-  var data = taggedTemplateLiteral_default()(["\n    transform: translate(0, -200%) rotate(-45deg);\n  "]);
-
-  HeaderClose_templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function HeaderClose_templateObject4() {
-  var data = taggedTemplateLiteral_default()(["\n    transform: translate(0, -100%) rotate(45deg);\n  "]);
-
-  HeaderClose_templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function HeaderClose_templateObject3() {
-  var data = taggedTemplateLiteral_default()(["\n    transform: translate(0, 0); \n  "]);
-
-  HeaderClose_templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function HeaderClose_templateObject2() {
-  var data = taggedTemplateLiteral_default()(["\n  width: 100%;\n  top: 50%;\n  height: 2px;\n  background: ", ";\n  transform: translate(0, -300%);\n  transform-origin: center center;\n  transition: .3s ease;\n  ", "\n  ", "\n  ", "\n  ", "\n"]);
-
-  HeaderClose_templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function HeaderClose_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  position:absolute;\n  top: 50%;\n  left: ", ";\n  width: 25px;\n  height: 25px;\n  z-index: 10;\n"]);
-
-  HeaderClose_templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
 
 
 
@@ -2329,74 +1878,42 @@ function (_PureComponent) {
   return HeaderClose;
 }(external_react_["PureComponent"]);
 
-var CloseCont = external_styled_components_default()(atoms_Box)(HeaderClose_templateObject(), helpers_theme('general.mobilePadding'));
-var Line = external_styled_components_default.a.div(HeaderClose_templateObject2(), helpers_theme('colors.black'), function (props) {
-  return props.bottom && Object(external_styled_components_["css"])(HeaderClose_templateObject3());
+var CloseCont = external_styled_components_default()(atoms_Box).withConfig({
+  displayName: "HeaderClose__CloseCont",
+  componentId: "v3wdck-0"
+})(["position:absolute;top:50%;left:", ";width:25px;height:25px;z-index:10;"], helpers_theme('general.mobilePadding'));
+var Line = external_styled_components_default.a.div.withConfig({
+  displayName: "HeaderClose__Line",
+  componentId: "v3wdck-1"
+})(["width:100%;top:50%;height:2px;background:", ";transform:translate(0,-300%);transform-origin:center center;transition:.3s ease;", " ", " ", " ", ""], helpers_theme('colors.black'), function (props) {
+  return props.bottom && Object(external_styled_components_["css"])(["transform:translate(0,0);"]);
 }, function (props) {
-  return props.opened && Object(external_styled_components_["css"])(HeaderClose_templateObject4());
+  return props.opened && Object(external_styled_components_["css"])(["transform:translate(0,-100%) rotate(45deg);"]);
 }, function (props) {
-  return props.opened && props.bottom && Object(external_styled_components_["css"])(HeaderClose_templateObject5());
+  return props.opened && props.bottom && Object(external_styled_components_["css"])(["transform:translate(0,-200%) rotate(-45deg);"]);
 }, function (props) {
-  return props.opened && Object(external_styled_components_["css"])(HeaderClose_templateObject6());
+  return props.opened && Object(external_styled_components_["css"])(["background:white;"]);
 });
 /* harmony default export */ var atoms_HeaderClose = (HeaderClose_HeaderClose);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/Hr.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/Hr.js
 
 
-function Hr_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  background-color: ", ";\n  border: 0;\n  width: 100%;\n  height: 1px;\n  ", ";\n  ", "\n"]);
-
-  Hr_templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-
-var Hr = external_styled_components_default.a.hr(Hr_templateObject(), function (p) {
+var Hr = external_styled_components_default.a.hr.withConfig({
+  displayName: "Hr",
+  componentId: "mp73i8-0"
+})(["background-color:", ";border:0;width:100%;height:1px;", ";", ""], function (p) {
   return p.theme.colors.black;
 }, function (p) {
   return p.grayed && "background-color: ".concat(p.theme.colors.grays.light, ";");
 }, hiddenMixin);
 /* harmony default export */ var atoms_Hr = (Hr);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/Flex.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/Flex.js
 
 
-function Flex_templateObject3() {
-  var data = taggedTemplateLiteral_default()(["\n      flex-wrap: wrap;\n      margin-left: -", ";\n      margin-right: -", ";\n      > div {\n        flex-grow: 0;\n        flex-shrink: 0;\n      }\n    "]);
-
-  Flex_templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function Flex_templateObject2() {
-  var data = taggedTemplateLiteral_default()(["\n      width: 100%;\n    "]);
-
-  Flex_templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function Flex_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  display: flex;\n  flex-direction: ", ";\n  align-items: ", ";\n  justify-content: ", ";\n  flex-wrap: ", ";\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"]);
-
-  Flex_templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-
-var Flex = external_styled_components_default.a.div(Flex_templateObject(), function (props) {
+var Flex = external_styled_components_default.a.div.withConfig({
+  displayName: "Flex",
+  componentId: "sc-1noxrkc-0"
+})(["display:flex;flex-direction:", ";align-items:", ";justify-content:", ";flex-wrap:", ";", " ", " ", " ", " ", ""], function (props) {
   return props.direction || 'row';
 }, function (props) {
   return props.alignItems || 'flex-start';
@@ -2405,49 +1922,20 @@ var Flex = external_styled_components_default.a.div(Flex_templateObject(), funct
 }, function (props) {
   return props.wrap || 'nowrap';
 }, function (props) {
-  return props.fullWidth && Object(external_styled_components_["css"])(Flex_templateObject2());
+  return props.fullWidth && Object(external_styled_components_["css"])(["width:100%;"]);
 }, function (p) {
-  return p.grid && Object(external_styled_components_["css"])(Flex_templateObject3(), p.theme.general.gridGap, p.theme.general.gridGap);
+  return p.grid && Object(external_styled_components_["css"])(["flex-wrap:wrap;margin-left:-", ";margin-right:-", ";> div{flex-grow:0;flex-shrink:0;}"], p.theme.general.gridGap, p.theme.general.gridGap);
 }, hiddenMixin, flexChildMixin, buildResponsiveWidthMixin);
 /* harmony default export */ var atoms_Flex = (Flex);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/Grid.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/Grid.js
 
-
-function Grid_templateObject3() {
-  var data = taggedTemplateLiteral_default()(["grid-gap: ", ";"]);
-
-  Grid_templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function Grid_templateObject2() {
-  var data = taggedTemplateLiteral_default()(["grid-template-columns: ", ";"]);
-
-  Grid_templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function Grid_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  display: grid;\n  ", "\n  ", "\n"]);
-
-  Grid_templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-var Grid = external_styled_components_default.a.section(Grid_templateObject(), function (props) {
-  return props.cols && Object(external_styled_components_["css"])(Grid_templateObject2(), props.cols);
+var Grid = external_styled_components_default.a.section.withConfig({
+  displayName: "Grid",
+  componentId: "sc-7ioyzo-0"
+})(["display:grid;", " ", ""], function (props) {
+  return props.cols && Object(external_styled_components_["css"])(["grid-template-columns:", ";"], props.cols);
 }, function (props) {
-  return props.gap && Object(external_styled_components_["css"])(Grid_templateObject3(), props.gap);
+  return props.gap && Object(external_styled_components_["css"])(["grid-gap:", ";"], props.gap);
 });
 /* harmony default export */ var atoms_Grid = (Grid);
 // EXTERNAL MODULE: external "react-dom"
@@ -2460,106 +1948,16 @@ var external_react_transition_group_ = __webpack_require__(46);
 // EXTERNAL MODULE: external "polished"
 var external_polished_ = __webpack_require__(47);
 
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/Modal.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/Modal.js
 
 
 
 
 
 
-
-function _templateObject11() {
-  var data = taggedTemplateLiteral_default()(["\n  position: relative;\n  flex-grow: 1;\n  {/*overflow-y: scroll;\n  -webkit-overflow-scrolling: touch;*/}\n"]);
-
-  _templateObject11 = function _templateObject11() {
-    return data;
-  };
-
-  return data;
-}
-
-function Modal_templateObject10() {
-  var data = taggedTemplateLiteral_default()(["\n    &:hover {\n      color: ", ";\n    }\n  "]);
-
-  Modal_templateObject10 = function _templateObject10() {
-    return data;
-  };
-
-  return data;
-}
-
-function Modal_templateObject9() {
-  var data = taggedTemplateLiteral_default()(["\n  position: absolute;\n  top: 5px;\n  right: 10px;\n  background: transparent;\n  border: 0;\n  box-shadow: none;\n  padding: 7px;\n  color: ", ";\n  font-size: 32px;\n  z-index: 2;\n  cursor: pointer;\n  ", "\n"]);
-
-  Modal_templateObject9 = function _templateObject9() {
-    return data;
-  };
-
-  return data;
-}
-
-function Modal_templateObject8() {
-  var data = taggedTemplateLiteral_default()(["\n    width: 100%;\n    height: 85vh;\n    display: flex;\n    top: auto;\n    flex-direction: column;\n    justify-content: center;\n    bottom: -5px;\n    left: 0;\n    transform: translate(0, 0);\n  "]);
-
-  Modal_templateObject8 = function _templateObject8() {
-    return data;
-  };
-
-  return data;
-}
-
-function Modal_templateObject7() {
-  var data = taggedTemplateLiteral_default()(["\n    width: 100vw;\n    height: 100vh;\n  "]);
-
-  Modal_templateObject7 = function _templateObject7() {
-    return data;
-  };
-
-  return data;
-}
-
-function Modal_templateObject6() {
-  var data = taggedTemplateLiteral_default()(["\n  position:fixed;\n  display:flex;\n  flex-direction: column;\n  width: 700px;\n  background: white;\n  left: 50%;\n  border-radius: 10px;\n  top: 50%;\n  padding: 40px;\n  transform: translate(-50%, -50%);\n  z-index: ", ";\n  ", "\n  ", "\n  ", "\n"]);
-
-  Modal_templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function Modal_templateObject5() {
-  var data = taggedTemplateLiteral_default()(["\n  position:fixed;\n  width: 100%;\n  height: 100%;\n  top: 0;\n  left: 0;\n  z-index: ", ";\n  background: ", ";\n"]);
-
-  Modal_templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function Modal_templateObject4() {
-  var data = taggedTemplateLiteral_default()(["\n    &.modal-appear {\n    }\n    &.modal-appear-active {\n    }\n    &.modal-exit {\n    }\n    &.modal-exit-active {\n    }\n  "]);
-
-  Modal_templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function Modal_templateObject3() {
-  var data = taggedTemplateLiteral_default()(["\n    &.modal-appear {\n      opacity: 0;\n    }\n    &.modal-appear-active {\n      opacity: 1;\n      transition: all 300ms ease-out;\n    }\n    &.modal-exit {\n      opacity: 1;\n    }\n    &.modal-exit-active {\n      opacity: 0;\n      transition: all 300ms ease-in;\n    }\n  "]);
-
-  Modal_templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
 
 function Modal_templateObject2() {
-  var data = taggedTemplateLiteral_default()(["\n    &.modal-appear {\n      transform: translate(0, 100%);\n    }\n    &.modal-appear-active {\n      transform: translate(0, 0);\n      transition: all 300ms ease-out;\n    }\n    &.modal-exit {\n      transform: translate(0, 0);\n    }\n    &.modal-exit-active {\n      transform: translate(0, 100%);\n      transition: all 300ms ease-in;\n    }\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n    &:hover {\n      color: ", ";\n    }\n  "]);
 
   Modal_templateObject2 = function _templateObject2() {
     return data;
@@ -2569,7 +1967,7 @@ function Modal_templateObject2() {
 }
 
 function Modal_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n    &.modal-appear {\n      transform: translate(100%, 0);\n    }\n    &.modal-appear-active {\n      transform: translate(0, 0);\n      transition: all 300ms ease-out;\n    }\n    &.modal-exit {\n      transform: translate(0, 0);\n    }\n    &.modal-exit-active {\n      transform: translate(100%, 0);\n      transition: all 300ms ease-in;\n    }\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n    width: 100%;\n    height: 85vh;\n    display: flex;\n    top: auto;\n    flex-direction: column;\n    justify-content: center;\n    bottom: -5px;\n    left: 0;\n    transform: translate(0, 0);\n  "]);
 
   Modal_templateObject = function _templateObject() {
     return data;
@@ -2628,51 +2026,51 @@ function (_Component) {
 }(external_react_["Component"]);
 
 var animations = {
-  fromRight: Object(external_styled_components_["css"])(Modal_templateObject()),
-  fromBottom: Object(external_styled_components_["css"])(Modal_templateObject2()),
-  fadeIn: Object(external_styled_components_["css"])(Modal_templateObject3()),
-  empty: Object(external_styled_components_["css"])(Modal_templateObject4())
+  fromRight: Object(external_styled_components_["css"])(["&.modal-appear{transform:translate(100%,0);}&.modal-appear-active{transform:translate(0,0);transition:all 300ms ease-out;}&.modal-exit{transform:translate(0,0);}&.modal-exit-active{transform:translate(100%,0);transition:all 300ms ease-in;}"]),
+  fromBottom: Object(external_styled_components_["css"])(["&.modal-appear{transform:translate(0,100%);}&.modal-appear-active{transform:translate(0,0);transition:all 300ms ease-out;}&.modal-exit{transform:translate(0,0);}&.modal-exit-active{transform:translate(0,100%);transition:all 300ms ease-in;}"]),
+  fadeIn: Object(external_styled_components_["css"])(["&.modal-appear{opacity:0;}&.modal-appear-active{opacity:1;transition:all 300ms ease-out;}&.modal-exit{opacity:1;}&.modal-exit-active{opacity:0;transition:all 300ms ease-in;}"]),
+  empty: Object(external_styled_components_["css"])(["&.modal-appear{}&.modal-appear-active{}&.modal-exit{}&.modal-exit-active{}"])
 };
-var ModalBackdrop = external_styled_components_default.a.div(Modal_templateObject5(), function (p) {
+var ModalBackdrop = external_styled_components_default.a.div.withConfig({
+  displayName: "Modal__ModalBackdrop",
+  componentId: "sc-7ji1fq-0"
+})(["position:fixed;width:100%;height:100%;top:0;left:0;z-index:", ";background:", ";"], function (p) {
   return p.theme.zIndex.modalBg;
 }, function (p) {
   return Object(external_polished_["rgba"])(p.theme.colors.black, 0.3);
 });
-var ModalContainer = external_styled_components_default.a.div(Modal_templateObject6(), function (p) {
+var ModalContainer = external_styled_components_default.a.div.withConfig({
+  displayName: "Modal__ModalContainer",
+  componentId: "sc-7ji1fq-1"
+})(["position:fixed;display:flex;flex-direction:column;width:700px;background:white;left:50%;border-radius:10px;top:50%;padding:40px;transform:translate(-50%,-50%);z-index:", ";", " ", " ", ""], function (p) {
   return p.theme.zIndex.modal;
 }, function (p) {
-  return p.fullScreen && Object(external_styled_components_["css"])(Modal_templateObject7());
+  return p.fullScreen && Object(external_styled_components_["css"])(["width:100vw;height:100vh;"]);
 }, function (p) {
   return animations[p.animation] || animations.empty;
 }, function (p) {
-  return p.theme.max('sm')(Modal_templateObject8());
+  return p.theme.max('sm')(Modal_templateObject());
 });
-var Close = external_styled_components_default.a.button(Modal_templateObject9(), function (p) {
+var Close = external_styled_components_default.a.button.withConfig({
+  displayName: "Modal__Close",
+  componentId: "sc-7ji1fq-2"
+})(["position:absolute;top:5px;right:10px;background:transparent;border:0;box-shadow:none;padding:7px;color:", ";font-size:32px;z-index:2;cursor:pointer;", ""], function (p) {
   return p.theme.colors.primary;
 }, function (p) {
-  return p.theme.min('md')(Modal_templateObject10(), function (p) {
+  return p.theme.min('md')(Modal_templateObject2(), function (p) {
     return p.theme.colors.black;
   });
 });
-var ModalBody = external_styled_components_default.a.section(_templateObject11());
+var ModalBody = external_styled_components_default.a.section.withConfig({
+  displayName: "Modal__ModalBody",
+  componentId: "sc-7ji1fq-3"
+})(["position:relative;flex-grow:1;{}"]);
 /* harmony default export */ var atoms_Modal = (Modal_Modal);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/Page.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/Page.js
 
 
 
 
-
-
-
-function Page_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  display: block;\n"]);
-
-  Page_templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
 
 
 
@@ -2705,25 +2103,16 @@ function (_Component) {
   return Page;
 }(external_react_["Component"]);
 
-var PageCont = external_styled_components_default.a.section(Page_templateObject());
+var PageCont = external_styled_components_default.a.section.withConfig({
+  displayName: "Page__PageCont",
+  componentId: "dnohn6-0"
+})(["display:block;"]);
 /* harmony default export */ var atoms_Page = (Page_Page);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/Section.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/Section.js
 
 
 
 
-
-
-
-function Section_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  position: relative;\n  padding: 50px 0;\n"]);
-
-  Section_templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
 
 
 
@@ -2749,42 +2138,24 @@ function (_PureComponent) {
   return Section;
 }(external_react_["PureComponent"]);
 
-var SectionCont = external_styled_components_default.a.div(Section_templateObject());
+var SectionCont = external_styled_components_default.a.div.withConfig({
+  displayName: "Section__SectionCont",
+  componentId: "sc-3vcvy4-0"
+})(["position:relative;padding:50px 0;"]);
 /* harmony default export */ var atoms_Section = (Section_Section);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/Cover.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/Cover.js
 
-
-function Cover_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0;\n  left: 0;\n"]);
-
-  Cover_templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-var Cover = external_styled_components_default.a.div(Cover_templateObject());
+var Cover = external_styled_components_default.a.div.withConfig({
+  displayName: "Cover",
+  componentId: "sc-1955xn2-0"
+})(["position:absolute;width:100%;height:100%;top:0;left:0;"]);
 /* harmony default export */ var atoms_Cover = (Cover);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/GradientOverlay.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/GradientOverlay.js
 
 
 
 
 
-
-
-
-function GradientOverlay_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background: linear-gradient(", "deg, ", " 0.75%, ", " 87.48%);\n"]);
-
-  GradientOverlay_templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
 
 
 
@@ -2815,7 +2186,10 @@ defineProperty_default()(GradientOverlay_GradientOverlay, "defaultProps", {
   deg: 224.34
 });
 
-var Overlay = external_styled_components_default.a.div(GradientOverlay_templateObject(), function (p) {
+var Overlay = external_styled_components_default.a.div.withConfig({
+  displayName: "GradientOverlay__Overlay",
+  componentId: "sc-1tnekrg-0"
+})(["position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(", "deg,", " 0.75%,", " 87.48%);"], function (p) {
   return p.deg;
 }, function (p) {
   return p.theme.colors.primary;
@@ -2823,61 +2197,11 @@ var Overlay = external_styled_components_default.a.div(GradientOverlay_templateO
   return p.theme.colors.secondary;
 });
 /* harmony default export */ var atoms_GradientOverlay = (GradientOverlay_GradientOverlay);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/Container.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/Container.js
 
-
-function Container_templateObject8() {
-  var data = taggedTemplateLiteral_default()(["\n      padding-left: ", ";\n      padding-right: ", ";\n    "]);
-
-  Container_templateObject8 = function _templateObject8() {
-    return data;
-  };
-
-  return data;
-}
-
-function Container_templateObject7() {
-  var data = taggedTemplateLiteral_default()(["\n    ", "\n  "]);
-
-  Container_templateObject7 = function _templateObject7() {
-    return data;
-  };
-
-  return data;
-}
-
-function Container_templateObject6() {
-  var data = taggedTemplateLiteral_default()(["\n    width: ", ";\n  "]);
-
-  Container_templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function Container_templateObject5() {
-  var data = taggedTemplateLiteral_default()(["\n    width: 100%;\n  "]);
-
-  Container_templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function Container_templateObject4() {
-  var data = taggedTemplateLiteral_default()(["\n    position: relative;\n    z-index: 2;\n  "]);
-
-  Container_templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
 
 function Container_templateObject3() {
-  var data = taggedTemplateLiteral_default()(["overflow: hidden;"]);
+  var data = taggedTemplateLiteral_default()(["\n      padding-left: ", ";\n      padding-right: ", ";\n    "]);
 
   Container_templateObject3 = function _templateObject3() {
     return data;
@@ -2887,7 +2211,7 @@ function Container_templateObject3() {
 }
 
 function Container_templateObject2() {
-  var data = taggedTemplateLiteral_default()(["position: relative;"]);
+  var data = taggedTemplateLiteral_default()(["\n    width: ", ";\n  "]);
 
   Container_templateObject2 = function _templateObject2() {
     return data;
@@ -2897,7 +2221,7 @@ function Container_templateObject2() {
 }
 
 function Container_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  margin-left: auto;\n  margin-right: auto;\n  height: 100%;\n  width: ", ";\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    width: 100%;\n  "]);
 
   Container_templateObject = function _templateObject() {
     return data;
@@ -2908,205 +2232,70 @@ function Container_templateObject() {
 
 
 
-var Container = external_styled_components_default.a.section(Container_templateObject(), function (p) {
+var Container = external_styled_components_default.a.section.withConfig({
+  displayName: "Container",
+  componentId: "n5m14-0"
+})(["margin-left:auto;margin-right:auto;height:100%;width:", ";", " ", " ", " ", " ", " ", " ", ""], function (p) {
   return p.theme.general.containerWidth.md;
 }, function (p) {
-  return p.relative && Object(external_styled_components_["css"])(Container_templateObject2());
+  return p.relative && Object(external_styled_components_["css"])(["position:relative;"]);
 }, function (p) {
-  return p.noOverflow && Object(external_styled_components_["css"])(Container_templateObject3());
+  return p.noOverflow && Object(external_styled_components_["css"])(["overflow:hidden;"]);
 }, function (p) {
-  return p.toFront && Object(external_styled_components_["css"])(Container_templateObject4());
+  return p.toFront && Object(external_styled_components_["css"])(["position:relative;z-index:2;"]);
 }, function (p) {
-  return p.theme.max('md')(Container_templateObject5());
+  return p.theme.max('md')(Container_templateObject());
 }, function (p) {
-  return p.theme.min('lg')(Container_templateObject6(), function (p) {
+  return p.theme.min('lg')(Container_templateObject2(), function (p) {
     return p.theme.general.containerWidth.lg;
   });
 }, function (p) {
-  return p.mobilePadding && Object(external_styled_components_["css"])(Container_templateObject7(), p.theme.max('md')(Container_templateObject8(), p.theme.general.mobilePadding, p.theme.general.mobilePadding));
+  return p.mobilePadding && Object(external_styled_components_["css"])(["", ""], p.theme.max('md')(Container_templateObject3(), p.theme.general.mobilePadding, p.theme.general.mobilePadding));
 }, hiddenMixin);
 /* harmony default export */ var atoms_Container = (Container);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/Heading.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/Heading.js
 
 
-function Heading_templateObject8() {
-  var data = taggedTemplateLiteral_default()(["color: ", ";"]);
-
-  Heading_templateObject8 = function _templateObject8() {
-    return data;
-  };
-
-  return data;
-}
-
-function Heading_templateObject7() {
-  var data = taggedTemplateLiteral_default()(["margin: 0;"]);
-
-  Heading_templateObject7 = function _templateObject7() {
-    return data;
-  };
-
-  return data;
-}
-
-function Heading_templateObject6() {
-  var data = taggedTemplateLiteral_default()(["\n    font-family: ", ";\n    font-style: italic;\n    font-weight: 400;\n  "]);
-
-  Heading_templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function Heading_templateObject5() {
-  var data = taggedTemplateLiteral_default()(["text-transform: ", ";"]);
-
-  Heading_templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function Heading_templateObject4() {
-  var data = taggedTemplateLiteral_default()(["font-size: ", ";"]);
-
-  Heading_templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function Heading_templateObject3() {
-  var data = taggedTemplateLiteral_default()(["font-size: ", ";"]);
-
-  Heading_templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function Heading_templateObject2() {
-  var data = taggedTemplateLiteral_default()(["letter-spacing: ", ";"]);
-
-  Heading_templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function Heading_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  font-weight: 700;\n  font-family: ", ";\n  color: ", ";\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  > span {\n    opacity: 1;\n    color: ", ";\n  }\n  ", "\n  ", "\n"]);
-
-  Heading_templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-
-var HeadingBase = external_styled_components_default.a.h3(Heading_templateObject(), function (p) {
+var HeadingBase = external_styled_components_default.a.h3.withConfig({
+  displayName: "Heading__HeadingBase",
+  componentId: "sc-1xhd8z9-0"
+})(["font-weight:700;font-family:", ";color:", ";", " ", " ", " ", " ", " ", " ", " > span{opacity:1;color:", ";}", " ", ""], function (p) {
   return p.theme.font.family.header;
 }, function (p) {
   return p.theme.colors.black;
 }, function (p) {
-  return p.spaced && Object(external_styled_components_["css"])(Heading_templateObject2(), p.theme.font.letterSpacing.accent);
+  return p.spaced && Object(external_styled_components_["css"])(["letter-spacing:", ";"], p.theme.font.letterSpacing.accent);
 }, function (p) {
-  return p.small && Object(external_styled_components_["css"])(Heading_templateObject3(), p.theme.font.size.small);
+  return p.small && Object(external_styled_components_["css"])(["font-size:", ";"], p.theme.font.size.small);
 }, function (p) {
-  return p.smaller && Object(external_styled_components_["css"])(Heading_templateObject4(), p.theme.font.size.smaller);
+  return p.smaller && Object(external_styled_components_["css"])(["font-size:", ";"], p.theme.font.size.smaller);
 }, function (p) {
-  return p.transform && Object(external_styled_components_["css"])(Heading_templateObject5(), p.transform);
+  return p.transform && Object(external_styled_components_["css"])(["text-transform:", ";"], p.transform);
 }, function (p) {
-  return p.accent && Object(external_styled_components_["css"])(Heading_templateObject6(), p.theme.font.family.accent);
+  return p.accent && Object(external_styled_components_["css"])(["font-family:", ";font-style:italic;font-weight:400;"], p.theme.font.family.accent);
 }, function (p) {
-  return p.noMargin && Object(external_styled_components_["css"])(Heading_templateObject7());
+  return p.noMargin && Object(external_styled_components_["css"])(["margin:0;"]);
 }, hiddenMixin, function (p) {
   return p.theme.colors.primary;
 }, function (p) {
-  return p.primary && Object(external_styled_components_["css"])(Heading_templateObject8(), function (p) {
+  return p.primary && Object(external_styled_components_["css"])(["color:", ";"], function (p) {
     return p.theme.colors.primary;
   });
 }, function (p) {
   return p.white && 'color: white;';
 });
 /* harmony default export */ var Heading = (helpers_withDynamicHeading(HeadingBase));
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/Text.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/Text.js
 
-
-function Text_templateObject6() {
-  var data = taggedTemplateLiteral_default()(["font-size: ", ";\n   line-height: ", ";\n   color: ", ";\n   opacity: ", ";\n  "]);
-
-  Text_templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function Text_templateObject5() {
-  var data = taggedTemplateLiteral_default()(["font-size: ", ";\n   line-height: ", ";\n   color: ", ";\n   opacity: ", ";\n  "]);
-
-  Text_templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function Text_templateObject4() {
-  var data = taggedTemplateLiteral_default()(["font-size: ", ";\n   line-height: ", ";\n   font-weight: ", ";\n   color: ", ";\n  "]);
-
-  Text_templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function Text_templateObject3() {
-  var data = taggedTemplateLiteral_default()(["font-size: ", ";\n   line-height: ", ";\n   color: ", ";\n   opacity: ", ";\n   font-weight: ", ";\n  "]);
-
-  Text_templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function Text_templateObject2() {
-  var data = taggedTemplateLiteral_default()(["font-size: ", ";\n   line-height: ", ";\n   font-weight: ", ";\n   color: ", ";\n   text-shadow: ", ";\n  "]);
-
-  Text_templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function Text_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  font-size: ", ";\n  line-height: ", ";\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"]);
-
-  Text_templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-var Text = external_styled_components_default.a.p(Text_templateObject(), function (p) {
+var Text = external_styled_components_default.a.p.withConfig({
+  displayName: "Text",
+  componentId: "pkamgi-0"
+})(["font-size:", ";line-height:", ";", " ", " ", " ", " ", ""], function (p) {
   return p.theme.font.size.normal;
 }, function (p) {
   return p.theme.font.lineHeight.normal;
 }, function (props) {
-  return props.textHuge ? Object(external_styled_components_["css"])(Text_templateObject2(), function (p) {
+  return props.textHuge ? Object(external_styled_components_["css"])(["font-size:", ";line-height:", ";font-weight:", ";color:", ";text-shadow:", ";"], function (p) {
     return p.theme.font.size.huge;
   }, function (p) {
     return p.theme.font.lineHeight.huge;
@@ -3118,7 +2307,7 @@ var Text = external_styled_components_default.a.p(Text_templateObject(), functio
     return p.theme.shadows.level2;
   }) : '';
 }, function (props) {
-  return props.textBig ? Object(external_styled_components_["css"])(Text_templateObject3(), function (p) {
+  return props.textBig ? Object(external_styled_components_["css"])(["font-size:", ";line-height:", ";color:", ";opacity:", ";font-weight:", ";"], function (p) {
     return p.theme.font.size.big;
   }, function (p) {
     return p.theme.font.lineHeight.huge;
@@ -3130,7 +2319,7 @@ var Text = external_styled_components_default.a.p(Text_templateObject(), functio
     return p.theme.font.weight.w400;
   }) : '';
 }, function (props) {
-  return props.textNormal ? Object(external_styled_components_["css"])(Text_templateObject4(), function (p) {
+  return props.textNormal ? Object(external_styled_components_["css"])(["font-size:", ";line-height:", ";font-weight:", ";color:", ";"], function (p) {
     return p.theme.font.size.normal;
   }, function (p) {
     return p.theme.font.lineHeight.normal;
@@ -3140,7 +2329,7 @@ var Text = external_styled_components_default.a.p(Text_templateObject(), functio
     return p.theme.colors.black;
   }) : '';
 }, function (props) {
-  return props.textSmall ? Object(external_styled_components_["css"])(Text_templateObject5(), function (p) {
+  return props.textSmall ? Object(external_styled_components_["css"])(["font-size:", ";line-height:", ";color:", ";opacity:", ";"], function (p) {
     return p.theme.font.size.small;
   }, function (p) {
     return p.theme.font.lineHeight.small;
@@ -3150,7 +2339,7 @@ var Text = external_styled_components_default.a.p(Text_templateObject(), functio
     return p.opacity ? '${p => p.theme.opacity.normal}' : '1';
   }) : '';
 }, function (props) {
-  return props.textSmaller ? Object(external_styled_components_["css"])(Text_templateObject6(), function (p) {
+  return props.textSmaller ? Object(external_styled_components_["css"])(["font-size:", ";line-height:", ";color:", ";opacity:", ";"], function (p) {
     return p.theme.font.size.smaller;
   }, function (p) {
     return p.theme.font.lineHeight.smaller;
@@ -3161,55 +2350,28 @@ var Text = external_styled_components_default.a.p(Text_templateObject(), functio
   }) : '';
 });
 /* harmony default export */ var atoms_Text = (Text);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/Link.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/Link.js
 
-
-function Link_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  text-decoration: none;\n  color: ", ";\n"]);
-
-  Link_templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-var Link = external_styled_components_default.a.a(Link_templateObject(), function (props) {
+var Link = external_styled_components_default.a.a.withConfig({
+  displayName: "Link",
+  componentId: "sc-1fsgs7m-0"
+})(["text-decoration:none;color:", ";"], function (props) {
   return props.theme.colors.black;
 });
 /* harmony default export */ var atoms_Link = (Link);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/Image.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/Image.js
 
-
-function Image_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  display: block;\n"]);
-
-  Image_templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-var Image = external_styled_components_default.a.img(Image_templateObject());
+var Image = external_styled_components_default.a.img.withConfig({
+  displayName: "Image",
+  componentId: "sgnf05-0"
+})(["display:block;"]);
 /* harmony default export */ var atoms_Image = (Image);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/ImageBlock.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/ImageBlock.js
 
-
-function ImageBlock_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  width: ", ";\n  height: ", ";\n  background-image: url(", ");\n  background-size: cover;\n  background-position: center;\n  background-repeat: no-repeat;\n"]);
-
-  ImageBlock_templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-var ImageBlock = external_styled_components_default.a.div(ImageBlock_templateObject(), function (props) {
+var ImageBlock = external_styled_components_default.a.div.withConfig({
+  displayName: "ImageBlock",
+  componentId: "oeicy5-0"
+})(["width:", ";height:", ";background-image:url(", ");background-size:cover;background-position:center;background-repeat:no-repeat;"], function (props) {
   return props.width || '50px';
 }, function (props) {
   return props.height || '50px';
@@ -3217,75 +2379,27 @@ var ImageBlock = external_styled_components_default.a.div(ImageBlock_templateObj
   return props.src;
 });
 /* harmony default export */ var atoms_ImageBlock = (ImageBlock);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/List.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/List.js
 
-
-function List_templateObject4() {
-  var data = taggedTemplateLiteral_default()(["justify-content: center;"]);
-
-  List_templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function List_templateObject3() {
-  var data = taggedTemplateLiteral_default()(["\n    margin: 0;\n    padding: 0;\n    list-style: none;\n  "]);
-
-  List_templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function List_templateObject2() {
-  var data = taggedTemplateLiteral_default()(["\n    display: flex;\n    flex-wrap: wrap;\n  "]);
-
-  List_templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function List_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  ", "\n  ", ";\n  ", "\n"]);
-
-  List_templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-var List = external_styled_components_default.a.ul(List_templateObject(), function (p) {
-  return p.horizontal && Object(external_styled_components_["css"])(List_templateObject2());
+var List = external_styled_components_default.a.ul.withConfig({
+  displayName: "List",
+  componentId: "l3sjbh-0"
+})(["", " ", ";", ""], function (p) {
+  return p.horizontal && Object(external_styled_components_["css"])(["display:flex;flex-wrap:wrap;"]);
 }, function (p) {
-  return p.unstyled && Object(external_styled_components_["css"])(List_templateObject3());
+  return p.unstyled && Object(external_styled_components_["css"])(["margin:0;padding:0;list-style:none;"]);
 }, function (props) {
-  return props.centered && Object(external_styled_components_["css"])(List_templateObject4());
+  return props.centered && Object(external_styled_components_["css"])(["justify-content:center;"]);
 });
 /* harmony default export */ var atoms_List = (List);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/ListItem.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/ListItem.js
 
-
-function ListItem_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  display: block;\n"]);
-
-  ListItem_templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-var ListItem = external_styled_components_default.a.li(ListItem_templateObject());
+var ListItem = external_styled_components_default.a.li.withConfig({
+  displayName: "ListItem",
+  componentId: "sc-19galkn-0"
+})(["display:block;"]);
 /* harmony default export */ var atoms_ListItem = (ListItem);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/Radio.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/Radio.js
 
 
 
@@ -3293,49 +2407,9 @@ var ListItem = external_styled_components_default.a.li(ListItem_templateObject()
 
 
 
-
-function Radio_templateObject6() {
-  var data = taggedTemplateLiteral_default()(["\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  opacity: 0;\n  cursor: pointer;\n"]);
-
-  Radio_templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function Radio_templateObject5() {
-  var data = taggedTemplateLiteral_default()(["\n    width: 28px;\n    height: 28px;\n    &:after {\n      width: calc(100% - 6px);\n      height: calc(100% - 6px);\n      top: 3px;\n      left: 3px;\n    }\n  "]);
-
-  Radio_templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function Radio_templateObject4() {
-  var data = taggedTemplateLiteral_default()(["\n    width: 36px;\n    height: 36px;\n  "]);
-
-  Radio_templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function Radio_templateObject3() {
-  var data = taggedTemplateLiteral_default()(["\n          top: 4px;\n          left: 4px;\n          width: calc(100% - 8px);\n          height: calc(100% - 8px);\n        "]);
-
-  Radio_templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
 
 function Radio_templateObject2() {
-  var data = taggedTemplateLiteral_default()(["\n      &:after {\n        position: absolute;\n        display: block;\n        content: '';\n        width: calc(100% - 4px);\n        height: calc(100% - 4px);\n        top: 2px;\n        left: 2px;\n        border-radius: 50%;\n        background: ", ";\n        ", "\n      }\n    "]);
+  var data = taggedTemplateLiteral_default()(["\n    width: 36px;\n    height: 36px;\n  "]);
 
   Radio_templateObject2 = function _templateObject2() {
     return data;
@@ -3345,7 +2419,7 @@ function Radio_templateObject2() {
 }
 
 function Radio_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  position: relative;\n  display: inline-block;\n  width: 18px;\n  height: 18px;\n  border: 1px solid ", ";\n  text-align: center;\n  border-radius: 50%;\n  flex-grow: 0;\n  flex-shrink: 0;\n  ", ";\n  ", "\n  ", "\n"]);
+  var data = taggedTemplateLiteral_default()(["\n          top: 4px;\n          left: 4px;\n          width: calc(100% - 8px);\n          height: calc(100% - 8px);\n        "]);
 
   Radio_templateObject = function _templateObject() {
     return data;
@@ -3385,22 +2459,28 @@ function (_PureComponent) {
   return Radio;
 }(external_react_["PureComponent"]);
 
-var RadioCont = external_styled_components_default.a.div(Radio_templateObject(), function (p) {
+var RadioCont = external_styled_components_default.a.div.withConfig({
+  displayName: "Radio__RadioCont",
+  componentId: "sc-16efxyy-0"
+})(["position:relative;display:inline-block;width:18px;height:18px;border:1px solid ", ";text-align:center;border-radius:50%;flex-grow:0;flex-shrink:0;", ";", " ", ""], function (p) {
   return p.theme.colors.grays.regular;
 }, function (p) {
-  return p.checked && Object(external_styled_components_["css"])(Radio_templateObject2(), function (p) {
+  return p.checked && Object(external_styled_components_["css"])(["&:after{position:absolute;display:block;content:'';width:calc(100% - 4px);height:calc(100% - 4px);top:2px;left:2px;border-radius:50%;background:", ";", "}"], function (p) {
     return p.theme.colors.black;
   }, function (p) {
-    return p.theme.max('md')(Radio_templateObject3());
+    return p.theme.max('md')(Radio_templateObject());
   });
 }, function (p) {
-  return p.theme.max('md')(Radio_templateObject4());
+  return p.theme.max('md')(Radio_templateObject2());
 }, function (p) {
-  return p.huge && Object(external_styled_components_["css"])(Radio_templateObject5());
+  return p.huge && Object(external_styled_components_["css"])(["width:28px;height:28px;&:after{width:calc(100% - 6px);height:calc(100% - 6px);top:3px;left:3px;}"]);
 });
-var Radio_Input = external_styled_components_default.a.input(Radio_templateObject6());
+var Radio_Input = external_styled_components_default.a.input.withConfig({
+  displayName: "Radio__Input",
+  componentId: "sc-16efxyy-1"
+})(["position:absolute;left:0;top:0;width:100%;height:100%;opacity:0;cursor:pointer;"]);
 /* harmony default export */ var atoms_Radio = (Radio_Radio);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/RadioButton.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/RadioButton.js
 
 
 
@@ -3411,39 +2491,9 @@ var Radio_Input = external_styled_components_default.a.input(Radio_templateObjec
 
 
 
-
-function RadioButton_templateObject4() {
-  var data = taggedTemplateLiteral_default()(["\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  opacity: 0;\n  cursor: pointer;\n"]);
-
-  RadioButton_templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function RadioButton_templateObject3() {
-  var data = taggedTemplateLiteral_default()(["\n    padding: 7px;\n  "]);
-
-  RadioButton_templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function RadioButton_templateObject2() {
-  var data = taggedTemplateLiteral_default()(["\n      background: black;\n      color: white;\n    "]);
-
-  RadioButton_templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
 
 function RadioButton_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  position: relative;\n  display: inline-block;\n  border: 2px solid ", ";\n  text-align: center;\n  flex-grow: 0;\n  flex-shrink: 0;\n  padding: 7px 18px;\n  font-size: 14px;\n  &:hover {\n    background: black;\n    color: white;\n  }\n  ", ";\n  ", "\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    padding: 7px;\n  "]);
 
   RadioButton_templateObject = function _templateObject() {
     return data;
@@ -3501,34 +2551,31 @@ function (_PureComponent) {
   return RadioButton;
 }(external_react_["PureComponent"]);
 
-var RadioButton_RadioCont = external_styled_components_default.a.div(RadioButton_templateObject(), function (p) {
+var RadioButton_RadioCont = external_styled_components_default.a.div.withConfig({
+  displayName: "RadioButton__RadioCont",
+  componentId: "tys55a-0"
+})(["position:relative;display:inline-block;border:2px solid ", ";text-align:center;flex-grow:0;flex-shrink:0;padding:7px 18px;font-size:14px;&:hover{background:black;color:white;}", ";", ""], function (p) {
   return p.theme.colors.black;
 }, function (p) {
-  return p.checked && Object(external_styled_components_["css"])(RadioButton_templateObject2());
+  return p.checked && Object(external_styled_components_["css"])(["background:black;color:white;"]);
 }, function (p) {
-  return p.theme.max('sm')(RadioButton_templateObject3());
+  return p.theme.max('sm')(RadioButton_templateObject());
 });
-var RadioButton_Input = external_styled_components_default.a.input(RadioButton_templateObject4());
+var RadioButton_Input = external_styled_components_default.a.input.withConfig({
+  displayName: "RadioButton__Input",
+  componentId: "tys55a-1"
+})(["position:absolute;left:0;top:0;width:100%;height:100%;opacity:0;cursor:pointer;"]);
 /* harmony default export */ var atoms_RadioButton = (RadioButton_RadioButton);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/Textarea.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/Textarea.js
 
-
-function Textarea_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  display: block;\n  width: 100%;\n  border: 2px solid ", ";\n  padding: 8px;\n  border-radius: 0;\n  box-shadow: none;\n"]);
-
-  Textarea_templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-var Textarea = external_styled_components_default.a.textarea(Textarea_templateObject(), function (p) {
+var Textarea = external_styled_components_default.a.textarea.withConfig({
+  displayName: "Textarea",
+  componentId: "efw5o4-0"
+})(["display:block;width:100%;border:2px solid ", ";padding:8px;border-radius:0;box-shadow:none;"], function (p) {
   return p.theme.colors.black;
 });
 /* harmony default export */ var atoms_Textarea = (Textarea);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/atoms/index.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/atoms/index.js
 
 
 
@@ -3562,11 +2609,11 @@ var Textarea = external_styled_components_default.a.textarea(Textarea_templateOb
 
 
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/iphone.png
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/images/iphone.png
 var iphone = __webpack_require__(48);
 var iphone_default = /*#__PURE__*/__webpack_require__.n(iphone);
 
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/components/top/Phone.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/components/top/Phone.js
 
 
 
@@ -3574,59 +2621,9 @@ var iphone_default = /*#__PURE__*/__webpack_require__.n(iphone);
 
 
 
-
-function Phone_templateObject7() {
-  var data = taggedTemplateLiteral_default()(["\n  position: absolute;\n  top: 47%;\n  left: 53%;\n  transform: translate(-50%, -50%);\n  border-top: 30px solid transparent;\n  border-bottom: 30px solid transparent;\n  border-left: 48px solid white;\n"]);
-
-  Phone_templateObject7 = function _templateObject7() {
-    return data;
-  };
-
-  return data;
-}
-
-function Phone_templateObject6() {
-  var data = taggedTemplateLiteral_default()(["\n  position: absolute;\n  top: 44px;\n  width: 100%;\n  color: white;\n  font-size: 17px;\n  font-weight: 600;\n  text-align:center;\n"]);
-
-  Phone_templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function Phone_templateObject5() {
-  var data = taggedTemplateLiteral_default()(["\n  position: absolute;\n  top: 32px;\n  width: 100%;\n  color: white;\n  font-size: 13px;\n  font-weight: 400;\n  text-align:center;\n  margin-bottom: 0;\n  opacity: 0.8;\n"]);
-
-  Phone_templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function Phone_templateObject4() {
-  var data = taggedTemplateLiteral_default()(["\n    display: none;\n  "]);
-
-  Phone_templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function Phone_templateObject3() {
-  var data = taggedTemplateLiteral_default()(["\n    transform: translateX(-20px) scale(0.85);\n  "]);
-
-  Phone_templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
 
 function Phone_templateObject2() {
-  var data = taggedTemplateLiteral_default()(["\n  position: relative;\n  width: 276px;\n  height: 550px;\n  background-image: url(", ");\n  background-size: cover;\n  ", "\n  ", "\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    display: none;\n  "]);
 
   Phone_templateObject2 = function _templateObject2() {
     return data;
@@ -3636,7 +2633,7 @@ function Phone_templateObject2() {
 }
 
 function Phone_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  transform: scale(0.65) translateY(68%);\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    transform: translateX(-20px) scale(0.85);\n  "]);
 
   Phone_templateObject = function _templateObject() {
     return data;
@@ -3716,39 +2713,50 @@ function (_PureComponent2) {
   return Phone;
 }(external_react_["PureComponent"]);
 
-var MeditationControl = external_styled_components_default()(Phone_Control)(Phone_templateObject());
-var Cont = external_styled_components_default.a.div(Phone_templateObject2(), iphone_default.a, function (p) {
-  return p.theme.between('sm', 'md')(Phone_templateObject3());
+var MeditationControl = external_styled_components_default()(Phone_Control).withConfig({
+  displayName: "Phone__MeditationControl",
+  componentId: "sc-1ukouqy-0"
+})(["transform:scale(0.65) translateY(68%);"]);
+var Cont = external_styled_components_default.a.div.withConfig({
+  displayName: "Phone__Cont",
+  componentId: "sc-1ukouqy-1"
+})(["position:relative;width:276px;height:550px;background-image:url(", ");background-size:cover;", " ", ""], iphone_default.a, function (p) {
+  return p.theme.between('sm', 'md')(Phone_templateObject());
 }, function (p) {
-  return p.theme.max('sm')(Phone_templateObject4());
+  return p.theme.max('sm')(Phone_templateObject2());
 });
-var Day = external_styled_components_default()(atoms_Text)(Phone_templateObject5());
-var Title = external_styled_components_default()(atoms_Text)(Phone_templateObject6());
-var PlayIcon = external_styled_components_default.a.div(Phone_templateObject7());
+var Day = external_styled_components_default()(atoms_Text).withConfig({
+  displayName: "Phone__Day",
+  componentId: "sc-1ukouqy-2"
+})(["position:absolute;top:32px;width:100%;color:white;font-size:13px;font-weight:400;text-align:center;margin-bottom:0;opacity:0.8;"]);
+var Title = external_styled_components_default()(atoms_Text).withConfig({
+  displayName: "Phone__Title",
+  componentId: "sc-1ukouqy-3"
+})(["position:absolute;top:44px;width:100%;color:white;font-size:17px;font-weight:600;text-align:center;"]);
+var PlayIcon = external_styled_components_default.a.div.withConfig({
+  displayName: "Phone__PlayIcon",
+  componentId: "sc-1ukouqy-4"
+})(["position:absolute;top:47%;left:53%;transform:translate(-50%,-50%);border-top:30px solid transparent;border-bottom:30px solid transparent;border-left:48px solid white;"]);
 /* harmony default export */ var top_Phone = (Phone_Phone);
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/icons/logo_v.png
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/icons/logo_v.png
 var logo_v = __webpack_require__(49);
 var logo_v_default = /*#__PURE__*/__webpack_require__.n(logo_v);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/BgTop.jpg
-var BgTop = __webpack_require__(18);
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/images/BgTop.jpg
+var BgTop = __webpack_require__(20);
 var BgTop_default = /*#__PURE__*/__webpack_require__.n(BgTop);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/icons/GooglePlay.png
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/icons/GooglePlay.png
 var GooglePlay = __webpack_require__(29);
 var GooglePlay_default = /*#__PURE__*/__webpack_require__.n(GooglePlay);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/icons/AppStore.png
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/icons/AppStore.png
 var AppStore = __webpack_require__(30);
 var AppStore_default = /*#__PURE__*/__webpack_require__.n(AppStore);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/CloudsTop.png
-var CloudsTop = __webpack_require__(108);
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/components/top/Top.js
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/CloudsTopTop.png
-var CloudsTopTop = __webpack_require__(109);
 
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/components/top/Top.js
 
 
 
@@ -3757,211 +2765,9 @@ var CloudsTopTop = __webpack_require__(109);
 
 
 
-
-
-
-function _templateObject36() {
-  var data = taggedTemplateLiteral_default()(["\n    width: 180px;\n    height: 65px;\n  "]);
-
-  _templateObject36 = function _templateObject36() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject35() {
-  var data = taggedTemplateLiteral_default()(["\n  ", "\n"]);
-
-  _templateObject35 = function _templateObject35() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject34() {
-  var data = taggedTemplateLiteral_default()(["\n     display: block !important;\n     margin-top: 30px;\n  "]);
-
-  _templateObject34 = function _templateObject34() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject33() {
-  var data = taggedTemplateLiteral_default()(["\n  display: none;\n  ", "\n"]);
-
-  _templateObject33 = function _templateObject33() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject32() {
-  var data = taggedTemplateLiteral_default()(["\n  cursor: pointer;\n  width: 180px;\n  height: 65px;\n  margin-right: ", ";\n"]);
-
-  _templateObject32 = function _templateObject32() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject31() {
-  var data = taggedTemplateLiteral_default()(["\n  text-decoration: none;\n"]);
-
-  _templateObject31 = function _templateObject31() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject30() {
-  var data = taggedTemplateLiteral_default()(["\n    display: none;\n  "]);
-
-  _templateObject30 = function _templateObject30() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject29() {
-  var data = taggedTemplateLiteral_default()(["\n  position: relative;\n  text-align: center;\n  z-index: ", ";\n  margin-top: 40px;\n  ", "\n"]);
-
-  _templateObject29 = function _templateObject29() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject28() {
-  var data = taggedTemplateLiteral_default()(["\n    font-size: 4.7vw;\n  "]);
-
-  _templateObject28 = function _templateObject28() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject27() {
-  var data = taggedTemplateLiteral_default()(["\n    font-size: ", ";\n    line-height: ", ";\n  "]);
-
-  _templateObject27 = function _templateObject27() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject26() {
-  var data = taggedTemplateLiteral_default()(["\n  color: ", ";\n  font-weight: 300;\n  ", "\n  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);\n  ", "\n"]);
-
-  _templateObject26 = function _templateObject26() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject25() {
-  var data = taggedTemplateLiteral_default()(["\n    width: auto;\n    min-width: 274px;\n  "]);
-
-  _templateObject25 = function _templateObject25() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject24() {
-  var data = taggedTemplateLiteral_default()(["\n    z-index: ", ";\n  "]);
-
-  _templateObject24 = function _templateObject24() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject23() {
-  var data = taggedTemplateLiteral_default()(["\n    left: 0;\n  "]);
-
-  _templateObject23 = function _templateObject23() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject22() {
-  var data = taggedTemplateLiteral_default()(["\n  position: relative;\n  top: -45px;\n  width: 450px;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n  ", "\n  ", "\n  ", "\n"]);
-
-  _templateObject22 = function _templateObject22() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject21() {
-  var data = taggedTemplateLiteral_default()(["\n    font-size: 7vw;\n  "]);
-
-  _templateObject21 = function _templateObject21() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject20() {
-  var data = taggedTemplateLiteral_default()(["\n    font-size: 24px;\n  "]);
-
-  _templateObject20 = function _templateObject20() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject19() {
-  var data = taggedTemplateLiteral_default()(["\n  font-size: 28px;\n  margin-bottom: 0;\n  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);\n  ", "\n  ", "\n"]);
-
-  _templateObject19 = function _templateObject19() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject18() {
-  var data = taggedTemplateLiteral_default()(["\n  height: 100%;\n  justify-content: space-between;\n  align-items: center;\n"]);
-
-  _templateObject18 = function _templateObject18() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject17() {
-  var data = taggedTemplateLiteral_default()(["\n    width: 160px; \n    height: 160px;\n    margin-top: 80px;\n  "]);
-
-  _templateObject17 = function _templateObject17() {
-    return data;
-  };
-
-  return data;
-}
 
 function _templateObject16() {
-  var data = taggedTemplateLiteral_default()(["\n    width: 140px; \n    height: 140px;\n    margin-top: 30px;\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n    width: 180px;\n    height: 65px;\n  "]);
 
   _templateObject16 = function _templateObject16() {
     return data;
@@ -3971,7 +2777,7 @@ function _templateObject16() {
 }
 
 function _templateObject15() {
-  var data = taggedTemplateLiteral_default()(["\n    left: 0;\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n     display: block !important;\n     margin-top: 30px;\n  "]);
 
   _templateObject15 = function _templateObject15() {
     return data;
@@ -3981,7 +2787,7 @@ function _templateObject15() {
 }
 
 function _templateObject14() {
-  var data = taggedTemplateLiteral_default()(["\n  position: relative;\n  width: 176px;\n  height: 176px;\n  z-index: ", ";\n  margin: 5px;\n  ", "\n  ", "\n  ", "\n}\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    display: none;\n  "]);
 
   _templateObject14 = function _templateObject14() {
     return data;
@@ -3991,7 +2797,7 @@ function _templateObject14() {
 }
 
 function _templateObject13() {
-  var data = taggedTemplateLiteral_default()(["\n    top: -260px;\n    left: 0;\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n    font-size: 4.7vw;\n  "]);
 
   _templateObject13 = function _templateObject13() {
     return data;
@@ -4001,7 +2807,7 @@ function _templateObject13() {
 }
 
 function _templateObject12() {
-  var data = taggedTemplateLiteral_default()(["\n    top: -45px;\n    left: -350px;\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n    font-size: ", ";\n    line-height: ", ";\n  "]);
 
   _templateObject12 = function _templateObject12() {
     return data;
@@ -4010,70 +2816,70 @@ function _templateObject12() {
   return data;
 }
 
-function Top_templateObject11() {
-  var data = taggedTemplateLiteral_default()(["\n    left: -250px;\n  "]);
+function _templateObject11() {
+  var data = taggedTemplateLiteral_default()(["\n    width: 100%;\n    min-width: 274px;\n  "]);
 
-  Top_templateObject11 = function _templateObject11() {
+  _templateObject11 = function _templateObject11() {
     return data;
   };
 
   return data;
 }
 
-function Top_templateObject10() {
-  var data = taggedTemplateLiteral_default()(["\n    position: absolute;\n    height: auto;\n    z-index: ", ";\n  ", "\n  ", "\n  ", "\n"]);
+function _templateObject10() {
+  var data = taggedTemplateLiteral_default()(["\n    z-index: ", ";\n  "]);
 
-  Top_templateObject10 = function _templateObject10() {
+  _templateObject10 = function _templateObject10() {
     return data;
   };
 
   return data;
 }
 
-function Top_templateObject9() {
-  var data = taggedTemplateLiteral_default()(["\n    display: none;\n  "]);
+function _templateObject9() {
+  var data = taggedTemplateLiteral_default()(["\n    left: 0;\n  "]);
 
-  Top_templateObject9 = function _templateObject9() {
+  _templateObject9 = function _templateObject9() {
     return data;
   };
 
   return data;
 }
 
-function Top_templateObject8() {
-  var data = taggedTemplateLiteral_default()(["\n  left: -50px;\n  "]);
+function _templateObject8() {
+  var data = taggedTemplateLiteral_default()(["\n    font-size: 7vw;\n  "]);
 
-  Top_templateObject8 = function _templateObject8() {
+  _templateObject8 = function _templateObject8() {
     return data;
   };
 
   return data;
 }
 
-function Top_templateObject7() {
-  var data = taggedTemplateLiteral_default()(["\n  position: absolute;\n  z-index: ", ";\n  left: 100px;\n  ", "\n  ", "\n"]);
+function _templateObject7() {
+  var data = taggedTemplateLiteral_default()(["\n    font-size: 24px;\n  "]);
 
-  Top_templateObject7 = function _templateObject7() {
+  _templateObject7 = function _templateObject7() {
     return data;
   };
 
   return data;
 }
 
-function Top_templateObject6() {
-  var data = taggedTemplateLiteral_default()(["\n  width: 466px;\n  height: 466px;\n  background-image:url(", ");\n  clip-path: url(#cross);\n  background-size: cover;\n"]);
+function _templateObject6() {
+  var data = taggedTemplateLiteral_default()(["\n    width: 160px; \n    height: 160px;\n    margin-top: 80px;\n  "]);
 
-  Top_templateObject6 = function _templateObject6() {
+  _templateObject6 = function _templateObject6() {
     return data;
   };
 
   return data;
 }
 
-function Top_templateObject5() {
-  var data = taggedTemplateLiteral_default()(["\n    height: 568px;\n    padding: 0 10px;\n  "]);
+function _templateObject5() {
+  var data = taggedTemplateLiteral_default()(["\n    width: 140px; \n    height: 140px;\n    margin-top: 30px;\n  "]);
 
-  Top_templateObject5 = function _templateObject5() {
+  _templateObject5 = function _templateObject5() {
     return data;
   };
 
@@ -4081,7 +2887,7 @@ function Top_templateObject5() {
 }
 
 function Top_templateObject4() {
-  var data = taggedTemplateLiteral_default()(["\n    height: 580px;\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n    left: 0;\n  "]);
 
   Top_templateObject4 = function _templateObject4() {
     return data;
@@ -4091,7 +2897,7 @@ function Top_templateObject4() {
 }
 
 function Top_templateObject3() {
-  var data = taggedTemplateLiteral_default()(["\n    background-attachment: fixed;\n    background-position: bottom;\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n    height: 568px;\n    padding: 0 10px;\n  "]);
 
   Top_templateObject3 = function _templateObject3() {
     return data;
@@ -4101,7 +2907,7 @@ function Top_templateObject3() {
 }
 
 function Top_templateObject2() {
-  var data = taggedTemplateLiteral_default()(["\n  background: url(", ") no-repeat center;\n  background-color: ", ";\n  background-size: cover;\n  ", "\n  padding: 0;\n  height: 700px;\n  ", "\n  ", "\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    height: 580px;\n  "]);
 
   Top_templateObject2 = function _templateObject2() {
     return data;
@@ -4111,7 +2917,7 @@ function Top_templateObject2() {
 }
 
 function Top_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  padding: 15px;\n  background: #fff;\n  color: #000;\n  text-align: center;\n  cursor: pointer;\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    background-attachment: fixed;\n    background-position: bottom;\n  "]);
 
   Top_templateObject = function _templateObject() {
     return data;
@@ -4134,9 +2940,6 @@ function Top_templateObject() {
 
 
 
-
-
- // import PHONE from 'core/assets/images/PhoneTop.png';
 
 
 
@@ -4227,20 +3030,19 @@ function (_PureComponent) {
     key: "render",
     value: function render() {
       var t = this.props.t;
-      return external_react_default.a.createElement(CustomSection, null, external_react_default.a.createElement(atoms_Container, null, external_react_default.a.createElement(CustomReactFlagsSelect, {
+      return external_react_default.a.createElement(CustomSection, null, external_react_default.a.createElement(CustomReactFlagsSelect, {
         defaultCountry: {
           ru: 'RU',
           en: 'US'
         }[i18n_getLocale()] || 'RU',
         countries: ["US", "RU"],
+        className: "menu-flags",
         customLabels: {
-          "US": "Eng",
-          "RU": "Рус"
+          "US": "EN",
+          "RU": "RU"
         },
         onSelect: this.onSelectFlag
-      }), external_react_default.a.createElement(TopFlex, null, external_react_default.a.createElement(BlockText, {
-        direction: 'column'
-      }, external_react_default.a.createElement(Logo, {
+      }), external_react_default.a.createElement(atoms_Container, null, external_react_default.a.createElement(TopFlex, null, external_react_default.a.createElement(BlockText, null, external_react_default.a.createElement(Logo, {
         src: logo_v_default.a
       }), external_react_default.a.createElement(Top_Heading, {
         white: true,
@@ -4280,100 +3082,119 @@ function (_PureComponent) {
 }(external_react_["PureComponent"]);
 
 /* harmony default export */ var top_Top = (Object(external_react_i18next_["withTranslation"])()(Top_Top));
-var CustomReactFlagsSelect = external_styled_components_default()(external_react_flags_select_default.a)(Top_templateObject());
-var CustomSection = external_styled_components_default()(atoms_Section)(Top_templateObject2(), BgTop_default.a, function (p) {
+var CustomReactFlagsSelect = external_styled_components_default()(external_react_flags_select_default.a).withConfig({
+  displayName: "Top__CustomReactFlagsSelect",
+  componentId: "tw6vr5-0"
+})(["position:absolute;right:0;padding:15px;color:rgba(255,255,255,0.7);text-transform:uppercase;text-align:center;cursor:pointer;&&{.flag-options{background:rgba(0,0,0,0.3);border:0;}.flag-option{&:hover{background:rgba(0,0,0,.5);}}.arrow-down{color:rgba(255,255,255,0.7);}}"]);
+var CustomSection = external_styled_components_default()(atoms_Section).withConfig({
+  displayName: "Top__CustomSection",
+  componentId: "tw6vr5-1"
+})(["background:url(", ") no-repeat center;background-color:", ";background-size:cover;", " padding:0;height:700px;", " ", ""], BgTop_default.a, function (p) {
   return p.theme.colors.primary;
 }, function (p) {
-  return p.theme.min('md')(Top_templateObject3());
+  return p.theme.min('md')(Top_templateObject());
 }, function (p) {
-  return p.theme.between('sm', 'md')(Top_templateObject4());
+  return p.theme.between('sm', 'md')(Top_templateObject2());
 }, function (p) {
-  return p.theme.max('sm')(Top_templateObject5());
+  return p.theme.max('sm')(Top_templateObject3());
 });
-var Img = external_styled_components_default.a.div(Top_templateObject6(), BgTop_default.a);
-var Top_CloudsTop = external_styled_components_default.a.img(Top_templateObject7(), function (p) {
-  return p.theme.zIndex.three;
-}, function (p) {
-  return p.theme.max('lg')(Top_templateObject8());
-}, function (p) {
-  return p.theme.max('md')(Top_templateObject9());
-});
-var Clouds = external_styled_components_default.a.img(Top_templateObject10(), function (p) {
-  return p.theme.zIndex.two;
-}, function (p) {
-  return p.theme.max('lg')(Top_templateObject11());
-}, function (p) {
-  return p.theme.max('md')(_templateObject12());
-}, function (p) {
-  return p.theme.max('sm')(_templateObject13());
-});
-var Logo = external_styled_components_default.a.img(_templateObject14(), function (p) {
+var Logo = external_styled_components_default.a.img.withConfig({
+  displayName: "Top__Logo",
+  componentId: "tw6vr5-2"
+})(["position:relative;width:176px;height:176px;z-index:", ";margin:5px;", " ", " ", "}"], function (p) {
   return p.theme.zIndex.four;
 }, function (p) {
-  return p.theme.max('lg')(_templateObject15());
+  return p.theme.max('lg')(Top_templateObject4());
 }, function (p) {
-  return p.theme.max('md')(_templateObject16());
+  return p.theme.max('md')(_templateObject5());
 }, function (p) {
-  return p.theme.max('sm')(_templateObject17());
+  return p.theme.max('sm')(_templateObject6());
 });
-var TopFlex = external_styled_components_default()(atoms_Flex)(_templateObject18());
-var Top_Heading = external_styled_components_default()(Heading)(_templateObject19(), function (p) {
-  return p.theme.max('md')(_templateObject20());
+var TopFlex = external_styled_components_default()(atoms_Flex).withConfig({
+  displayName: "Top__TopFlex",
+  componentId: "tw6vr5-3"
+})(["height:100%;justify-content:space-between;align-items:center;"]);
+var Top_Heading = external_styled_components_default()(Heading).withConfig({
+  displayName: "Top__Heading",
+  componentId: "tw6vr5-4"
+})(["font-size:28px;margin-bottom:0;text-shadow:0 0 3px rgba(0,0,0,0.3);", " ", ""], function (p) {
+  return p.theme.max('md')(_templateObject7());
 }, function (p) {
-  return p.theme.max('sm')(_templateObject21());
+  return p.theme.max('sm')(_templateObject8());
 });
-var BlockText = external_styled_components_default()(atoms_Flex)(_templateObject22(), function (p) {
-  return p.theme.max('lg')(_templateObject23());
+var BlockText = external_styled_components_default()(atoms_Flex).withConfig({
+  displayName: "Top__BlockText",
+  componentId: "tw6vr5-5"
+})(["position:relative;top:-45px;width:450px;flex-direction:column;align-items:center;justify-content:center;text-align:center;", " ", " ", ""], function (p) {
+  return p.theme.max('lg')(_templateObject9());
 }, function (p) {
-  return p.theme.max('md')(_templateObject24(), function (p) {
+  return p.theme.max('md')(_templateObject10(), function (p) {
     return p.theme.zIndex.three;
   });
 }, function (p) {
-  return p.theme.max('sm')(_templateObject25());
+  return p.theme.max('sm')(_templateObject11());
 });
-var NormalText = external_styled_components_default()(atoms_Text)(_templateObject26(), function (p) {
+var NormalText = external_styled_components_default()(atoms_Text).withConfig({
+  displayName: "Top__NormalText",
+  componentId: "tw6vr5-6"
+})(["color:", ";font-weight:300;", " text-shadow:0 0 3px rgba(0,0,0,0.3);", ""], function (p) {
   return p.theme.colors.white;
 }, function (p) {
-  return p.theme.max('sm')(_templateObject27(), function (p) {
+  return p.theme.max('sm')(_templateObject12(), function (p) {
     return p.theme.font.size.smaller;
   }, function (p) {
     return p.theme.font.lineHeight.normal;
   });
 }, function (p) {
-  return p.theme.max('sm')(_templateObject28());
+  return p.theme.max('sm')(_templateObject13());
 });
-var ButtonCont = external_styled_components_default.a.div(_templateObject29(), function (p) {
+var ButtonCont = external_styled_components_default.a.div.withConfig({
+  displayName: "Top__ButtonCont",
+  componentId: "tw6vr5-7"
+})(["position:relative;text-align:center;z-index:", ";margin-top:40px;", ""], function (p) {
   return p.theme.zIndex.two;
 }, function (p) {
-  return p.theme.max('sm')(_templateObject30());
+  return p.theme.max('sm')(_templateObject14());
 });
-var AppLink = external_styled_components_default()(atoms_Link)(_templateObject31());
-var ButtonDownload = external_styled_components_default.a.img(_templateObject32(), function (p) {
+var AppLink = external_styled_components_default()(atoms_Link).withConfig({
+  displayName: "Top__AppLink",
+  componentId: "tw6vr5-8"
+})(["text-decoration:none;"]);
+var ButtonDownload = external_styled_components_default.a.img.withConfig({
+  displayName: "Top__ButtonDownload",
+  componentId: "tw6vr5-9"
+})(["cursor:pointer;width:180px;height:65px;margin-right:", ";"], function (p) {
   return p.last ? '0' : '15px';
 });
-var FullVersion = external_styled_components_default.a.div(_templateObject33(), function (p) {
-  return p.theme.max('sm')(_templateObject34());
+var FullVersion = external_styled_components_default.a.div.withConfig({
+  displayName: "Top__FullVersion",
+  componentId: "tw6vr5-10"
+})(["display:none;", ""], function (p) {
+  return p.theme.max('sm')(_templateObject15());
 });
-var ButtonDownloadSm = external_styled_components_default.a.img(_templateObject35(), function (p) {
-  return p.theme.max('sm')(_templateObject36());
+var ButtonDownloadSm = external_styled_components_default.a.img.withConfig({
+  displayName: "Top__ButtonDownloadSm",
+  componentId: "tw6vr5-11"
+})(["", ""], function (p) {
+  return p.theme.max('sm')(_templateObject16());
 });
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/marketing1.png
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/images/marketing1.png
 var marketing1 = __webpack_require__(50);
 var marketing1_default = /*#__PURE__*/__webpack_require__.n(marketing1);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/marketing2.png
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/images/marketing2.png
 var marketing2 = __webpack_require__(51);
 var marketing2_default = /*#__PURE__*/__webpack_require__.n(marketing2);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/marketing3.png
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/images/marketing3.png
 var marketing3 = __webpack_require__(52);
 var marketing3_default = /*#__PURE__*/__webpack_require__.n(marketing3);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/top_wave.png
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/images/top_wave.png
 var top_wave = __webpack_require__(21);
 var top_wave_default = /*#__PURE__*/__webpack_require__.n(top_wave);
 
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/components/marketing/Marketing.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/components/marketing/Marketing.js
 
 
 
@@ -4382,120 +3203,30 @@ var top_wave_default = /*#__PURE__*/__webpack_require__.n(top_wave);
 
 
 
-function Marketing_templateObject28() {
+function _templateObject19() {
   var data = taggedTemplateLiteral_default()(["\n    padding: 0 50px;\n    margin-top: 7px;\n    margin-bottom: 30px;\n  "]);
 
-  Marketing_templateObject28 = function _templateObject28() {
+  _templateObject19 = function _templateObject19() {
     return data;
   };
 
   return data;
 }
 
-function Marketing_templateObject27() {
+function _templateObject18() {
   var data = taggedTemplateLiteral_default()(["\n    margin-top: 3px;\n    padding: 0 10px;\n  "]);
 
-  Marketing_templateObject27 = function _templateObject27() {
+  _templateObject18 = function _templateObject18() {
     return data;
   };
 
   return data;
 }
 
-function Marketing_templateObject26() {
-  var data = taggedTemplateLiteral_default()(["\n  position: relative;\n  font-weight: 700;\n  font-size: 20px;\n  text-align:center;\n  padding: 0 20px;\n  z-index: 2;\n  margin-top: 12px;\n  ", "\n  ", "\n"]);
-
-  Marketing_templateObject26 = function _templateObject26() {
-    return data;
-  };
-
-  return data;
-}
-
-function Marketing_templateObject25() {
+function _templateObject17() {
   var data = taggedTemplateLiteral_default()(["\n        width: 2130px;\n      "]);
 
-  Marketing_templateObject25 = function _templateObject25() {
-    return data;
-  };
-
-  return data;
-}
-
-function Marketing_templateObject24() {
-  var data = taggedTemplateLiteral_default()(["\n        height: 35vw;\n      "]);
-
-  Marketing_templateObject24 = function _templateObject24() {
-    return data;
-  };
-
-  return data;
-}
-
-function Marketing_templateObject23() {
-  var data = taggedTemplateLiteral_default()(["\n        width: 2130px;\n        transform: translateX(-2194px);\n      "]);
-
-  Marketing_templateObject23 = function _templateObject23() {
-    return data;
-  };
-
-  return data;
-}
-
-function Marketing_templateObject22() {
-  var data = taggedTemplateLiteral_default()(["\n        height: 270px;\n        transform: translate(0, calc(-17.5vw + 2px - 200px));\n      "]);
-
-  Marketing_templateObject22 = function _templateObject22() {
-    return data;
-  };
-
-  return data;
-}
-
-function Marketing_templateObject21() {
-  var data = taggedTemplateLiteral_default()(["\n      transform: translate(0, calc(35vw - 2px));\n    "]);
-
-  Marketing_templateObject21 = function _templateObject21() {
-    return data;
-  };
-
-  return data;
-}
-
-function Marketing_templateObject20() {
-  var data = taggedTemplateLiteral_default()(["\n      transform: translate(0, calc(-17.5vw + 2px));\n    "]);
-
-  Marketing_templateObject20 = function _templateObject20() {
-    return data;
-  };
-
-  return data;
-}
-
-function Marketing_templateObject19() {
-  var data = taggedTemplateLiteral_default()(["\n      width: 100%;\n      left: 0;\n      height: 17.5vw;\n    "]);
-
-  Marketing_templateObject19 = function _templateObject19() {
-    return data;
-  };
-
-  return data;
-}
-
-function Marketing_templateObject18() {
-  var data = taggedTemplateLiteral_default()(["\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  &:before, &:after {\n    content: '';\n    display: block;\n    position: absolute;\n    height: 100%;\n    left: 50%;\n    background: white;\n    top: 0;\n    width: 130px;\n    ", "\n  }\n  &:before {\n    transform: translateX(-194px);\n    ", "\n  }\n  &:after {\n    transform: translateX(64px);\n    ", "\n  }\n  &:first-child {\n    &:before {\n      ", "\n      ", "\n    }\n  }\n  &:last-child {\n    &:after {\n      ", "\n      ", "\n    }\n  }\n"]);
-
-  Marketing_templateObject18 = function _templateObject18() {
-    return data;
-  };
-
-  return data;
-}
-
-function Marketing_templateObject17() {
-  var data = taggedTemplateLiteral_default()(["\n    width: 35vw;\n    height: 35vw;\n  "]);
-
-  Marketing_templateObject17 = function _templateObject17() {
+  _templateObject17 = function _templateObject17() {
     return data;
   };
 
@@ -4503,7 +3234,7 @@ function Marketing_templateObject17() {
 }
 
 function Marketing_templateObject16() {
-  var data = taggedTemplateLiteral_default()(["\n  width: 130px;\n  height: 130px;\n  background-image: url(", ");\n  background-size: cover;\n  ", "\n"]);
+  var data = taggedTemplateLiteral_default()(["\n        height: 35vw;\n      "]);
 
   Marketing_templateObject16 = function _templateObject16() {
     return data;
@@ -4513,7 +3244,7 @@ function Marketing_templateObject16() {
 }
 
 function Marketing_templateObject15() {
-  var data = taggedTemplateLiteral_default()(["\n    position: relative;\n    top: 20px;\n    font-size: 18px;\n    text-align: justify;\n    line-height: 1.38;\n    margin: 10px 0 40px 0;\n    padding: 0 ", ";\n    z-index: 10;\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n        width: 2130px;\n        transform: translateX(-2194px);\n      "]);
 
   Marketing_templateObject15 = function _templateObject15() {
     return data;
@@ -4523,7 +3254,7 @@ function Marketing_templateObject15() {
 }
 
 function Marketing_templateObject14() {
-  var data = taggedTemplateLiteral_default()(["\n    margin: 40px 0;\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n        height: 270px;\n        transform: translate(0, calc(-17.5vw + 2px - 200px));\n      "]);
 
   Marketing_templateObject14 = function _templateObject14() {
     return data;
@@ -4533,7 +3264,7 @@ function Marketing_templateObject14() {
 }
 
 function Marketing_templateObject13() {
-  var data = taggedTemplateLiteral_default()(["\n  text-align: center;\n  font-size: 20px;\n  line-height: 1.45;\n  margin: 40px 0;\n  ", "\n  ", "\n"]);
+  var data = taggedTemplateLiteral_default()(["\n      transform: translate(0, calc(35vw - 2px));\n    "]);
 
   Marketing_templateObject13 = function _templateObject13() {
     return data;
@@ -4543,7 +3274,7 @@ function Marketing_templateObject13() {
 }
 
 function Marketing_templateObject12() {
-  var data = taggedTemplateLiteral_default()(["\n    height: 101%;\n    width: 33vw;\n    top: 0;\n    right: 0;\n    left: auto;\n    bottom: auto;\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n      transform: translate(0, calc(-17.5vw + 2px));\n    "]);
 
   Marketing_templateObject12 = function _templateObject12() {
     return data;
@@ -4553,7 +3284,7 @@ function Marketing_templateObject12() {
 }
 
 function Marketing_templateObject11() {
-  var data = taggedTemplateLiteral_default()(["\n  position: absolute;\n  width: 100%;\n  height: 154px;\n  bottom: -50px;\n  left: 0;\n  background: white;\n  ", "\n"]);
+  var data = taggedTemplateLiteral_default()(["\n      width: 100%;\n      left: 0;\n      height: 17.5vw;\n    "]);
 
   Marketing_templateObject11 = function _templateObject11() {
     return data;
@@ -4563,7 +3294,7 @@ function Marketing_templateObject11() {
 }
 
 function Marketing_templateObject10() {
-  var data = taggedTemplateLiteral_default()(["\n    height: 101%;\n    width: 33vw;\n    top: 0;\n    left: 0;\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n    width: 35vw;\n    height: 35vw;\n  "]);
 
   Marketing_templateObject10 = function _templateObject10() {
     return data;
@@ -4573,7 +3304,7 @@ function Marketing_templateObject10() {
 }
 
 function Marketing_templateObject9() {
-  var data = taggedTemplateLiteral_default()(["\n    height: 198px;\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n    position: relative;\n    top: 20px;\n    font-size: 18px;\n    text-align: justify;\n    line-height: 1.38;\n    margin: 10px 0 40px 0;\n    padding: 0 ", ";\n    z-index: 10;\n  "]);
 
   Marketing_templateObject9 = function _templateObject9() {
     return data;
@@ -4583,7 +3314,7 @@ function Marketing_templateObject9() {
 }
 
 function Marketing_templateObject8() {
-  var data = taggedTemplateLiteral_default()(["\n  position: absolute;\n  width: 100%;\n  height: 188px;\n  top: 0;\n  left: 0;\n  background: white;\n  ", "\n  ", "\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    margin: 40px 0;\n  "]);
 
   Marketing_templateObject8 = function _templateObject8() {
     return data;
@@ -4593,7 +3324,7 @@ function Marketing_templateObject8() {
 }
 
 function Marketing_templateObject7() {
-  var data = taggedTemplateLiteral_default()(["\n    background-size: 200vw 38%;\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n    height: 101%;\n    width: 33vw;\n    top: 0;\n    right: 0;\n    left: auto;\n    bottom: auto;\n  "]);
 
   Marketing_templateObject7 = function _templateObject7() {
     return data;
@@ -4603,7 +3334,7 @@ function Marketing_templateObject7() {
 }
 
 function Marketing_templateObject6() {
-  var data = taggedTemplateLiteral_default()(["\n    background-size: 150vw 40%;\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n    height: 101%;\n    width: 33vw;\n    top: 0;\n    left: 0;\n  "]);
 
   Marketing_templateObject6 = function _templateObject6() {
     return data;
@@ -4613,7 +3344,7 @@ function Marketing_templateObject6() {
 }
 
 function Marketing_templateObject5() {
-  var data = taggedTemplateLiteral_default()(["\n  position: absolute;\n  left: 0;\n  top: -99px;\n  height: 100px;\n  width: 100%;\n  background-image: url(", ");\n  z-index: 10;\n  background-size: 2420px 55%;\n  background-position: center bottom;\n  background-repeat: no-repeat;\n  ", "\n  ", "\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    height: 198px;\n  "]);
 
   Marketing_templateObject5 = function _templateObject5() {
     return data;
@@ -4623,7 +3354,7 @@ function Marketing_templateObject5() {
 }
 
 function Marketing_templateObject4() {
-  var data = taggedTemplateLiteral_default()(["\n  overflow: hidden;\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    background-size: 200vw 38%;\n  "]);
 
   Marketing_templateObject4 = function _templateObject4() {
     return data;
@@ -4633,7 +3364,7 @@ function Marketing_templateObject4() {
 }
 
 function Marketing_templateObject3() {
-  var data = taggedTemplateLiteral_default()(["\n    padding: 0;\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n    background-size: 150vw 40%;\n  "]);
 
   Marketing_templateObject3 = function _templateObject3() {
     return data;
@@ -4643,7 +3374,7 @@ function Marketing_templateObject3() {
 }
 
 function Marketing_templateObject2() {
-  var data = taggedTemplateLiteral_default()(["\n    background-attachment: fixed;\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n    padding: 0;\n  "]);
 
   Marketing_templateObject2 = function _templateObject2() {
     return data;
@@ -4653,7 +3384,7 @@ function Marketing_templateObject2() {
 }
 
 function Marketing_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  position:relative;\n  padding: 20px 0;\n  background-image: url(", ");\n  background-size: cover;\n  background-position: bottom;\n  ", "\n  ", "\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    background-attachment: fixed;\n  "]);
 
   Marketing_templateObject = function _templateObject() {
     return data;
@@ -4715,36 +3446,57 @@ function (_PureComponent) {
   return Marketing;
 }(external_react_["PureComponent"]);
 
-var Marketing_Cont = external_styled_components_default.a.section(Marketing_templateObject(), BgTop_default.a, function (p) {
-  return p.theme.min('md')(Marketing_templateObject2());
+var Marketing_Cont = external_styled_components_default.a.section.withConfig({
+  displayName: "Marketing__Cont",
+  componentId: "sc-496sae-0"
+})(["position:relative;padding:20px 0;background-image:url(", ");background-size:cover;background-position:bottom;", " ", ""], BgTop_default.a, function (p) {
+  return p.theme.min('md')(Marketing_templateObject());
 }, function (p) {
-  return p.theme.max('md')(Marketing_templateObject3());
+  return p.theme.max('md')(Marketing_templateObject2());
 });
-var Overflow = external_styled_components_default.a.div(Marketing_templateObject4());
-var TopOverlay = external_styled_components_default.a.div(Marketing_templateObject5(), top_wave_default.a, function (p) {
-  return p.theme.max('md')(Marketing_templateObject6());
+var Overflow = external_styled_components_default.a.div.withConfig({
+  displayName: "Marketing__Overflow",
+  componentId: "sc-496sae-1"
+})(["overflow:hidden;"]);
+var TopOverlay = external_styled_components_default.a.div.withConfig({
+  displayName: "Marketing__TopOverlay",
+  componentId: "sc-496sae-2"
+})(["position:absolute;left:0;top:-99px;height:100px;width:100%;background-image:url(", ");z-index:10;background-size:2420px 55%;background-position:center bottom;background-repeat:no-repeat;", " ", ""], top_wave_default.a, function (p) {
+  return p.theme.max('md')(Marketing_templateObject3());
 }, function (p) {
+  return p.theme.max('sm')(Marketing_templateObject4());
+});
+var TopBlock = external_styled_components_default.a.div.withConfig({
+  displayName: "Marketing__TopBlock",
+  componentId: "sc-496sae-3"
+})(["position:absolute;width:100%;height:188px;top:0;left:0;background:white;", " ", ""], function (p) {
+  return p.theme.between('sm', 'md')(Marketing_templateObject5());
+}, function (p) {
+  return p.theme.max('sm')(Marketing_templateObject6());
+});
+var BottomBlock = external_styled_components_default.a.div.withConfig({
+  displayName: "Marketing__BottomBlock",
+  componentId: "sc-496sae-4"
+})(["position:absolute;width:100%;height:154px;bottom:-50px;left:0;background:white;", ""], function (p) {
   return p.theme.max('sm')(Marketing_templateObject7());
 });
-var TopBlock = external_styled_components_default.a.div(Marketing_templateObject8(), function (p) {
-  return p.theme.between('sm', 'md')(Marketing_templateObject9());
+var Desc = external_styled_components_default()(atoms_Text).withConfig({
+  displayName: "Marketing__Desc",
+  componentId: "sc-496sae-5"
+})(["text-align:center;font-size:20px;line-height:1.45;margin:40px 0;", " ", ""], function (p) {
+  return p.theme.between('sm', 'md')(Marketing_templateObject8());
 }, function (p) {
-  return p.theme.max('sm')(Marketing_templateObject10());
-});
-var BottomBlock = external_styled_components_default.a.div(Marketing_templateObject11(), function (p) {
-  return p.theme.max('sm')(Marketing_templateObject12());
-});
-var Desc = external_styled_components_default()(atoms_Text)(Marketing_templateObject13(), function (p) {
-  return p.theme.between('sm', 'md')(Marketing_templateObject14());
-}, function (p) {
-  return p.theme.max('sm')(Marketing_templateObject15(), function (p) {
+  return p.theme.max('sm')(Marketing_templateObject9(), function (p) {
     return p.theme.general.mobilePadding;
   });
 });
-var Marketing_Image = external_styled_components_default.a.image(Marketing_templateObject16(), function (p) {
+var Marketing_Image = external_styled_components_default.a.image.withConfig({
+  displayName: "Marketing__Image",
+  componentId: "sc-496sae-6"
+})(["width:130px;height:130px;background-image:url(", ");background-size:cover;", ""], function (p) {
   return p.source;
 }, function (p) {
-  return p.theme.max('sm')(Marketing_templateObject17());
+  return p.theme.max('sm')(Marketing_templateObject10());
 });
 var ItemBox = external_styled_components_default()(function (p) {
   return external_react_default.a.createElement(atoms_Box, extends_default()({
@@ -4752,64 +3504,70 @@ var ItemBox = external_styled_components_default()(function (p) {
     sm: 4,
     xs: 12
   }, p));
-})(Marketing_templateObject18(), function (p) {
-  return p.theme.max('sm')(Marketing_templateObject19());
+}).withConfig({
+  displayName: "Marketing__ItemBox",
+  componentId: "sc-496sae-7"
+})(["position:relative;display:flex;flex-direction:column;align-items:center;&:before,&:after{content:'';display:block;position:absolute;height:100%;left:50%;background:white;top:0;width:130px;", "}&:before{transform:translateX(-194px);", "}&:after{transform:translateX(64px);", "}&:first-child{&:before{", " ", "}}&:last-child{&:after{", " ", "}}"], function (p) {
+  return p.theme.max('sm')(Marketing_templateObject11());
 }, function (p) {
-  return p.theme.max('sm')(Marketing_templateObject20());
+  return p.theme.max('sm')(Marketing_templateObject12());
 }, function (p) {
-  return p.theme.max('sm')(Marketing_templateObject21());
+  return p.theme.max('sm')(Marketing_templateObject13());
 }, function (p) {
-  return p.theme.max('sm')(Marketing_templateObject22());
+  return p.theme.max('sm')(Marketing_templateObject14());
 }, function (p) {
-  return p.theme.min('sm')(Marketing_templateObject23());
+  return p.theme.min('sm')(Marketing_templateObject15());
 }, function (p) {
-  return p.theme.max('sm')(Marketing_templateObject24());
+  return p.theme.max('sm')(Marketing_templateObject16());
 }, function (p) {
-  return p.theme.min('sm')(Marketing_templateObject25());
+  return p.theme.min('sm')(_templateObject17());
 });
-var Marketing_Title = external_styled_components_default()(atoms_Text)(Marketing_templateObject26(), function (p) {
-  return p.theme.between('sm', 'md')(Marketing_templateObject27());
+var Marketing_Title = external_styled_components_default()(atoms_Text).withConfig({
+  displayName: "Marketing__Title",
+  componentId: "sc-496sae-8"
+})(["position:relative;font-weight:700;font-size:20px;text-align:center;padding:0 20px;z-index:2;margin-top:12px;", " ", ""], function (p) {
+  return p.theme.between('sm', 'md')(_templateObject18());
 }, function (p) {
-  return p.theme.max('sm')(Marketing_templateObject28());
+  return p.theme.max('sm')(_templateObject19());
 });
 /* harmony default export */ var marketing_Marketing = (Object(external_react_i18next_["withTranslation"])()(Marketing_Marketing));
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/screenshots/screenshot1.png
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/images/screenshots/screenshot1.png
 var screenshot1 = __webpack_require__(53);
 var screenshot1_default = /*#__PURE__*/__webpack_require__.n(screenshot1);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/screenshots/screenshot2.png
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/images/screenshots/screenshot2.png
 var screenshot2 = __webpack_require__(54);
 var screenshot2_default = /*#__PURE__*/__webpack_require__.n(screenshot2);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/screenshots/screenshot3.png
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/images/screenshots/screenshot3.png
 var screenshot3 = __webpack_require__(55);
 var screenshot3_default = /*#__PURE__*/__webpack_require__.n(screenshot3);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/screenshots/screenshot4.png
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/images/screenshots/screenshot4.png
 var screenshot4 = __webpack_require__(56);
 var screenshot4_default = /*#__PURE__*/__webpack_require__.n(screenshot4);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/screenshots/screenshot5.png
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/images/screenshots/screenshot5.png
 var screenshot5 = __webpack_require__(57);
 var screenshot5_default = /*#__PURE__*/__webpack_require__.n(screenshot5);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/screenshots/flower1.png
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/images/screenshots/flower1.png
 var flower1 = __webpack_require__(58);
 var flower1_default = /*#__PURE__*/__webpack_require__.n(flower1);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/screenshots/flower2.png
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/images/screenshots/flower2.png
 var flower2 = __webpack_require__(59);
 var flower2_default = /*#__PURE__*/__webpack_require__.n(flower2);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/screenshots/flower3.png
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/images/screenshots/flower3.png
 var flower3 = __webpack_require__(60);
 var flower3_default = /*#__PURE__*/__webpack_require__.n(flower3);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/sati_app_logo.jpg
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/images/sati_app_logo.jpg
 var sati_app_logo = __webpack_require__(61);
 var sati_app_logo_default = /*#__PURE__*/__webpack_require__.n(sati_app_logo);
 
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/components/how/How.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/components/how/How.js
 
 
 
@@ -4818,330 +3576,130 @@ var sati_app_logo_default = /*#__PURE__*/__webpack_require__.n(sati_app_logo);
 
 
 
-function _templateObject52() {
+function _templateObject32() {
   var data = taggedTemplateLiteral_default()(["\n    margin-top: 10px;\n    margin-bottom: 30px;\n  "]);
 
-  _templateObject52 = function _templateObject52() {
+  _templateObject32 = function _templateObject32() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject51() {
-  var data = taggedTemplateLiteral_default()(["\n  margin-top: 50px;\n  margin-bottom: 100px;\n  ", "\n"]);
-
-  _templateObject51 = function _templateObject51() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject50() {
+function _templateObject31() {
   var data = taggedTemplateLiteral_default()(["\n    transform: scale(0.9) translateX(27vw);\n  "]);
 
-  _templateObject50 = function _templateObject50() {
+  _templateObject31 = function _templateObject31() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject49() {
+function _templateObject30() {
   var data = taggedTemplateLiteral_default()(["\n    transform: scale(0.95) translateX(11vw);\n  "]);
 
-  _templateObject49 = function _templateObject49() {
+  _templateObject30 = function _templateObject30() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject48() {
-  var data = taggedTemplateLiteral_default()(["\n  position: absolute;\n  transform: scale(0.85) translateX(228px);\n  ", "\n  ", "\n"]);
-
-  _templateObject48 = function _templateObject48() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject47() {
+function _templateObject29() {
   var data = taggedTemplateLiteral_default()(["\n    transform: scale(0.9) translate(6vw, -28px);\n    filter: none;\n  "]);
 
-  _templateObject47 = function _templateObject47() {
+  _templateObject29 = function _templateObject29() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject46() {
+function _templateObject28() {
   var data = taggedTemplateLiteral_default()(["\n    transform: scale(0.95) translate(0, -28px);\n  "]);
 
-  _templateObject46 = function _templateObject46() {
+  _templateObject28 = function _templateObject28() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject45() {
-  var data = taggedTemplateLiteral_default()(["\n  position: absolute;\n  transform: scale(0.85) translate(95px, -28px);\n  filter: blur(0.66px);\n  ", "\n  ", "\n"]);
-
-  _templateObject45 = function _templateObject45() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject44() {
+function _templateObject27() {
   var data = taggedTemplateLiteral_default()(["\n    transform: scale(0.9) translate(49.8vw, 28px);\n    filter: none;\n  "]);
 
-  _templateObject44 = function _templateObject44() {
+  _templateObject27 = function _templateObject27() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject43() {
+function _templateObject26() {
   var data = taggedTemplateLiteral_default()(["\n    transform: scale(0.95) translate(22vw, 28px);\n  "]);
 
-  _templateObject43 = function _templateObject43() {
+  _templateObject26 = function _templateObject26() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject42() {
-  var data = taggedTemplateLiteral_default()(["\n  transform: scale(0.85) translate(370px, 28px);\n  filter: blur(0.33px);\n  ", "\n  ", "\n"]);
-
-  _templateObject42 = function _templateObject42() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject41() {
+function _templateObject25() {
   var data = taggedTemplateLiteral_default()(["\n    transform: scale(1) rotateY(0) translateX(42vw);\n  "]);
 
-  _templateObject41 = function _templateObject41() {
+  _templateObject25 = function _templateObject25() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject40() {
+function _templateObject24() {
   var data = taggedTemplateLiteral_default()(["\n    transform: scale(0.95) rotateY(0) translateX(20vw);\n  "]);
 
-  _templateObject40 = function _templateObject40() {
+  _templateObject24 = function _templateObject24() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject39() {
-  var data = taggedTemplateLiteral_default()(["\n  transform: scale(0.95) rotateY(-2deg) translateX(270px);\n  ", "\n  ", "\n"]);
-
-  _templateObject39 = function _templateObject39() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject38() {
+function _templateObject23() {
   var data = taggedTemplateLiteral_default()(["\n    transform: scale(0.93) rotateY(8deg) translateX(7vw);\n  "]);
 
-  _templateObject38 = function _templateObject38() {
+  _templateObject23 = function _templateObject23() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject37() {
+function _templateObject22() {
   var data = taggedTemplateLiteral_default()(["\n    transform: scale(0.8) rotateY(9deg) translateX(-1.6vw);\n  "]);
 
-  _templateObject37 = function _templateObject37() {
+  _templateObject22 = function _templateObject22() {
     return data;
   };
 
   return data;
 }
 
-function How_templateObject36() {
-  var data = taggedTemplateLiteral_default()(["\n  position: absolute;\n  transform: scale(0.8) rotateY(9deg) translateX(100px);\n  ", "\n  ", "\n"]);
-
-  How_templateObject36 = function _templateObject36() {
-    return data;
-  };
-
-  return data;
-}
-
-function How_templateObject35() {
+function _templateObject21() {
   var data = taggedTemplateLiteral_default()(["\n    transform: translateX(42vw);\n  "]);
 
-  How_templateObject35 = function _templateObject35() {
+  _templateObject21 = function _templateObject21() {
     return data;
   };
 
   return data;
 }
 
-function How_templateObject34() {
+function _templateObject20() {
   var data = taggedTemplateLiteral_default()(["\n    transform: translateX(23vw);\n  "]);
 
-  How_templateObject34 = function _templateObject34() {
-    return data;
-  };
-
-  return data;
-}
-
-function How_templateObject33() {
-  var data = taggedTemplateLiteral_default()(["\n  transform: translateX(258px);\n  ", "\n  ", "\n"]);
-
-  How_templateObject33 = function _templateObject33() {
-    return data;
-  };
-
-  return data;
-}
-
-function How_templateObject32() {
-  var data = taggedTemplateLiteral_default()(["\n    filter: none;\n    transform: scale(0.88) translateX(23vw);\n  "]);
-
-  How_templateObject32 = function _templateObject32() {
-    return data;
-  };
-
-  return data;
-}
-
-function How_templateObject31() {
-  var data = taggedTemplateLiteral_default()(["\n    transform: scale(0.88) translateX(13vw);\n  "]);
-
-  How_templateObject31 = function _templateObject31() {
-    return data;
-  };
-
-  return data;
-}
-
-function How_templateObject30() {
-  var data = taggedTemplateLiteral_default()(["\n  position: absolute;\n  transform: scale(0.88) translateX(136px);\n  filter: blur(0.33px);\n  ", "\n  ", "\n"]);
-
-  How_templateObject30 = function _templateObject30() {
-    return data;
-  };
-
-  return data;
-}
-
-function How_templateObject29() {
-  var data = taggedTemplateLiteral_default()(["\n    filter: none;\n    transform: scale(0.77) translateX(2vw);\n  "]);
-
-  How_templateObject29 = function _templateObject29() {
-    return data;
-  };
-
-  return data;
-}
-
-function How_templateObject28() {
-  var data = taggedTemplateLiteral_default()(["\n    transform: scale(0.77) translateX(", ");\n  "]);
-
-  How_templateObject28 = function _templateObject28() {
-    return data;
-  };
-
-  return data;
-}
-
-function How_templateObject27() {
-  var data = taggedTemplateLiteral_default()(["\n  position: absolute;\n  transform: scale(0.77);\n  filter: blur(0.66px);\n  ", "\n  ", "\n"]);
-
-  How_templateObject27 = function _templateObject27() {
-    return data;
-  };
-
-  return data;
-}
-
-function How_templateObject26() {
-  var data = taggedTemplateLiteral_default()(["\n    font-size: 12px;\n  "]);
-
-  How_templateObject26 = function _templateObject26() {
-    return data;
-  };
-
-  return data;
-}
-
-function How_templateObject25() {
-  var data = taggedTemplateLiteral_default()(["\n  font-size: 14px;\n  margin: 7px 0 0;\n  ", "\n"]);
-
-  How_templateObject25 = function _templateObject25() {
-    return data;
-  };
-
-  return data;
-}
-
-function How_templateObject24() {
-  var data = taggedTemplateLiteral_default()(["\n    font-size: 12px;\n  "]);
-
-  How_templateObject24 = function _templateObject24() {
-    return data;
-  };
-
-  return data;
-}
-
-function How_templateObject23() {
-  var data = taggedTemplateLiteral_default()(["\n  font-size: 14px;\n  margin: 0;\n  color: ", ";\n  ", "\n"]);
-
-  How_templateObject23 = function _templateObject23() {
-    return data;
-  };
-
-  return data;
-}
-
-function How_templateObject22() {
-  var data = taggedTemplateLiteral_default()(["\n    font-size: 13px;\n  "]);
-
-  How_templateObject22 = function _templateObject22() {
-    return data;
-  };
-
-  return data;
-}
-
-function How_templateObject21() {
-  var data = taggedTemplateLiteral_default()(["\n  margin: 0;\n  font-weight: 200;\n  font-size: 14px;\n  padding-left: 10px;\n  text-transform: uppercase;\n  color: ", ";\n  ", "\n"]);
-
-  How_templateObject21 = function _templateObject21() {
-    return data;
-  };
-
-  return data;
-}
-
-function How_templateObject20() {
-  var data = taggedTemplateLiteral_default()(["\n    width: 14px;\n    height: 14px;\n  "]);
-
-  How_templateObject20 = function _templateObject20() {
+  _templateObject20 = function _templateObject20() {
     return data;
   };
 
@@ -5149,7 +3707,7 @@ function How_templateObject20() {
 }
 
 function How_templateObject19() {
-  var data = taggedTemplateLiteral_default()(["\n  width: 20px;\n  height: 20px;\n  border-radius: 5px;\n  background-image: url(", ");\n  background-size: cover;\n  ", "\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    filter: none;\n    transform: scale(0.88) translateX(23vw);\n  "]);
 
   How_templateObject19 = function _templateObject19() {
     return data;
@@ -5159,7 +3717,7 @@ function How_templateObject19() {
 }
 
 function How_templateObject18() {
-  var data = taggedTemplateLiteral_default()(["\n      margin-bottom: 0;\n    "]);
+  var data = taggedTemplateLiteral_default()(["\n    transform: scale(0.88) translateX(13vw);\n  "]);
 
   How_templateObject18 = function _templateObject18() {
     return data;
@@ -5169,7 +3727,7 @@ function How_templateObject18() {
 }
 
 function How_templateObject17() {
-  var data = taggedTemplateLiteral_default()(["\n    width: 90vw;\n    margin-left: 5vw;\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n    filter: none;\n    transform: scale(0.77) translateX(2vw);\n  "]);
 
   How_templateObject17 = function _templateObject17() {
     return data;
@@ -5179,7 +3737,7 @@ function How_templateObject17() {
 }
 
 function How_templateObject16() {
-  var data = taggedTemplateLiteral_default()(["\n    width: 46vw;\n    margin-left: ", ";\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n    transform: scale(0.77) translateX(", ");\n  "]);
 
   How_templateObject16 = function _templateObject16() {
     return data;
@@ -5189,7 +3747,7 @@ function How_templateObject16() {
 }
 
 function How_templateObject15() {
-  var data = taggedTemplateLiteral_default()(["\n  width: 400px;\n  padding: 14px;\n  background: #eeeeee;\n  border-radius: 16px;\n  margin-bottom: 18px;\n  margin-left: 40px;\n  box-shadow: 7px 7px 20px rgba(0, 0, 0, .2);\n  &:nth-child(2) {\n    opacity: 0.75;\n  }\n  &:nth-child(3) {\n    opacity: 0.5;\n  }\n  ", "\n  ", "\n  &:last-child {\n    ", "\n  }\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    font-size: 12px;\n  "]);
 
   How_templateObject15 = function _templateObject15() {
     return data;
@@ -5199,7 +3757,7 @@ function How_templateObject15() {
 }
 
 function How_templateObject14() {
-  var data = taggedTemplateLiteral_default()(["\n    width: 50vw;\n    height: 108.2vw;\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n    font-size: 12px;\n  "]);
 
   How_templateObject14 = function _templateObject14() {
     return data;
@@ -5209,7 +3767,7 @@ function How_templateObject14() {
 }
 
 function How_templateObject13() {
-  var data = taggedTemplateLiteral_default()(["\n    width: 25vw;\n    height: 54.1vw;\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n    font-size: 13px;\n  "]);
 
   How_templateObject13 = function _templateObject13() {
     return data;
@@ -5219,7 +3777,7 @@ function How_templateObject13() {
 }
 
 function How_templateObject12() {
-  var data = taggedTemplateLiteral_default()(["\n  height: 500px;\n  width: 231px;\n  border-radius: 20px;\n  box-shadow: 10px 10px 30px rgba(0, 0, 0, .2);\n  transform-style: preserve-3d;\n  background-image: url(", ");\n  background-size: cover;\n  ", "\n  ", "\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    width: 14px;\n    height: 14px;\n  "]);
 
   How_templateObject12 = function _templateObject12() {
     return data;
@@ -5229,7 +3787,7 @@ function How_templateObject12() {
 }
 
 function How_templateObject11() {
-  var data = taggedTemplateLiteral_default()(["\n    padding-bottom: 50px;\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n      margin-bottom: 0;\n    "]);
 
   How_templateObject11 = function _templateObject11() {
     return data;
@@ -5239,7 +3797,7 @@ function How_templateObject11() {
 }
 
 function How_templateObject10() {
-  var data = taggedTemplateLiteral_default()(["\n  position: relative;\n  background: white;\n  z-index: 10;\n  padding-bottom: 70px;\n  ", "\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    width: 90vw;\n    margin-left: 5vw;\n  "]);
 
   How_templateObject10 = function _templateObject10() {
     return data;
@@ -5249,7 +3807,7 @@ function How_templateObject10() {
 }
 
 function How_templateObject9() {
-  var data = taggedTemplateLiteral_default()(["\n    text-align: justify;\n    padding: 0 ", ";\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n    width: 46vw;\n    margin-left: ", ";\n  "]);
 
   How_templateObject9 = function _templateObject9() {
     return data;
@@ -5259,7 +3817,7 @@ function How_templateObject9() {
 }
 
 function How_templateObject8() {
-  var data = taggedTemplateLiteral_default()(["\n  text-align: ", ";\n  margin-bottom: 0;\n  margin-top: 0;\n  ", "\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    width: 50vw;\n    height: 108.2vw;\n  "]);
 
   How_templateObject8 = function _templateObject8() {
     return data;
@@ -5269,7 +3827,7 @@ function How_templateObject8() {
 }
 
 function How_templateObject7() {
-  var data = taggedTemplateLiteral_default()(["\n    text-align: center;\n    padding: ", " calc(", " * 2);\n    margin-bottom: -3px;\n    margin-top: 0;\n    font-size: 30px;\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n    width: 25vw;\n    height: 54.1vw;\n  "]);
 
   How_templateObject7 = function _templateObject7() {
     return data;
@@ -5279,7 +3837,7 @@ function How_templateObject7() {
 }
 
 function How_templateObject6() {
-  var data = taggedTemplateLiteral_default()(["\n  color: ", ";\n  font-weight: 200;\n  font-size: 42px;\n  margin-bottom: 28px;\n  margin-top: -30px;\n  text-align: ", ";\n  ", "\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    padding-bottom: 50px;\n  "]);
 
   How_templateObject6 = function _templateObject6() {
     return data;
@@ -5289,7 +3847,7 @@ function How_templateObject6() {
 }
 
 function How_templateObject5() {
-  var data = taggedTemplateLiteral_default()(["\n          order: 1;\n        "]);
+  var data = taggedTemplateLiteral_default()(["\n    text-align: justify;\n    padding: 0 ", ";\n  "]);
 
   How_templateObject5 = function _templateObject5() {
     return data;
@@ -5299,7 +3857,7 @@ function How_templateObject5() {
 }
 
 function How_templateObject4() {
-  var data = taggedTemplateLiteral_default()(["\n          order: 2;\n        "]);
+  var data = taggedTemplateLiteral_default()(["\n    text-align: center;\n    padding: ", " calc(", " * 2);\n    margin-bottom: -3px;\n    margin-top: 0;\n    font-size: 30px;\n  "]);
 
   How_templateObject4 = function _templateObject4() {
     return data;
@@ -5309,7 +3867,7 @@ function How_templateObject4() {
 }
 
 function How_templateObject3() {
-  var data = taggedTemplateLiteral_default()(["\n    > div {\n      &:nth-child(1) {\n        ", "\n      }\n      &:nth-child(1) {\n        ", "\n      }\n    }\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n          order: 1;\n        "]);
 
   How_templateObject3 = function _templateObject3() {
     return data;
@@ -5319,7 +3877,7 @@ function How_templateObject3() {
 }
 
 function How_templateObject2() {
-  var data = taggedTemplateLiteral_default()(["\n      margin-bottom: 100px;\n    "]);
+  var data = taggedTemplateLiteral_default()(["\n          order: 2;\n        "]);
 
   How_templateObject2 = function _templateObject2() {
     return data;
@@ -5329,7 +3887,7 @@ function How_templateObject2() {
 }
 
 function How_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  &:not(:last-child) {\n    ", "\n  }\n  ", "\n"]);
+  var data = taggedTemplateLiteral_default()(["\n      margin-bottom: 100px;\n    "]);
 
   How_templateObject = function _templateObject() {
     return data;
@@ -5482,206 +4040,193 @@ var ItemsFlex = external_styled_components_default()(function (p) {
     alignItems: "center",
     grid: true
   }, p));
-})(How_templateObject(), function (p) {
-  return p.theme.max('sm')(How_templateObject2());
+}).withConfig({
+  displayName: "How__ItemsFlex",
+  componentId: "sc-18lqjty-0"
+})(["&:not(:last-child){", "}", ""], function (p) {
+  return p.theme.max('sm')(How_templateObject());
 }, function (p) {
-  return p.reverseMobile && Object(external_styled_components_["css"])(How_templateObject3(), p.theme.max('sm')(How_templateObject4()), p.theme.max('sm')(How_templateObject5()));
+  return p.reverseMobile && Object(external_styled_components_["css"])(["> div{&:nth-child(1){", "}&:nth-child(1){", "}}"], p.theme.max('sm')(How_templateObject2()), p.theme.max('sm')(How_templateObject3()));
 });
-var ItemHeading = external_styled_components_default.a.h3(How_templateObject6(), function (p) {
+var ItemHeading = external_styled_components_default.a.h3.withConfig({
+  displayName: "How__ItemHeading",
+  componentId: "sc-18lqjty-1"
+})(["color:", ";font-weight:200;font-size:42px;margin-bottom:28px;margin-top:-30px;text-align:", ";", ""], function (p) {
   return p.theme.colors.black;
 }, function (p) {
   return p.right ? 'right' : 'left';
 }, function (p) {
-  return p.theme.max('sm')(How_templateObject7(), p.theme.general.mobilePadding, p.theme.general.mobilePadding);
+  return p.theme.max('sm')(How_templateObject4(), p.theme.general.mobilePadding, p.theme.general.mobilePadding);
 });
-var ItemText = external_styled_components_default()(atoms_Text)(How_templateObject8(), function (p) {
+var ItemText = external_styled_components_default()(atoms_Text).withConfig({
+  displayName: "How__ItemText",
+  componentId: "sc-18lqjty-2"
+})(["text-align:", ";margin-bottom:0;margin-top:0;", ""], function (p) {
   return p.right ? 'right' : 'left';
 }, function (p) {
-  return p.theme.max('sm')(How_templateObject9(), p.theme.general.mobilePadding);
+  return p.theme.max('sm')(How_templateObject5(), p.theme.general.mobilePadding);
 });
-var How_Cont = external_styled_components_default.a.div(How_templateObject10(), function (p) {
-  return p.theme.max('sm')(How_templateObject11());
+var How_Cont = external_styled_components_default.a.div.withConfig({
+  displayName: "How__Cont",
+  componentId: "sc-18lqjty-3"
+})(["position:relative;background:white;z-index:10;padding-bottom:70px;", ""], function (p) {
+  return p.theme.max('sm')(How_templateObject6());
 });
-var Screen = external_styled_components_default.a.div(How_templateObject12(), function (p) {
+var Screen = external_styled_components_default.a.div.withConfig({
+  displayName: "How__Screen",
+  componentId: "sc-18lqjty-4"
+})(["height:500px;width:231px;border-radius:20px;box-shadow:10px 10px 30px rgba(0,0,0,.2);transform-style:preserve-3d;background-image:url(", ");background-size:cover;", " ", ""], function (p) {
   return p.source;
 }, function (p) {
-  return p.theme.between('sm', 'md')(How_templateObject13());
+  return p.theme.between('sm', 'md')(How_templateObject7());
 }, function (p) {
-  return p.theme.max('sm')(How_templateObject14());
+  return p.theme.max('sm')(How_templateObject8());
 });
-var NotificationCont = external_styled_components_default.a.div(How_templateObject15(), function (p) {
-  return p.theme.between('sm', 'md')(How_templateObject16(), function (p) {
+var NotificationCont = external_styled_components_default.a.div.withConfig({
+  displayName: "How__NotificationCont",
+  componentId: "sc-18lqjty-5"
+})(["width:400px;padding:14px;background:#eeeeee;border-radius:16px;margin-bottom:18px;margin-left:40px;box-shadow:7px 7px 20px rgba(0,0,0,.2);&:nth-child(2){opacity:0.75;}&:nth-child(3){opacity:0.5;}", " ", " &:last-child{", "}"], function (p) {
+  return p.theme.between('sm', 'md')(How_templateObject9(), function (p) {
     return p.theme.general.mobilePadding;
   });
 }, function (p) {
-  return p.theme.max('sm')(How_templateObject17());
+  return p.theme.max('sm')(How_templateObject10());
 }, function (p) {
-  return p.theme.max('sm')(How_templateObject18());
+  return p.theme.max('sm')(How_templateObject11());
 });
-var NotificationIcon = external_styled_components_default.a.div(How_templateObject19(), sati_app_logo_default.a, function (p) {
-  return p.theme.max('sm')(How_templateObject20());
+var NotificationIcon = external_styled_components_default.a.div.withConfig({
+  displayName: "How__NotificationIcon",
+  componentId: "sc-18lqjty-6"
+})(["width:20px;height:20px;border-radius:5px;background-image:url(", ");background-size:cover;", ""], sati_app_logo_default.a, function (p) {
+  return p.theme.max('sm')(How_templateObject12());
 });
-var NotificationTitle = external_styled_components_default.a.h5(How_templateObject21(), function (p) {
+var NotificationTitle = external_styled_components_default.a.h5.withConfig({
+  displayName: "How__NotificationTitle",
+  componentId: "sc-18lqjty-7"
+})(["margin:0;font-weight:200;font-size:14px;padding-left:10px;text-transform:uppercase;color:", ";", ""], function (p) {
   return p.theme.colors.black;
 }, function (p) {
-  return p.theme.max('sm')(How_templateObject22());
+  return p.theme.max('sm')(How_templateObject13());
 });
-var NotificationTime = external_styled_components_default.a.p(How_templateObject23(), function (p) {
+var NotificationTime = external_styled_components_default.a.p.withConfig({
+  displayName: "How__NotificationTime",
+  componentId: "sc-18lqjty-8"
+})(["font-size:14px;margin:0;color:", ";", ""], function (p) {
   return p.theme.colors.grays.regular;
 }, function (p) {
-  return p.theme.max('sm')(How_templateObject24());
+  return p.theme.max('sm')(How_templateObject14());
 });
-var NotificationText = external_styled_components_default()(atoms_Text)(How_templateObject25(), function (p) {
-  return p.theme.max('sm')(How_templateObject26());
+var NotificationText = external_styled_components_default()(atoms_Text).withConfig({
+  displayName: "How__NotificationText",
+  componentId: "sc-18lqjty-9"
+})(["font-size:14px;margin:7px 0 0;", ""], function (p) {
+  return p.theme.max('sm')(How_templateObject15());
 });
-var MainView1 = external_styled_components_default()(Screen)(How_templateObject27(), function (p) {
-  return p.theme.between('sm', 'md')(How_templateObject28(), p.theme.general.mobilePadding);
+var MainView1 = external_styled_components_default()(Screen).withConfig({
+  displayName: "How__MainView1",
+  componentId: "sc-18lqjty-10"
+})(["position:absolute;transform:scale(0.77);filter:blur(0.66px);", " ", ""], function (p) {
+  return p.theme.between('sm', 'md')(How_templateObject16(), p.theme.general.mobilePadding);
 }, function (p) {
-  return p.theme.max('sm')(How_templateObject29());
+  return p.theme.max('sm')(How_templateObject17());
 });
-var MainView2 = external_styled_components_default()(Screen)(How_templateObject30(), function (p) {
-  return p.theme.between('sm', 'md')(How_templateObject31());
+var MainView2 = external_styled_components_default()(Screen).withConfig({
+  displayName: "How__MainView2",
+  componentId: "sc-18lqjty-11"
+})(["position:absolute;transform:scale(0.88) translateX(136px);filter:blur(0.33px);", " ", ""], function (p) {
+  return p.theme.between('sm', 'md')(How_templateObject18());
 }, function (p) {
-  return p.theme.max('sm')(How_templateObject32());
+  return p.theme.max('sm')(How_templateObject19());
 });
-var MainView3 = external_styled_components_default()(Screen)(How_templateObject33(), function (p) {
-  return p.theme.between('sm', 'md')(How_templateObject34());
+var MainView3 = external_styled_components_default()(Screen).withConfig({
+  displayName: "How__MainView3",
+  componentId: "sc-18lqjty-12"
+})(["transform:translateX(258px);", " ", ""], function (p) {
+  return p.theme.between('sm', 'md')(_templateObject20());
 }, function (p) {
-  return p.theme.max('sm')(How_templateObject35());
+  return p.theme.max('sm')(_templateObject21());
 });
-var TextScreen1 = external_styled_components_default()(Screen)(How_templateObject36(), function (p) {
-  return p.theme.between('sm', 'md')(_templateObject37());
+var TextScreen1 = external_styled_components_default()(Screen).withConfig({
+  displayName: "How__TextScreen1",
+  componentId: "sc-18lqjty-13"
+})(["position:absolute;transform:scale(0.8) rotateY(9deg) translateX(100px);", " ", ""], function (p) {
+  return p.theme.between('sm', 'md')(_templateObject22());
 }, function (p) {
-  return p.theme.max('sm')(_templateObject38());
+  return p.theme.max('sm')(_templateObject23());
 });
-var TextScreen2 = external_styled_components_default()(Screen)(_templateObject39(), function (p) {
-  return p.theme.between('sm', 'md')(_templateObject40());
+var TextScreen2 = external_styled_components_default()(Screen).withConfig({
+  displayName: "How__TextScreen2",
+  componentId: "sc-18lqjty-14"
+})(["transform:scale(0.95) rotateY(-2deg) translateX(270px);", " ", ""], function (p) {
+  return p.theme.between('sm', 'md')(_templateObject24());
 }, function (p) {
-  return p.theme.max('sm')(_templateObject41());
+  return p.theme.max('sm')(_templateObject25());
 });
-var FlowerScreen1 = external_styled_components_default()(Screen)(_templateObject42(), function (p) {
-  return p.theme.between('sm', 'md')(_templateObject43());
+var FlowerScreen1 = external_styled_components_default()(Screen).withConfig({
+  displayName: "How__FlowerScreen1",
+  componentId: "sc-18lqjty-15"
+})(["transform:scale(0.85) translate(370px,28px);filter:blur(0.33px);", " ", ""], function (p) {
+  return p.theme.between('sm', 'md')(_templateObject26());
 }, function (p) {
-  return p.theme.max('sm')(_templateObject44());
+  return p.theme.max('sm')(_templateObject27());
 });
-var FlowerScreen2 = external_styled_components_default()(Screen)(_templateObject45(), function (p) {
-  return p.theme.between('sm', 'md')(_templateObject46());
+var FlowerScreen2 = external_styled_components_default()(Screen).withConfig({
+  displayName: "How__FlowerScreen2",
+  componentId: "sc-18lqjty-16"
+})(["position:absolute;transform:scale(0.85) translate(95px,-28px);filter:blur(0.66px);", " ", ""], function (p) {
+  return p.theme.between('sm', 'md')(_templateObject28());
 }, function (p) {
-  return p.theme.max('sm')(_templateObject47());
+  return p.theme.max('sm')(_templateObject29());
 });
-var FlowerScreen3 = external_styled_components_default()(Screen)(_templateObject48(), function (p) {
-  return p.theme.between('sm', 'md')(_templateObject49());
+var FlowerScreen3 = external_styled_components_default()(Screen).withConfig({
+  displayName: "How__FlowerScreen3",
+  componentId: "sc-18lqjty-17"
+})(["position:absolute;transform:scale(0.85) translateX(228px);", " ", ""], function (p) {
+  return p.theme.between('sm', 'md')(_templateObject30());
 }, function (p) {
-  return p.theme.max('sm')(_templateObject50());
+  return p.theme.max('sm')(_templateObject31());
 });
-var How_SectionHeading = external_styled_components_default()(atoms_SectionHeading)(_templateObject51(), function (p) {
-  return p.theme.max('sm')(_templateObject52());
+var How_SectionHeading = external_styled_components_default()(atoms_SectionHeading).withConfig({
+  displayName: "How__SectionHeading",
+  componentId: "sc-18lqjty-18"
+})(["margin-top:50px;margin-bottom:100px;", ""], function (p) {
+  return p.theme.max('sm')(_templateObject32());
 });
 /* harmony default export */ var how_How = (Object(external_react_i18next_["withTranslation"])()(How_How));
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/bg_inside.jpg
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/images/bg_inside.jpg
 var bg_inside = __webpack_require__(62);
 var bg_inside_default = /*#__PURE__*/__webpack_require__.n(bg_inside);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/icons/meditation.png
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/icons/meditation.png
 var meditation = __webpack_require__(63);
 var meditation_default = /*#__PURE__*/__webpack_require__.n(meditation);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/icons/brain.png
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/icons/brain.png
 var brain = __webpack_require__(64);
 var brain_default = /*#__PURE__*/__webpack_require__.n(brain);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/icons/books.png
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/icons/books.png
 var books = __webpack_require__(65);
 var books_default = /*#__PURE__*/__webpack_require__.n(books);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/icons/buddhism.png
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/icons/buddhism.png
 var buddhism = __webpack_require__(66);
 var buddhism_default = /*#__PURE__*/__webpack_require__.n(buddhism);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/wave2.png
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/images/wave2.png
 var wave2 = __webpack_require__(67);
 var wave2_default = /*#__PURE__*/__webpack_require__.n(wave2);
 
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/components/inside/Inside.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/components/inside/Inside.js
 
 
 
 
 
 
-
-function Inside_templateObject12() {
-  var data = taggedTemplateLiteral_default()(["\n    text-align: justify;\n    padding: 0 ", ";\n  "]);
-
-  Inside_templateObject12 = function _templateObject12() {
-    return data;
-  };
-
-  return data;
-}
-
-function Inside_templateObject11() {
-  var data = taggedTemplateLiteral_default()(["\n  color: white;\n  margin-bottom: 40px;\n  ", "\n"]);
-
-  Inside_templateObject11 = function _templateObject11() {
-    return data;
-  };
-
-  return data;
-}
-
-function Inside_templateObject10() {
-  var data = taggedTemplateLiteral_default()(["\n    text-align: center;\n    font-size: 18px;\n    padding: 0 ", ";\n  "]);
-
-  Inside_templateObject10 = function _templateObject10() {
-    return data;
-  };
-
-  return data;
-}
-
-function Inside_templateObject9() {
-  var data = taggedTemplateLiteral_default()(["\n  color: white;\n  font-weight: 800;\n  font-size: 20px;\n  margin-bottom: 10px;\n  ", "\n"]);
-
-  Inside_templateObject9 = function _templateObject9() {
-    return data;
-  };
-
-  return data;
-}
-
-function Inside_templateObject8() {
-  var data = taggedTemplateLiteral_default()(["\n  color: white;\n  margin-top: 20px;\n  margin-bottom: 30px;\n"]);
-
-  Inside_templateObject8 = function _templateObject8() {
-    return data;
-  };
-
-  return data;
-}
-
-function Inside_templateObject7() {
-  var data = taggedTemplateLiteral_default()(["\n    top: 0;\n    width: 80px;\n    height: 80px;\n    margin: 0 auto;\n  "]);
-
-  Inside_templateObject7 = function _templateObject7() {
-    return data;
-  };
-
-  return data;
-}
-
-function Inside_templateObject6() {
-  var data = taggedTemplateLiteral_default()(["\n  position: relative;\n  top: 22px;\n  width: 60px;\n  height: 60px;\n  background-image: url(", ");\n  background-size: cover;\n  ", "\n"]);
-
-  Inside_templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
 
 function Inside_templateObject5() {
-  var data = taggedTemplateLiteral_default()(["\n  position: absolute;\n  width: 120%;\n  height: 50px;\n  bottom: 0;\n  left: -5%;\n  background-image:url(", ");\n  background-size: 103% 35%;\n  background-position: bottom;\n  background-repeat: no-repeat;\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    text-align: justify;\n    padding: 0 ", ";\n  "]);
 
   Inside_templateObject5 = function _templateObject5() {
     return data;
@@ -5691,7 +4236,7 @@ function Inside_templateObject5() {
 }
 
 function Inside_templateObject4() {
-  var data = taggedTemplateLiteral_default()(["\n  position: absolute;\n  width: 100%;\n  height: 50px;\n  top: 0;\n  left: 0;\n  background-image:url(", ");\n  background-size: 103% 25%;\n  background-repeat: no-repeat;\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    text-align: center;\n    font-size: 18px;\n    padding: 0 ", ";\n  "]);
 
   Inside_templateObject4 = function _templateObject4() {
     return data;
@@ -5701,7 +4246,7 @@ function Inside_templateObject4() {
 }
 
 function Inside_templateObject3() {
-  var data = taggedTemplateLiteral_default()(["\n    padding-bottom: 30px;\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n    top: 0;\n    width: 80px;\n    height: 80px;\n    margin: 0 auto;\n  "]);
 
   Inside_templateObject3 = function _templateObject3() {
     return data;
@@ -5711,7 +4256,7 @@ function Inside_templateObject3() {
 }
 
 function Inside_templateObject2() {
-  var data = taggedTemplateLiteral_default()(["\n    background-attachment: fixed;\n    background-size: 120%;\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n    padding-bottom: 30px;\n  "]);
 
   Inside_templateObject2 = function _templateObject2() {
     return data;
@@ -5721,7 +4266,7 @@ function Inside_templateObject2() {
 }
 
 function Inside_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  position: relative;\n  padding: 70px 0;\n  background: url(", ");\n  background-size: cover;\n  overflow: hidden;\n  ", "\n  ", "\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    background-attachment: fixed;\n    background-size: 120%;\n  "]);
 
   Inside_templateObject = function _templateObject() {
     return data;
@@ -5844,27 +4389,48 @@ function (_PureComponent) {
   return Inside;
 }(external_react_["PureComponent"]);
 
-var Inside_Cont = external_styled_components_default.a.div(Inside_templateObject(), bg_inside_default.a, function (p) {
-  return p.theme.min('md')(Inside_templateObject2());
+var Inside_Cont = external_styled_components_default.a.div.withConfig({
+  displayName: "Inside__Cont",
+  componentId: "sc-5gxyww-0"
+})(["position:relative;padding:70px 0;background:url(", ");background-size:cover;overflow:hidden;", " ", ""], bg_inside_default.a, function (p) {
+  return p.theme.min('md')(Inside_templateObject());
 }, function (p) {
-  return p.theme.max('sm')(Inside_templateObject3());
+  return p.theme.max('sm')(Inside_templateObject2());
 });
-var TopWave = external_styled_components_default.a.div(Inside_templateObject4(), wave2_default.a);
-var BottomWave = external_styled_components_default.a.div(Inside_templateObject5(), top_wave_default.a);
-var Inside_Icon = external_styled_components_default.a.div(Inside_templateObject6(), function (p) {
+var TopWave = external_styled_components_default.a.div.withConfig({
+  displayName: "Inside__TopWave",
+  componentId: "sc-5gxyww-1"
+})(["position:absolute;width:100%;height:50px;top:0;left:0;background-image:url(", ");background-size:103% 25%;background-repeat:no-repeat;"], wave2_default.a);
+var BottomWave = external_styled_components_default.a.div.withConfig({
+  displayName: "Inside__BottomWave",
+  componentId: "sc-5gxyww-2"
+})(["position:absolute;width:120%;height:50px;bottom:0;left:-5%;background-image:url(", ");background-size:103% 35%;background-position:bottom;background-repeat:no-repeat;"], top_wave_default.a);
+var Inside_Icon = external_styled_components_default.a.div.withConfig({
+  displayName: "Inside__Icon",
+  componentId: "sc-5gxyww-3"
+})(["position:relative;top:22px;width:60px;height:60px;background-image:url(", ");background-size:cover;", ""], function (p) {
   return p.source;
 }, function (p) {
-  return p.theme.max('md')(Inside_templateObject7());
+  return p.theme.max('md')(Inside_templateObject3());
 });
-var Inside_SectionHeading = external_styled_components_default()(atoms_SectionHeading)(Inside_templateObject8());
-var Inside_Heading = external_styled_components_default.a.h3(Inside_templateObject9(), function (p) {
-  return p.theme.max('md')(Inside_templateObject10(), p.theme.general.mobilePadding);
+var Inside_SectionHeading = external_styled_components_default()(atoms_SectionHeading).withConfig({
+  displayName: "Inside__SectionHeading",
+  componentId: "sc-5gxyww-4"
+})(["color:white;margin-top:20px;margin-bottom:30px;"]);
+var Inside_Heading = external_styled_components_default.a.h3.withConfig({
+  displayName: "Inside__Heading",
+  componentId: "sc-5gxyww-5"
+})(["color:white;font-weight:800;font-size:20px;margin-bottom:10px;", ""], function (p) {
+  return p.theme.max('md')(Inside_templateObject4(), p.theme.general.mobilePadding);
 });
-var Inside_Desc = external_styled_components_default()(atoms_Text)(Inside_templateObject11(), function (p) {
-  return p.theme.max('md')(Inside_templateObject12(), p.theme.general.mobilePadding);
+var Inside_Desc = external_styled_components_default()(atoms_Text).withConfig({
+  displayName: "Inside__Desc",
+  componentId: "sc-5gxyww-6"
+})(["color:white;margin-bottom:40px;", ""], function (p) {
+  return p.theme.max('md')(Inside_templateObject5(), p.theme.general.mobilePadding);
 });
 /* harmony default export */ var inside_Inside = (Object(external_react_i18next_["withTranslation"])()(Inside_Inside));
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/components/advantages/Advantages.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/components/advantages/Advantages.js
 
 
 
@@ -5872,59 +4438,9 @@ var Inside_Desc = external_styled_components_default()(atoms_Text)(Inside_templa
 
 
 
-
-function Advantages_templateObject12() {
-  var data = taggedTemplateLiteral_default()(["\n    position: absolute;\n    top: -30px;\n    width: 220px;\n    padding-left: 0 !important;\n    font-size: 220px;\n    z-index: -1;\n    padding-top: 20px;\n  "]);
-
-  Advantages_templateObject12 = function _templateObject12() {
-    return data;
-  };
-
-  return data;
-}
-
-function Advantages_templateObject11() {
-  var data = taggedTemplateLiteral_default()(["\n    position: relative;\n    left: ", ";\n  "]);
-
-  Advantages_templateObject11 = function _templateObject11() {
-    return data;
-  };
-
-  return data;
-}
-
-function Advantages_templateObject10() {
-  var data = taggedTemplateLiteral_default()(["\n  width: 80px;\n  overflow: hidden;\n  height: 170px;\n  font-size: 170px;\n  font-weight: 800;\n  line-height: 150px;\n  padding-top: 8px;\n  margin: 0;\n  color: ", ";\n  opacity: 0.5;\n  padding-left: ", ";\n  ", "\n  ", "\n"]);
-
-  Advantages_templateObject10 = function _templateObject10() {
-    return data;
-  };
-
-  return data;
-}
-
-function Advantages_templateObject9() {
-  var data = taggedTemplateLiteral_default()(["\n    text-align: justify;\n    padding: 0 ", ";\n  "]);
-
-  Advantages_templateObject9 = function _templateObject9() {
-    return data;
-  };
-
-  return data;
-}
-
-function Advantages_templateObject8() {
-  var data = taggedTemplateLiteral_default()(["\n    padding-left: 40px;\n  "]);
-
-  Advantages_templateObject8 = function _templateObject8() {
-    return data;
-  };
-
-  return data;
-}
 
 function Advantages_templateObject7() {
-  var data = taggedTemplateLiteral_default()(["\n  color: ", ";\n  margin-top: 10px;\n  margin-bottom: 40px;\n  padding-left: 12px;\n  ", "\n  ", "\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    position: absolute;\n    top: -30px;\n    width: 220px;\n    padding-left: 0 !important;\n    font-size: 220px;\n    z-index: -1;\n    padding-top: 20px;\n  "]);
 
   Advantages_templateObject7 = function _templateObject7() {
     return data;
@@ -5934,7 +4450,7 @@ function Advantages_templateObject7() {
 }
 
 function Advantages_templateObject6() {
-  var data = taggedTemplateLiteral_default()(["\n      width: 0;\n    "]);
+  var data = taggedTemplateLiteral_default()(["\n    position: relative;\n    left: ", ";\n  "]);
 
   Advantages_templateObject6 = function _templateObject6() {
     return data;
@@ -5944,7 +4460,7 @@ function Advantages_templateObject6() {
 }
 
 function Advantages_templateObject5() {
-  var data = taggedTemplateLiteral_default()(["\n  position: relative;\n  &:nth-child(1) {\n    ", "\n  }\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    text-align: justify;\n    padding: 0 ", ";\n  "]);
 
   Advantages_templateObject5 = function _templateObject5() {
     return data;
@@ -5954,7 +4470,7 @@ function Advantages_templateObject5() {
 }
 
 function Advantages_templateObject4() {
-  var data = taggedTemplateLiteral_default()(["\n    text-align: center;\n    padding: 0 ", ";\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n    padding-left: 40px;\n  "]);
 
   Advantages_templateObject4 = function _templateObject4() {
     return data;
@@ -5964,7 +4480,7 @@ function Advantages_templateObject4() {
 }
 
 function Advantages_templateObject3() {
-  var data = taggedTemplateLiteral_default()(["\n    padding-left: 40px;\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n      width: 0;\n    "]);
 
   Advantages_templateObject3 = function _templateObject3() {
     return data;
@@ -5974,7 +4490,7 @@ function Advantages_templateObject3() {
 }
 
 function Advantages_templateObject2() {
-  var data = taggedTemplateLiteral_default()(["\n  color: ", ";\n  font-weight: 700;\n  font-size: 20px;\n  margin-bottom: 0;\n  padding-left: 12px;\n  ", "\n  ", "\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    text-align: center;\n    padding: 0 ", ";\n  "]);
 
   Advantages_templateObject2 = function _templateObject2() {
     return data;
@@ -5984,7 +4500,7 @@ function Advantages_templateObject2() {
 }
 
 function Advantages_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  padding: 50px 0 10px;\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    padding-left: 40px;\n  "]);
 
   Advantages_templateObject = function _templateObject() {
     return data;
@@ -6058,13 +4574,19 @@ function (_PureComponent) {
   return Advantages;
 }(external_react_["PureComponent"]);
 
-var Advantages_Cont = external_styled_components_default.a.section(Advantages_templateObject());
-var Advantages_Heading = external_styled_components_default.a.h3(Advantages_templateObject2(), function (p) {
+var Advantages_Cont = external_styled_components_default.a.section.withConfig({
+  displayName: "Advantages__Cont",
+  componentId: "zuvi60-0"
+})(["padding:50px 0 10px;"]);
+var Advantages_Heading = external_styled_components_default.a.h3.withConfig({
+  displayName: "Advantages__Heading",
+  componentId: "zuvi60-1"
+})(["color:", ";font-weight:700;font-size:20px;margin-bottom:0;padding-left:12px;", " ", ""], function (p) {
   return p.theme.colors.black;
 }, function (p) {
-  return p.theme.between('sm', 'md')(Advantages_templateObject3());
+  return p.theme.between('sm', 'md')(Advantages_templateObject());
 }, function (p) {
-  return p.theme.max('sm')(Advantages_templateObject4(), function (p) {
+  return p.theme.max('sm')(Advantages_templateObject2(), function (p) {
     return p.theme.general.mobilePadding;
   });
 });
@@ -6073,86 +4595,65 @@ var ItemFlex = external_styled_components_default()(function (p) {
     alignItems: "center",
     grid: true
   }, p));
-})(Advantages_templateObject5(), function (p) {
-  return p.theme.max('sm')(Advantages_templateObject6());
+}).withConfig({
+  displayName: "Advantages__ItemFlex",
+  componentId: "zuvi60-2"
+})(["position:relative;&:nth-child(1){", "}"], function (p) {
+  return p.theme.max('sm')(Advantages_templateObject3());
 });
-var Advantages_Desc = external_styled_components_default()(atoms_Text)(Advantages_templateObject7(), function (p) {
+var Advantages_Desc = external_styled_components_default()(atoms_Text).withConfig({
+  displayName: "Advantages__Desc",
+  componentId: "zuvi60-3"
+})(["color:", ";margin-top:10px;margin-bottom:40px;padding-left:12px;", " ", ""], function (p) {
   return p.theme.colors.black;
 }, function (p) {
-  return p.theme.between('sm', 'md')(Advantages_templateObject8());
+  return p.theme.between('sm', 'md')(Advantages_templateObject4());
 }, function (p) {
-  return p.theme.max('sm')(Advantages_templateObject9(), function (p) {
+  return p.theme.max('sm')(Advantages_templateObject5(), function (p) {
     return p.theme.general.mobilePadding;
   });
 });
-var NumberCont = external_styled_components_default.a.p(Advantages_templateObject10(), function (p) {
+var NumberCont = external_styled_components_default.a.p.withConfig({
+  displayName: "Advantages__NumberCont",
+  componentId: "zuvi60-4"
+})(["width:80px;overflow:hidden;height:170px;font-size:170px;font-weight:800;line-height:150px;padding-top:8px;margin:0;color:", ";opacity:0.5;padding-left:", ";", " ", ""], function (p) {
   return p.theme.colors.grays.light;
 }, function (p) {
   return p.isOne ? '33px' : 0;
 }, function (p) {
-  return p.theme.between('sm', 'md')(Advantages_templateObject11(), function (p) {
+  return p.theme.between('sm', 'md')(Advantages_templateObject6(), function (p) {
     return p.theme.general.mobilePadding;
   });
 }, function (p) {
-  return p.theme.max('sm')(Advantages_templateObject12());
+  return p.theme.max('sm')(Advantages_templateObject7());
 });
 /* harmony default export */ var advantages_Advantages = (Object(external_react_i18next_["withTranslation"])()(Advantages_Advantages));
 // EXTERNAL MODULE: external "react-compare-image"
 var external_react_compare_image_ = __webpack_require__(68);
 var external_react_compare_image_default = /*#__PURE__*/__webpack_require__.n(external_react_compare_image_);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/positive_brain.png
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/images/positive_brain.png
 var positive_brain = __webpack_require__(69);
 var positive_brain_default = /*#__PURE__*/__webpack_require__.n(positive_brain);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/negative_brain.png
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/images/negative_brain.png
 var negative_brain = __webpack_require__(70);
 var negative_brain_default = /*#__PURE__*/__webpack_require__.n(negative_brain);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/icons/sati_green.png
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/icons/sati_green.png
 var sati_green = __webpack_require__(71);
 var sati_green_default = /*#__PURE__*/__webpack_require__.n(sati_green);
 
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/components/fits/Fits.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/components/fits/Fits.js
 
 
 
 
 
 
-
-function Fits_templateObject4() {
-  var data = taggedTemplateLiteral_default()(["\n  position: relative;\n  font-size: 18px;\n  color: ", ";\n  margin-bottom: 20px;\n  &:before {\n    content: '';\n    display: block;\n    position: absolute;\n    width: 20px;\n    height: 20px;\n    background-image: url(", ");\n    background-size: cover;\n    left: -36px;\n    top: 3px;\n  }\n"]);
-
-  Fits_templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function Fits_templateObject3() {
-  var data = taggedTemplateLiteral_default()(["\n    padding: 0 ", " 0 calc(", " * 2.6);\n  "]);
-
-  Fits_templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function Fits_templateObject2() {
-  var data = taggedTemplateLiteral_default()(["\n  list-style: none;\n  ", "\n"]);
-
-  Fits_templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
 
 function Fits_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  padding: 20px 0;\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    padding: 0 ", " 0 calc(", " * 2.6);\n  "]);
 
   Fits_templateObject = function _templateObject() {
     return data;
@@ -6203,55 +4704,64 @@ function (_PureComponent) {
   return Fits;
 }(external_react_["PureComponent"]);
 
-var Fits_Cont = external_styled_components_default.a.section(Fits_templateObject());
-var Fits_List = external_styled_components_default.a.ul(Fits_templateObject2(), function (p) {
-  return p.theme.max('sm')(Fits_templateObject3(), function (p) {
+var Fits_Cont = external_styled_components_default.a.section.withConfig({
+  displayName: "Fits__Cont",
+  componentId: "orsyau-0"
+})(["padding:20px 0;"]);
+var Fits_List = external_styled_components_default.a.ul.withConfig({
+  displayName: "Fits__List",
+  componentId: "orsyau-1"
+})(["list-style:none;", ""], function (p) {
+  return p.theme.max('sm')(Fits_templateObject(), function (p) {
     return p.theme.general.mobilePadding;
   }, function (p) {
     return p.theme.general.mobilePadding;
   });
 });
-var Item = external_styled_components_default.a.li(Fits_templateObject4(), function (p) {
+var Item = external_styled_components_default.a.li.withConfig({
+  displayName: "Fits__Item",
+  componentId: "orsyau-2"
+})(["position:relative;font-size:18px;color:", ";margin-bottom:20px;&:before{content:'';display:block;position:absolute;width:20px;height:20px;background-image:url(", ");background-size:cover;left:-36px;top:3px;}"], function (p) {
   return p.theme.colors.black;
 }, sati_green_default.a);
 /* harmony default export */ var fits_Fits = (Object(external_react_i18next_["withTranslation"])()(Fits_Fits));
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/app_icons/aura.jpg
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/images/app_icons/aura.jpg
 var aura = __webpack_require__(72);
 var aura_default = /*#__PURE__*/__webpack_require__.n(aura);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/app_icons/breathe.jpg
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/images/app_icons/breathe.jpg
 var breathe = __webpack_require__(73);
 var breathe_default = /*#__PURE__*/__webpack_require__.n(breathe);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/app_icons/budhify.jpg
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/images/app_icons/budhify.jpg
 var budhify = __webpack_require__(74);
 var budhify_default = /*#__PURE__*/__webpack_require__.n(budhify);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/app_icons/calm.jpg
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/images/app_icons/calm.jpg
 var calm = __webpack_require__(75);
 var calm_default = /*#__PURE__*/__webpack_require__.n(calm);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/app_icons/headspace.jpg
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/images/app_icons/headspace.jpg
 var headspace = __webpack_require__(76);
 var headspace_default = /*#__PURE__*/__webpack_require__.n(headspace);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/app_icons/insight.jpg
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/images/app_icons/insight.jpg
 var insight = __webpack_require__(77);
 var insight_default = /*#__PURE__*/__webpack_require__.n(insight);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/app_icons/meditopia.jpg
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/images/app_icons/meditopia.jpg
 var meditopia = __webpack_require__(78);
 var meditopia_default = /*#__PURE__*/__webpack_require__.n(meditopia);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/app_icons/percent.jpg
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/images/app_icons/percent.jpg
 var percent = __webpack_require__(79);
 var percent_default = /*#__PURE__*/__webpack_require__.n(percent);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/app_icons/simple.jpg
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/images/app_icons/simple.jpg
 var simple = __webpack_require__(80);
 var simple_default = /*#__PURE__*/__webpack_require__.n(simple);
 
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/components/nofit/NoFit.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/components/nofit/NoFit.js
 
 
 
@@ -6259,59 +4769,9 @@ var simple_default = /*#__PURE__*/__webpack_require__.n(simple);
 
 
 
-
-function NoFit_templateObject9() {
-  var data = taggedTemplateLiteral_default()(["\n    transform: none;\n  "]);
-
-  NoFit_templateObject9 = function _templateObject9() {
-    return data;
-  };
-
-  return data;
-}
-
-function NoFit_templateObject8() {
-  var data = taggedTemplateLiteral_default()(["\n  display: flex;\n  flex-wrap: wrap;\n  transform: translateX(-18px) scale(0.92) skewX(-7deg) rotateY(-11deg);\n  ", "\n"]);
-
-  NoFit_templateObject8 = function _templateObject8() {
-    return data;
-  };
-
-  return data;
-}
-
-function NoFit_templateObject7() {
-  var data = taggedTemplateLiteral_default()(["\n    > div {\n      &:nth-child(2) {\n        order: 1;\n        padding: 0 calc(", " + 15px);\n        margin-bottom: ", ";\n      }\n      &:nth-child(1) {\n        order: 2;\n      }\n    }\n  "]);
-
-  NoFit_templateObject7 = function _templateObject7() {
-    return data;
-  };
-
-  return data;
-}
-
-function NoFit_templateObject6() {
-  var data = taggedTemplateLiteral_default()(["\n  perspective: 500px;\n  ", "\n"]);
-
-  NoFit_templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function NoFit_templateObject5() {
-  var data = taggedTemplateLiteral_default()(["\n    width: calc((100vw - (", " * 4)) / 3);\n    height: calc((100vw - (", " * 4)) / 3);\n    margin: 0 0 ", " ", ";\n  "]);
-
-  NoFit_templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
 
 function NoFit_templateObject4() {
-  var data = taggedTemplateLiteral_default()(["\n  display: block;\n  width: 100px;\n  height: 100px;\n  border-radius: 14px;\n  margin: 20px;\n  background-image: url(", ");\n  background-size: 102%;\n  background-position: center;\n  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);\n  cursor: pointer;\n  transition: all .4s ease;\n  ", "\n  &:hover {\n    transform: scale(1.1);\n  }\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    transform: none;\n  "]);
 
   NoFit_templateObject4 = function _templateObject4() {
     return data;
@@ -6321,7 +4781,7 @@ function NoFit_templateObject4() {
 }
 
 function NoFit_templateObject3() {
-  var data = taggedTemplateLiteral_default()(["\n    text-align: justify;\n    &:last-of-type {\n      margin-bottom: 30px;\n    }\n  "]);
+  var data = taggedTemplateLiteral_default()(["\n    > div {\n      &:nth-child(2) {\n        order: 1;\n        padding: 0 calc(", " + 15px);\n        margin-bottom: ", ";\n      }\n      &:nth-child(1) {\n        order: 2;\n      }\n    }\n  "]);
 
   NoFit_templateObject3 = function _templateObject3() {
     return data;
@@ -6331,7 +4791,7 @@ function NoFit_templateObject3() {
 }
 
 function NoFit_templateObject2() {
-  var data = taggedTemplateLiteral_default()(["\n  ", "\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    width: calc((100vw - (", " * 4)) / 3);\n    height: calc((100vw - (", " * 4)) / 3);\n    margin: 0 0 ", " ", ";\n  "]);
 
   NoFit_templateObject2 = function _templateObject2() {
     return data;
@@ -6341,7 +4801,7 @@ function NoFit_templateObject2() {
 }
 
 function NoFit_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  padding: 20px 0;\n  overflow: hidden;\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    text-align: justify;\n    &:last-of-type {\n      margin-bottom: 30px;\n    }\n  "]);
 
   NoFit_templateObject = function _templateObject() {
     return data;
@@ -6432,28 +4892,43 @@ function (_PureComponent) {
   return NoFit;
 }(external_react_["PureComponent"]);
 
-var NoFit_Cont = external_styled_components_default.a.section(NoFit_templateObject());
-var NoFit_Text = external_styled_components_default()(atoms_Text)(NoFit_templateObject2(), function (p) {
-  return p.theme.max('sm')(NoFit_templateObject3());
+var NoFit_Cont = external_styled_components_default.a.section.withConfig({
+  displayName: "NoFit__Cont",
+  componentId: "sc-1rjdr3u-0"
+})(["padding:20px 0;overflow:hidden;"]);
+var NoFit_Text = external_styled_components_default()(atoms_Text).withConfig({
+  displayName: "NoFit__Text",
+  componentId: "sc-1rjdr3u-1"
+})(["", ""], function (p) {
+  return p.theme.max('sm')(NoFit_templateObject());
 });
-var AppIcon = external_styled_components_default.a.a(NoFit_templateObject4(), function (p) {
+var AppIcon = external_styled_components_default.a.a.withConfig({
+  displayName: "NoFit__AppIcon",
+  componentId: "sc-1rjdr3u-2"
+})(["display:block;width:100px;height:100px;border-radius:14px;margin:20px;background-image:url(", ");background-size:102%;background-position:center;box-shadow:0 0 30px rgba(0,0,0,0.1);cursor:pointer;transition:all .4s ease;", " &:hover{transform:scale(1.1);}"], function (p) {
   return p.image;
 }, function (p) {
-  return p.theme.max('sm')(NoFit_templateObject5(), p.theme.general.mobilePadding, p.theme.general.mobilePadding, p.theme.general.mobilePadding, p.theme.general.mobilePadding);
+  return p.theme.max('sm')(NoFit_templateObject2(), p.theme.general.mobilePadding, p.theme.general.mobilePadding, p.theme.general.mobilePadding, p.theme.general.mobilePadding);
 });
 var FlexCont = external_styled_components_default()(function (p) {
   return external_react_default.a.createElement(atoms_Flex, extends_default()({
     alignItems: "center",
     grid: true
   }, p));
-})(NoFit_templateObject6(), function (p) {
-  return p.theme.max('sm')(NoFit_templateObject7(), p.theme.general.mobilePadding, p.theme.general.mobilePadding);
+}).withConfig({
+  displayName: "NoFit__FlexCont",
+  componentId: "sc-1rjdr3u-3"
+})(["perspective:500px;", ""], function (p) {
+  return p.theme.max('sm')(NoFit_templateObject3(), p.theme.general.mobilePadding, p.theme.general.mobilePadding);
 });
-var AppCont = external_styled_components_default.a.div(NoFit_templateObject8(), function (p) {
-  return p.theme.max('sm')(NoFit_templateObject9());
+var AppCont = external_styled_components_default.a.div.withConfig({
+  displayName: "NoFit__AppCont",
+  componentId: "sc-1rjdr3u-4"
+})(["display:flex;flex-wrap:wrap;transform:translateX(-18px) scale(0.92) skewX(-7deg) rotateY(-11deg);", ""], function (p) {
+  return p.theme.max('sm')(NoFit_templateObject4());
 });
 /* harmony default export */ var nofit_NoFit = (Object(external_react_i18next_["withTranslation"])()(NoFit_NoFit));
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/components/faq/Faq.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/components/faq/Faq.js
 
 
 
@@ -6462,79 +4937,9 @@ var AppCont = external_styled_components_default.a.div(NoFit_templateObject8(), 
 
 
 
-
-function Faq_templateObject8() {
-  var data = taggedTemplateLiteral_default()(["\n  position: relative;\n  top: 8px;\n  left: 9px;\n  &:before {\n    content: '';\n    display: block;\n    position: absolute;\n    top: 0;\n    height: 2px;\n    width: 14px;\n    background: ", ";\n    transform: rotate(45deg) translate(-6px);\n  }\n  &:after {\n    content: '';\n    display: block;\n    position: absolute;\n    top: 0;\n    height: 2px;\n    width: 14px;\n    background: ", ";\n    transform: rotate(-45deg) translate(6px);\n  }\n"]);
-
-  Faq_templateObject8 = function _templateObject8() {
-    return data;
-  };
-
-  return data;
-}
-
-function Faq_templateObject7() {
-  var data = taggedTemplateLiteral_default()(["\n  position: relative;\n  top: 0;\n  left: 9px;\n  &:before {\n    content: '';\n    display: block;\n    position: absolute;\n    top: 0;\n    height: 2px;\n    width: 14px;\n    background: ", ";\n    transform: rotate(-45deg) translate(-6px);\n  }\n  &:after {\n    content: '';\n    display: block;\n    position: absolute;\n    top: 0;\n    height: 2px;\n    width: 14px;\n    background: ", ";\n    transform: rotate(45deg) translate(6px);\n  }\n"]);
-
-  Faq_templateObject7 = function _templateObject7() {
-    return data;
-  };
-
-  return data;
-}
-
-function Faq_templateObject6() {
-  var data = taggedTemplateLiteral_default()(["\n  margin-top: 10px;\n  padding-right: 30px;\n  padding-left: 45px;\n"]);
-
-  Faq_templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function Faq_templateObject5() {
-  var data = taggedTemplateLiteral_default()(["\n    left: 7px;\n  "]);
-
-  Faq_templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function Faq_templateObject4() {
-  var data = taggedTemplateLiteral_default()(["\n  position: absolute;\n  font-size: 70px;\n  background: transparent;\n  padding: 7px 0;\n  border: 0;\n  cursor: pointer;\n  ", "\n"]);
-
-  Faq_templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function Faq_templateObject3() {
-  var data = taggedTemplateLiteral_default()(["\n  color: ", ";\n  font-size: 20px;\n  font-weight: 700;\n  margin-bottom: 10px;\n  padding-right: 30px;\n  padding-left: 45px;\n  cursor: pointer;\n  &:hover {\n    color: ", ";\n  }\n"]);
-
-  Faq_templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function Faq_templateObject2() {
-  var data = taggedTemplateLiteral_default()(["\n  position: relative;\n  margin-bottom: 30px;\n"]);
-
-  Faq_templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
 
 function Faq_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  padding: 20px 0;\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    left: 7px;\n  "]);
 
   Faq_templateObject = function _templateObject() {
     return data;
@@ -6627,82 +5032,63 @@ function (_PureComponent2) {
   return Faq;
 }(external_react_["PureComponent"]);
 
-var Faq_Cont = external_styled_components_default.a.div(Faq_templateObject());
-var QuestionCont = external_styled_components_default.a.div(Faq_templateObject2());
-var QuestionTitle = external_styled_components_default.a.h4(Faq_templateObject3(), function (p) {
+var Faq_Cont = external_styled_components_default.a.div.withConfig({
+  displayName: "Faq__Cont",
+  componentId: "sc-1qr1dde-0"
+})(["padding:20px 0;"]);
+var QuestionCont = external_styled_components_default.a.div.withConfig({
+  displayName: "Faq__QuestionCont",
+  componentId: "sc-1qr1dde-1"
+})(["position:relative;margin-bottom:30px;"]);
+var QuestionTitle = external_styled_components_default.a.h4.withConfig({
+  displayName: "Faq__QuestionTitle",
+  componentId: "sc-1qr1dde-2"
+})(["color:", ";font-size:20px;font-weight:700;margin-bottom:10px;padding-right:30px;padding-left:45px;cursor:pointer;&:hover{color:", ";}"], function (p) {
   return p.theme.colors.black;
 }, function (p) {
   return p.theme.colors.primary;
 });
-var QuestionButton = external_styled_components_default.a.button(Faq_templateObject4(), function (p) {
-  return p.theme.max('sm')(Faq_templateObject5());
+var QuestionButton = external_styled_components_default.a.button.withConfig({
+  displayName: "Faq__QuestionButton",
+  componentId: "sc-1qr1dde-3"
+})(["position:absolute;font-size:70px;background:transparent;padding:7px 0;border:0;cursor:pointer;", ""], function (p) {
+  return p.theme.max('sm')(Faq_templateObject());
 });
-var QuestionText = external_styled_components_default()(atoms_Text)(Faq_templateObject6());
-var AngleUp = external_styled_components_default.a.div(Faq_templateObject7(), function (p) {
+var QuestionText = external_styled_components_default()(atoms_Text).withConfig({
+  displayName: "Faq__QuestionText",
+  componentId: "sc-1qr1dde-4"
+})(["margin-top:10px;padding-right:30px;padding-left:45px;"]);
+var AngleUp = external_styled_components_default.a.div.withConfig({
+  displayName: "Faq__AngleUp",
+  componentId: "sc-1qr1dde-5"
+})(["position:relative;top:0;left:9px;&:before{content:'';display:block;position:absolute;top:0;height:2px;width:14px;background:", ";transform:rotate(-45deg) translate(-6px);}&:after{content:'';display:block;position:absolute;top:0;height:2px;width:14px;background:", ";transform:rotate(45deg) translate(6px);}"], function (p) {
   return p.theme.colors.primary;
 }, function (p) {
   return p.theme.colors.primary;
 });
-var AngleDown = external_styled_components_default.a.div(Faq_templateObject8(), function (p) {
+var AngleDown = external_styled_components_default.a.div.withConfig({
+  displayName: "Faq__AngleDown",
+  componentId: "sc-1qr1dde-6"
+})(["position:relative;top:8px;left:9px;&:before{content:'';display:block;position:absolute;top:0;height:2px;width:14px;background:", ";transform:rotate(45deg) translate(-6px);}&:after{content:'';display:block;position:absolute;top:0;height:2px;width:14px;background:", ";transform:rotate(-45deg) translate(6px);}"], function (p) {
   return p.theme.colors.primary;
 }, function (p) {
   return p.theme.colors.primary;
 });
 /* harmony default export */ var faq_Faq = (Object(external_react_i18next_["withTranslation"])()(Faq_Faq));
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/images/footer_b.jpg
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/images/footer_b.jpg
 var footer_b = __webpack_require__(81);
 var footer_b_default = /*#__PURE__*/__webpack_require__.n(footer_b);
 
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/components/cost/Cost.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/components/cost/Cost.js
 
 
 
 
 
 
-
-function Cost_templateObject5() {
-  var data = taggedTemplateLiteral_default()(["\n    padding: 0 ", ";\n    text-align: justify;\n  "]);
-
-  Cost_templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function Cost_templateObject4() {
-  var data = taggedTemplateLiteral_default()(["\n  font-size: 22px;\n  text-align: center;\n  color: white;\n  ", "\n"]);
-
-  Cost_templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function Cost_templateObject3() {
-  var data = taggedTemplateLiteral_default()(["\n  position: absolute;\n  width: 100vw;\n  height: 220vh;\n  bottom: 0;\n  left: 0;\n  background-image: url(", ");\n  background-size: cover;\n  z-index: -1;\n"]);
-
-  Cost_templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function Cost_templateObject2() {
-  var data = taggedTemplateLiteral_default()(["\n  position:relative;\n  padding: 20px 0;\n  background-size: cover;\n  padding-bottom: 200px;\n"]);
-
-  Cost_templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
 
 function Cost_templateObject() {
-  var data = taggedTemplateLiteral_default()(["\n  color: white;\n"]);
+  var data = taggedTemplateLiteral_default()(["\n    padding: 0 ", ";\n    text-align: justify;\n  "]);
 
   Cost_templateObject = function _templateObject() {
     return data;
@@ -6746,14 +5132,26 @@ function (_PureComponent) {
   return Cost;
 }(external_react_["PureComponent"]);
 
-var Cost_SectionHeading = external_styled_components_default()(atoms_SectionHeading)(Cost_templateObject());
-var Cost_Cont = external_styled_components_default.a.div(Cost_templateObject2());
-var BottomBg = external_styled_components_default.a.div(Cost_templateObject3(), footer_b_default.a);
-var Cost_Desc = external_styled_components_default()(atoms_Text)(Cost_templateObject4(), function (p) {
-  return p.theme.max('sm')(Cost_templateObject5(), p.theme.general.mobilePadding);
+var Cost_SectionHeading = external_styled_components_default()(atoms_SectionHeading).withConfig({
+  displayName: "Cost__SectionHeading",
+  componentId: "j2wdpy-0"
+})(["color:white;"]);
+var Cost_Cont = external_styled_components_default.a.div.withConfig({
+  displayName: "Cost__Cont",
+  componentId: "j2wdpy-1"
+})(["position:relative;padding:20px 0;background-size:cover;padding-bottom:200px;"]);
+var BottomBg = external_styled_components_default.a.div.withConfig({
+  displayName: "Cost__BottomBg",
+  componentId: "j2wdpy-2"
+})(["position:absolute;width:100vw;height:220vh;bottom:0;left:0;background-image:url(", ");background-size:cover;z-index:-1;"], footer_b_default.a);
+var Cost_Desc = external_styled_components_default()(atoms_Text).withConfig({
+  displayName: "Cost__Desc",
+  componentId: "j2wdpy-3"
+})(["font-size:22px;text-align:center;color:white;", ""], function (p) {
+  return p.theme.max('sm')(Cost_templateObject(), p.theme.general.mobilePadding);
 });
 /* harmony default export */ var cost_Cost = (Object(external_react_i18next_["withTranslation"])()(Cost_Cost));
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/pages/Landing.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/pages/Landing.js
 
 
 
@@ -6806,43 +5204,43 @@ function (_PureComponent) {
 var external_styled_normalize_ = __webpack_require__(82);
 var external_styled_normalize_default = /*#__PURE__*/__webpack_require__.n(external_styled_normalize_);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/fonts/TT-Norms-Pro-Thin.ttf
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/fonts/TT-Norms-Pro-Thin.ttf
 var TT_Norms_Pro_Thin = __webpack_require__(83);
 var TT_Norms_Pro_Thin_default = /*#__PURE__*/__webpack_require__.n(TT_Norms_Pro_Thin);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/fonts/TT-Norms-Pro-ExtraLight.ttf
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/fonts/TT-Norms-Pro-ExtraLight.ttf
 var TT_Norms_Pro_ExtraLight = __webpack_require__(84);
 var TT_Norms_Pro_ExtraLight_default = /*#__PURE__*/__webpack_require__.n(TT_Norms_Pro_ExtraLight);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/fonts/TT-Norms-Pro-Light.ttf
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/fonts/TT-Norms-Pro-Light.ttf
 var TT_Norms_Pro_Light = __webpack_require__(85);
 var TT_Norms_Pro_Light_default = /*#__PURE__*/__webpack_require__.n(TT_Norms_Pro_Light);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/fonts/TT-Norms-Pro-Normal.ttf
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/fonts/TT-Norms-Pro-Normal.ttf
 var TT_Norms_Pro_Normal = __webpack_require__(86);
 var TT_Norms_Pro_Normal_default = /*#__PURE__*/__webpack_require__.n(TT_Norms_Pro_Normal);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/fonts/TT-Norms-Pro-Medium.ttf
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/fonts/TT-Norms-Pro-Medium.ttf
 var TT_Norms_Pro_Medium = __webpack_require__(87);
 var TT_Norms_Pro_Medium_default = /*#__PURE__*/__webpack_require__.n(TT_Norms_Pro_Medium);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/fonts/TT-Norms-Pro-DemiBold.ttf
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/fonts/TT-Norms-Pro-DemiBold.ttf
 var TT_Norms_Pro_DemiBold = __webpack_require__(88);
 var TT_Norms_Pro_DemiBold_default = /*#__PURE__*/__webpack_require__.n(TT_Norms_Pro_DemiBold);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/fonts/TT-Norms-Pro-Bold.ttf
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/fonts/TT-Norms-Pro-Bold.ttf
 var TT_Norms_Pro_Bold = __webpack_require__(89);
 var TT_Norms_Pro_Bold_default = /*#__PURE__*/__webpack_require__.n(TT_Norms_Pro_Bold);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/fonts/TT-Norms-Pro-ExtraBold.ttf
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/fonts/TT-Norms-Pro-ExtraBold.ttf
 var TT_Norms_Pro_ExtraBold = __webpack_require__(90);
 var TT_Norms_Pro_ExtraBold_default = /*#__PURE__*/__webpack_require__.n(TT_Norms_Pro_ExtraBold);
 
-// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/core/assets/fonts/TT-Norms-Pro-Black.ttf
+// EXTERNAL MODULE: /Users/user/projects/sati_one_landing/src/assets/fonts/TT-Norms-Pro-Black.ttf
 var TT_Norms_Pro_Black = __webpack_require__(91);
 var TT_Norms_Pro_Black_default = /*#__PURE__*/__webpack_require__.n(TT_Norms_Pro_Black);
 
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/globalStyles.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/globalStyles.js
 
 
 function globalStyles_templateObject2() {
@@ -6888,7 +5286,7 @@ var GlobalStyle = Object(external_styled_components_["createGlobalStyle"])(globa
   return p.theme.font.size.base;
 }, TT_Norms_Pro_Thin_default.a, TT_Norms_Pro_ExtraLight_default.a, TT_Norms_Pro_Light_default.a, TT_Norms_Pro_Normal_default.a, TT_Norms_Pro_Medium_default.a, TT_Norms_Pro_DemiBold_default.a, TT_Norms_Pro_Bold_default.a, TT_Norms_Pro_ExtraBold_default.a, TT_Norms_Pro_Black_default.a);
 /* harmony default export */ var globalStyles = (GlobalStyle);
-// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/core/ui/layouts/AppRoot.js
+// CONCATENATED MODULE: /Users/user/projects/sati_one_landing/src/ui/layouts/AppRoot.js
 
 
 
@@ -7005,7 +5403,7 @@ var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "sym
   return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : _typeof2(obj);
 };
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(0);
 
 var React = _interopRequireWildcard(_react);
 
@@ -7157,15 +5555,15 @@ module.exports = require("react-device-detect");
 
 /***/ }),
 /* 29 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "data:image/png;base64,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"
+module.exports = __webpack_require__.p + "static/GooglePlay.54d0dc20.png";
 
 /***/ }),
 /* 30 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "data:image/png;base64,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"
+module.exports = __webpack_require__.p + "static/AppStore.2c6e596e.png";
 
 /***/ }),
 /* 31 */
@@ -7184,6 +5582,10 @@ var plugins = [{
   hooks: _Users_user_projects_sati_one_landing_node_modules_react_static_plugin_reach_router_browser_api_js__WEBPACK_IMPORTED_MODULE_0___default()({})
 }, {
   location: "/Users/user/projects/sati_one_landing/node_modules/react-static-plugin-styled-components",
+  plugins: [],
+  hooks: {}
+}, {
+  location: "/Users/user/projects/sati_one_landing/node_modules/react-static-plugin-favicons",
   plugins: [],
   hooks: {}
 }, {
@@ -7211,9 +5613,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var path__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(path__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(38);
 /* harmony import */ var babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _Users_user_projects_sati_one_landing_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(19);
+/* harmony import */ var _Users_user_projects_sati_one_landing_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(18);
 /* harmony import */ var _Users_user_projects_sati_one_landing_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_Users_user_projects_sati_one_landing_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3__);
 
 
@@ -7280,7 +5682,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
-var _react = _interopRequireDefault(__webpack_require__(1));
+var _react = _interopRequireDefault(__webpack_require__(0));
 
 var _reactStatic = __webpack_require__(26);
 
@@ -7464,121 +5866,121 @@ module.exports = require("polished");
 /* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "0ee41cfa966ea781275f2012056bfce8.png";
+module.exports = __webpack_require__.p + "static/iphone.0ee41cfa.png";
 
 /***/ }),
 /* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "9539e03b9397b3eb254f5b6cd22d475a.png";
+module.exports = __webpack_require__.p + "static/logo_v.9539e03b.png";
 
 /***/ }),
 /* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "f360f693e83072c47934f9d8146d9cd6.png";
+module.exports = __webpack_require__.p + "static/marketing1.f360f693.png";
 
 /***/ }),
 /* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "a5481dba7ac7ff6fbda7cfca0e9f59fa.png";
+module.exports = __webpack_require__.p + "static/marketing2.a5481dba.png";
 
 /***/ }),
 /* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "3e0309dfd9a4c62c39db656d0df22cac.png";
+module.exports = __webpack_require__.p + "static/marketing3.3e0309df.png";
 
 /***/ }),
 /* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "729e37290bd509b6fa2c3ddb694f2ec4.png";
+module.exports = __webpack_require__.p + "static/screenshot1.729e3729.png";
 
 /***/ }),
 /* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "d577fede16bd48ae611bfd8fe471c203.png";
+module.exports = __webpack_require__.p + "static/screenshot2.d577fede.png";
 
 /***/ }),
 /* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "c92887241122100da8c91539c3d0d967.png";
+module.exports = __webpack_require__.p + "static/screenshot3.c9288724.png";
 
 /***/ }),
 /* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "358b89b8e1db297a63574a72266cd081.png";
+module.exports = __webpack_require__.p + "static/screenshot4.358b89b8.png";
 
 /***/ }),
 /* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "165aa657a31e0f7f1ffc350e151fa6d3.png";
+module.exports = __webpack_require__.p + "static/screenshot5.165aa657.png";
 
 /***/ }),
 /* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "66a445eefc37546192cd6a1bd7e8bcfb.png";
+module.exports = __webpack_require__.p + "static/flower1.66a445ee.png";
 
 /***/ }),
 /* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "f043b9f2154158d1e97f25e9a1861ba2.png";
+module.exports = __webpack_require__.p + "static/flower2.f043b9f2.png";
 
 /***/ }),
 /* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "0b31b1e9f0d8caf031427224e7f7ed62.png";
+module.exports = __webpack_require__.p + "static/flower3.0b31b1e9.png";
 
 /***/ }),
 /* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "1a9f38a377f3638bcb3d214adb0d2a01.jpg";
+module.exports = __webpack_require__.p + "static/sati_app_logo.1a9f38a3.jpg";
 
 /***/ }),
 /* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "1eb9f577c40dbfb15ce57501d814165d.jpg";
+module.exports = __webpack_require__.p + "static/bg_inside.1eb9f577.jpg";
 
 /***/ }),
 /* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "8cceed63e308eeb2baf16014091dcb14.png";
+module.exports = __webpack_require__.p + "static/meditation.8cceed63.png";
 
 /***/ }),
 /* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "7a4560d2f3c4b7750841069104f16251.png";
+module.exports = __webpack_require__.p + "static/brain.7a4560d2.png";
 
 /***/ }),
 /* 65 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "data:image/png;base64,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"
+module.exports = __webpack_require__.p + "static/books.21ab8d3d.png";
 
 /***/ }),
 /* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "ee3c268d1c23619b2031e0710707fe9e.png";
+module.exports = __webpack_require__.p + "static/buddhism.ee3c268d.png";
 
 /***/ }),
 /* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "cb6cd48cc2c2fd67ffdd5783bd7c93e6.png";
+module.exports = __webpack_require__.p + "static/wave2.cb6cd48c.png";
 
 /***/ }),
 /* 68 */
@@ -7590,79 +5992,79 @@ module.exports = require("react-compare-image");
 /* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "585da359ff2fc6ded4b39185a89d1c56.png";
+module.exports = __webpack_require__.p + "static/positive_brain.585da359.png";
 
 /***/ }),
 /* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "a8fa334acf89a7461a76737c5b481f56.png";
+module.exports = __webpack_require__.p + "static/negative_brain.a8fa334a.png";
 
 /***/ }),
 /* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "b7641340abaf6a5db5e610b957d0f9bc.png";
+module.exports = __webpack_require__.p + "static/sati_green.b7641340.png";
 
 /***/ }),
 /* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "31bbd92304869447352d3b754c71f001.jpg";
+module.exports = __webpack_require__.p + "static/aura.31bbd923.jpg";
 
 /***/ }),
 /* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "ebb85e27b525b7cbb532fec99933bb33.jpg";
+module.exports = __webpack_require__.p + "static/breathe.ebb85e27.jpg";
 
 /***/ }),
 /* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "51f674bd7dab6377b42b8b0ce69c00e3.jpg";
+module.exports = __webpack_require__.p + "static/budhify.51f674bd.jpg";
 
 /***/ }),
 /* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "f73e67f67f91f1d96f2a0834ed050468.jpg";
+module.exports = __webpack_require__.p + "static/calm.f73e67f6.jpg";
 
 /***/ }),
 /* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "d0dc292f346324a02e28f6d9c3e84c3e.jpg";
+module.exports = __webpack_require__.p + "static/headspace.d0dc292f.jpg";
 
 /***/ }),
 /* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "2f8262caad82ada5e2e7a25ffe1010d0.jpg";
+module.exports = __webpack_require__.p + "static/insight.2f8262ca.jpg";
 
 /***/ }),
 /* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "02cccfec9b80ed0b40a3b5cc4aaf5b17.jpg";
+module.exports = __webpack_require__.p + "static/meditopia.02cccfec.jpg";
 
 /***/ }),
 /* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "906e819f61a6ce8ef0a4bd16197631e1.jpg";
+module.exports = __webpack_require__.p + "static/percent.906e819f.jpg";
 
 /***/ }),
 /* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "de7f0f9ff3445fa773fbb06149e4de20.jpg";
+module.exports = __webpack_require__.p + "static/simple.de7f0f9f.jpg";
 
 /***/ }),
 /* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "8f1faf29d07ef13f87212dd34128dbf8.jpg";
+module.exports = __webpack_require__.p + "static/footer_b.8f1faf29.jpg";
 
 /***/ }),
 /* 82 */
@@ -7674,55 +6076,55 @@ module.exports = require("styled-normalize");
 /* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "a3484902ac0cf6f03d265260c0e24e0e.ttf";
+module.exports = __webpack_require__.p + "static/TT-Norms-Pro-Thin.a3484902.ttf";
 
 /***/ }),
 /* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "f3beb0957abf56c707e56498f0903619.ttf";
+module.exports = __webpack_require__.p + "static/TT-Norms-Pro-ExtraLight.f3beb095.ttf";
 
 /***/ }),
 /* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "1b413af308adece662cdce87748edbf2.ttf";
+module.exports = __webpack_require__.p + "static/TT-Norms-Pro-Light.1b413af3.ttf";
 
 /***/ }),
 /* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "1a2ffa72728bda6c1a3228d46c4bab13.ttf";
+module.exports = __webpack_require__.p + "static/TT-Norms-Pro-Normal.1a2ffa72.ttf";
 
 /***/ }),
 /* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "f53f50bf86ed0285a386f516d19e6a2a.ttf";
+module.exports = __webpack_require__.p + "static/TT-Norms-Pro-Medium.f53f50bf.ttf";
 
 /***/ }),
 /* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "62618b593c97353490bcf112a4ea546d.ttf";
+module.exports = __webpack_require__.p + "static/TT-Norms-Pro-DemiBold.62618b59.ttf";
 
 /***/ }),
 /* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "33a327aaeb24b268c2b496ffc2d295f2.ttf";
+module.exports = __webpack_require__.p + "static/TT-Norms-Pro-Bold.33a327aa.ttf";
 
 /***/ }),
 /* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "20790586fa1d70412d8683f90c0a2ce6.ttf";
+module.exports = __webpack_require__.p + "static/TT-Norms-Pro-ExtraBold.20790586.ttf";
 
 /***/ }),
 /* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "aa4b73e3917aed58f4222ed05f197fc8.ttf";
+module.exports = __webpack_require__.p + "static/TT-Norms-Pro-Black.aa4b73e3.ttf";
 
 /***/ }),
 /* 92 */
@@ -8062,7 +6464,7 @@ var _createClass = function () {
   };
 }();
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -8162,7 +6564,7 @@ var _hoistNonReactStatics = __webpack_require__(34);
 
 var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
-var _index = __webpack_require__(19);
+var _index = __webpack_require__(18);
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -8233,7 +6635,7 @@ var _extends2 = _interopRequireDefault(__webpack_require__(8));
 
 var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(14));
 
-var React = _interopRequireWildcard(__webpack_require__(1));
+var React = _interopRequireWildcard(__webpack_require__(0));
 
 var _useStaticInfo = __webpack_require__(104);
 /* eslint-disable import/no-dynamic-require */
@@ -8292,7 +6694,7 @@ module.exports = require("/Users/user/projects/sati_one_landing/node_modules/rea
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(17);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
@@ -8361,18 +6763,6 @@ module.exports = function (originalModule) {
 /***/ (function(module, exports) {
 
 module.exports = require("react-flags-select/css/react-flags-select.css");
-
-/***/ }),
-/* 108 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "1042e1d58ac392e0cd31749c4992fd75.png";
-
-/***/ }),
-/* 109 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "74f056749c745c39601b3f649c125adf.png";
 
 /***/ })
 /******/ ]);

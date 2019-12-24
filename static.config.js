@@ -6,7 +6,7 @@ export default {
     require.resolve('react-static-plugin-styled-components'),
     [
       require.resolve('react-static-plugin-favicons'),
-      { inputFile: path.resolve(__dirname, 'sati_green.png') },
+      { inputFile: path.resolve(__dirname, 'public/sati_green.png') },
     ],
   ],
 }

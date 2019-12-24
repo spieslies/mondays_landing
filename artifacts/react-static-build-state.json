@@ -16,6 +16,12 @@
   "plugins": [
     "/Users/user/projects/sati_one_landing/node_modules/react-static-plugin-reach-router/browser.api.js",
     "/Users/user/projects/sati_one_landing/node_modules/react-static-plugin-styled-components/node.api.js",
+    [
+      "/Users/user/projects/sati_one_landing/node_modules/react-static-plugin-favicons/node.api.js",
+      {
+        "inputFile": "/Users/user/projects/sati_one_landing/public/sati_green.png"
+      }
+    ],
     "/Users/user/projects/sati_one_landing"
   ],
   "paths": {
