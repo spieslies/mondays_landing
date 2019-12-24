@@ -12,11 +12,7 @@ import Fits from 'ui/components/fits/Fits';
 import NoFit from 'ui/components/nofit/NoFit';
 import Faq from 'ui/components/faq/Faq';
 import Cost from 'ui/components/cost/Cost';
-// import Why from '../components/why/Why';
-// import FirstStep from '../components/firststep/FirstStep';
-// import Ask from '../components/ask/Ask';
-// import Question from '../components/question/Question';
-// import Bottom from '../components/bottom/Bottom';
+import FlowerPreloading from 'ui/components/FlowerPreloading';
 
 class Landing extends PureComponent {
   render() {
@@ -31,6 +27,7 @@ class Landing extends PureComponent {
         <NoFit />
         <Faq />
         <Cost />
+        <FlowerPreloading />
       </ParallaxProvider>
     );
   }
