@@ -7,7 +7,7 @@ export default pluginOptions => ({
         state.defaultLoaders.cssLoader,
         {
           loader: 'url-loader',
-          test: /\.(jpg|png)$/,
+          test: /\.(jpg|png|ttf)$/,
           query: {
             limit: 100,
             name: 'static/[name].[hash:8].[ext]',
