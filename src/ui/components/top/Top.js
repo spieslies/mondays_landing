@@ -1,6 +1,5 @@
 import React, {PureComponent} from 'react';
 import styled from 'styled-components';
-import ReactGA from 'react-ga';
 import PropTypes from 'prop-types';
 import ReactFlagsSelect from 'react-flags-select';
 import 'react-flags-select/css/react-flags-select.css';

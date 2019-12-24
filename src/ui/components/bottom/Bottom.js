@@ -1,6 +1,5 @@
 import React, {PureComponent} from 'react';
 import styled from 'styled-components';
-import ReactGA from 'react-ga';
 
 import {
   Section,

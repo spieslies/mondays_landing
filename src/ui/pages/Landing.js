@@ -1,6 +1,5 @@
 import React, {PureComponent} from 'react';
 import styled from 'styled-components';
-import ReactGA from 'react-ga';
 import { withTranslation } from 'react-i18next';
 import { ParallaxProvider } from 'react-scroll-parallax';
 
@@ -18,9 +17,6 @@ import Cost from 'ui/components/cost/Cost';
 // import Ask from '../components/ask/Ask';
 // import Question from '../components/question/Question';
 // import Bottom from '../components/bottom/Bottom';
-
-// ReactGA.initialize('');
-// ReactGA.pageview(window.location.pathname);
 
 class Landing extends PureComponent {
   render() {
