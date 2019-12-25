@@ -148,6 +148,11 @@ const CustomReactFlagsSelect = styled(ReactFlagsSelect)`
     .arrow-down {
       color: rgba(255, 255, 255, 0.7);
     }
+    .country-flag {
+      img {
+        display: none;
+      }
+    }
   }
 `;
 
