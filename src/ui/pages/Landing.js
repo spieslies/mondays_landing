@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import styled from 'styled-components';
 import { withTranslation } from 'react-i18next';
 import { ParallaxProvider } from 'react-scroll-parallax';
-import { MetaTagsContext } from 'react-meta-tags';
+import { Head } from 'react-static';
 
 import Top from 'ui/components/top/Top';
 import Marketing from 'ui/components/marketing/Marketing';
@@ -19,7 +19,7 @@ class Landing extends PureComponent {
   render() {
     return (
       <ParallaxProvider>
-        <MetaTagsContext>
+        <Head>
           <title>40-day meditation retreat in your smartphone</title>
           <meta name="description" content="40-day meditation retreat in your smartphone" />
           <meta property="og:description" content="40-day meditation retreat in your smartphone" />
@@ -31,7 +31,7 @@ class Landing extends PureComponent {
           <meta property="og:site_name" content="Sati" />
           <meta property="og:url" content="https://sati.app" />
           <meta property="twitter:url" content="https://sati.app" />
-        </MetaTagsContext>
+        </Head>
         <Top/>
         <Marketing />
         <How />
