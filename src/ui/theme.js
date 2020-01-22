@@ -12,11 +12,9 @@ export const theme = {
   },
   colors: {
     white: '#fff',
-    black: '#414856',
-    almostBlack: '#111111',
-    gradientBlue: 'linear-gradient(170.24deg, #AB9BD3 0%, #6D9FF0 100%)',
-    primary: '#5a8536',
-    secondary: '#E84B28',
+    black: '#000',
+    primary: '#BB6BD9',
+    secondary: '#DEA8F2',
     grays: {
       darker: '#444444',
       dark: '#555555',
@@ -27,7 +25,8 @@ export const theme = {
     danger: '#C70018',
     warning: '#ffa836',
     info: '#6654ff',
-    success: '#46ff3e'
+    success: '#46ff3e',
+    bg: '#181929',
   },
   borderRadius: {
     smaller: '20px',
@@ -37,7 +36,7 @@ export const theme = {
   general: {
     gridSize: 12,
     gridGap: '12px',
-    mobilePadding: '22px',
+    mobilePadding: '30px',
     borderWidth: '1px',
     headerHeight: '60px',
     menuShift: '52px',
@@ -47,7 +46,7 @@ export const theme = {
       xs: '449',
       sm: '767px',
       md: '980px',
-      lg: '1420px'
+      lg: '1440px'
     }
   },
   transitions: {
@@ -78,7 +77,7 @@ export const theme = {
       big: '38px',
       normal: '18px',
       small: '16px',
-      smaller: '15px'
+      smaller: '14px'
     },
     lineHeight: {
       huge: '56px',
@@ -87,21 +86,14 @@ export const theme = {
       small: '22px',
       smaller: '18px'
     },
-    weight: {
-      w900: '900',
-      w700: '700',
-      w500: '500',
-      w400: '400',
-      w300: '300'
-    },
     letterSpacing: {
       base: 'normal',
       accent: '0.2em'
     },
     family: {
-      text: 'TT',
-      header: 'TT',
-      accent: 'TT'
+      text: 'Montserrat',
+      header: 'Montserrat',
+      accent: 'Montserrat'
     }
   },
   min,

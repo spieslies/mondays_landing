@@ -1,125 +1,93 @@
-import React, { PureComponent } from 'react';
-import styled from 'styled-components';
-import { withTranslation } from 'react-i18next';
+import React, { PureComponent } from "react";
+import styled from "styled-components";
 
-import { Container, Flex, Box, SectionHeading, Text } from 'ui/atoms';
+import { Container, Flex } from "ui/atoms";
+
+import AdvantageItem from "./AdvantageItem";
+
+const SAdvantages = styled.div`
+  padding: 60px 0 197px;
+  background-color: #1f2033;
+  color: ${p => p.theme.colors.white};
+`;
+
+const Title = styled.h3`
+  position: relative;
+  margin: 0 0 69px 0;
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 600;
+  &:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    display: block;
+    width: 60px;
+    height: 2px;
+    transform: translateX(-50%);
+    background-color: ${p => p.theme.colors.primary};
+  }
+`;
+
+const AdvantageRow = styled(Flex)`
+  &:not(:last-child) {
+    margin-bottom: 70px;
+  }
+`;
 
 class Advantages extends PureComponent {
   render() {
-    const { t } = this.props;
     return (
-      <Cont>
+      <SAdvantages>
         <Container>
-          <SectionHeading>{t('Advantages.title')}</SectionHeading>
-          <ItemFlex>
-            <Box md={1} sm={1} xs={0}>
-              <NumberCont isOne>1</NumberCont>
-            </Box>
-            <Box md={11} sm={11} xs={12} padded>
-              <Heading>{t('Advantages.box-1.title')}</Heading>
-              <Desc>{t('Advantages.box-1.description')}</Desc>
-            </Box>
-          </ItemFlex>
-          <ItemFlex>
-            <Box md={1} sm={1} xs={0}>
-              <NumberCont>2</NumberCont>
-            </Box>
-            <Box md={11} sm={11} xs={12} padded>
-              <Heading>{t('Advantages.box-2.title')}</Heading>
-              <Desc>{t('Advantages.box-2.description')}</Desc>
-            </Box>
-          </ItemFlex>
-          <ItemFlex>
-            <Box md={1} sm={1} xs={0}>
-              <NumberCont>3</NumberCont>
-            </Box>
-            <Box md={11} sm={11} xs={12} padded>
-              <Heading>{t('Advantages.box-3.title')}</Heading>
-              <Desc>{t('Advantages.box-3.description')}</Desc>
-            </Box>
-          </ItemFlex>
-          <ItemFlex>
-            <Box md={1} sm={1} xs={0}>
-              <NumberCont>4</NumberCont>
-            </Box>
-            <Box md={11} sm={11} xs={12} padded>
-              <Heading>{t('Advantages.box-4.title')}</Heading>
-              <Desc>{t('Advantages.box-4.description')}</Desc>
-            </Box>
-          </ItemFlex>
+          <Flex direction="column" alignItems="center">
+            <Title>Преимущества</Title>
+            <AdvantageRow>
+              <AdvantageItem
+                icon="icon"
+                title="Делитесь вашим марафоном с помощью лендинг страницы"
+                description="Вы автоматически получаете продающую посадочную страницу, с
+                великолепым дизайном, оптимизированную под все устройства. Мы
+                уже сделали всю работу за вас."
+              />
+              <AdvantageItem
+                icon="icon"
+                title="Неограниченное количество проверяющих"
+                description="По мере роста, вы можете делегировать проверку заданий другим
+                людям. Они как и вы смогут проверять задания с помощью
+                удобного мобильного приложения, а также"
+              />
+            </AdvantageRow>
+            <AdvantageRow>
+              <AdvantageItem
+                icon="icon"
+                title="Различные методы оплаты"
+                description="По статистике, 30% пользователей уходят из-за неудобной системы оплаты. Больше никаких недобств с переводом на карту, для вас мы дадим пользователю оплатить ваш курс любым удобным для него способом, включая Apple Pay и Samsung Pay, и переведем на ваш банковский счет"
+              />
+              <AdvantageItem
+                icon="icon"
+                title="Удобная система проверки"
+                description="Вы можете проверять ответы пользователей с помощью удобного интерфейса, а также с любого устройства. Система предупредит вас, если в конце дня остались непроверенные занания, а также поможет удобно маркировать задания. И вы и пользователи получите уникальный опыт взаимодейтсвия"
+              />
+            </AdvantageRow>
+            <AdvantageRow>
+              <AdvantageItem
+                icon="icon"
+                title="Push-уведомления"
+                description="Ваше взаиможействие с пользователем переходит на новый уровень с помощью пуш уведомдений. Гиб кая настрйка привязанная ко дню марафона позволет вам контактировать с пользователем даже когда он не открывает приложение"
+              />
+              <AdvantageItem
+                icon="icon"
+                title="Полное брендирование"
+                description="Когда пользователь скачивает приложение через ссылку с ленжинга, или через специальную ссылку, которую мы вам предотставляем, то после скачивания все приложение будет брендировано под ваш марафон. Многие даже не замечают."
+              />
+            </AdvantageRow>
+          </Flex>
         </Container>
-      </Cont>
+      </SAdvantages>
     );
   }
 }
 
-const Cont = styled.section`
-  padding: 50px 0 10px;
-`;
-
-const Heading = styled.h3`
-  color: ${p => p.theme.colors.black};
-  font-weight: 700;
-  font-size: 20px;
-  margin-bottom: 0;
-  padding-left: 12px;
-  ${p => p.theme.between('sm', 'md')`
-    padding-left: 40px;
-  `}
-  ${p => p.theme.max('sm')`
-    text-align: center;
-    padding: 0 ${p => p.theme.general.mobilePadding};
-  `}
-`;
-
-const ItemFlex = styled(p => <Flex alignItems="center" grid {...p} />)`
-  position: relative;
-  &:nth-child(1) {
-    ${p => p.theme.max('sm')`
-      width: 0;
-    `}
-  }
-`;
-
-const Desc = styled(Text)`
-  color: ${p => p.theme.colors.black};
-  margin-top: 10px;
-  margin-bottom: 40px;
-  padding-left: 12px;
-  ${p => p.theme.between('sm', 'md')`
-    padding-left: 40px;
-  `}
-  ${p => p.theme.max('sm')`
-    text-align: justify;
-    padding: 0 ${p => p.theme.general.mobilePadding};
-  `}
-`;
-
-const NumberCont = styled.p`
-  width: 80px;
-  overflow: hidden;
-  height: 170px;
-  font-size: 170px;
-  font-weight: 800;
-  line-height: 150px;
-  padding-top: 8px;
-  margin: 0;
-  color: ${p => p.theme.colors.grays.light};
-  opacity: 0.5;
-  padding-left: ${p => p.isOne ? '33px' : 0};
-  ${p => p.theme.between('sm', 'md')`
-    position: relative;
-    left: ${p => p.theme.general.mobilePadding};
-  `}
-  ${p => p.theme.max('sm')`
-    position: absolute;
-    top: -30px;
-    width: 220px;
-    padding-left: 0 !important;
-    font-size: 220px;
-    z-index: -1;
-    padding-top: 20px;
-  `}
-`;
-
-export default withTranslation()(Advantages);
+export default Advantages;

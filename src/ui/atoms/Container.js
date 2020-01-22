@@ -4,6 +4,8 @@ import { hiddenMixin } from 'ui/helpers';
 const Container = styled.section`
   margin-left: auto;
   margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
   height: 100%;
   width: ${p => p.theme.general.containerWidth.md};
   ${p => p.relative && css`position: relative;`}

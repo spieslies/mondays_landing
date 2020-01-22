@@ -12,8 +12,6 @@
   "dependencies": {
     "@reach/router": "^1.2.1",
     "babel-plugin-universal-import": "^4.0.0",
-    "i18next": "^19.0.2",
-    "i18next-browser-languagedetector": "^4.0.1",
     "lodash": "^4.17.15",
     "polished": "^3.4.1",
     "prop-types": "^15.7.2",
@@ -24,7 +22,6 @@
     "react-dom": "^16.9.0",
     "react-flags-select": "^1.1.10",
     "react-form-validator-core": "^0.6.4",
-    "react-i18next": "^11.2.7",
     "react-scripts": "3.2.0",
     "react-scroll-parallax": "^2.2.0",
     "react-static": "^7.2.0",
