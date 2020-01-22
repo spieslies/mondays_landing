@@ -11,6 +11,16 @@ const Logo = styled.div`
   font-size: 24px;
   font-weight: 700;
   z-index: 10;
+  ${p => p.theme.max("sm")`
+    margin-right: auto;
+    margin-left: auto;
+  `}
+`;
+
+const Menu = styled(Flex)`
+  ${p => p.theme.max("sm")`
+      display: none;
+  `}
 `;
 
 const MenuItem = styled(Link)`
@@ -42,6 +52,9 @@ const SHero = styled.div`
     opacity: 0.6;
     z-index: 1;
   }
+  ${p => p.theme.max("sm")`
+      background-position: 70% 0;
+  `}
 `;
 
 const HeroBottom = styled.div`
@@ -66,6 +79,9 @@ const HeroBottom = styled.div`
     border-radius: 60px;
     box-shadow: 30px 30px 0 5px ${p => p.theme.colors.bg};
   }
+  ${p => p.theme.max("sm")`
+      width: 50%;
+  `}
 `;
 
 const HeroContent = styled.div`
@@ -74,6 +90,13 @@ const HeroContent = styled.div`
   left: 150px;
   font-size: 80px;
   z-index: 10;
+  ${p => p.theme.max("sm")`
+      top: 35%;
+      left: 50%;
+      font-size: 50px;
+      transform: translateX(-50%);
+      text-align: center;
+  `}
 `;
 
 const HeroContentItem1 = styled.span`
@@ -92,6 +115,9 @@ const HeroLine = styled.div`
   right: 0;
   padding-bottom: 150px;
   z-index: 10;
+  ${p => p.theme.max("sm")`
+    display: none;
+  `}
 `;
 
 const HeroLineItem = styled.div`
@@ -108,12 +134,12 @@ class Hero extends PureComponent {
         <Container>
           <Flex alignItems="center">
             <Logo>Mondays.</Logo>
-            <Flex center>
+            <Menu center>
               <MenuItem href="#">О чем это</MenuItem>
               <MenuItem href="#">Преимущества</MenuItem>
               <MenuItem href="#">Как это работает</MenuItem>
               <MenuItem href="#">Интерфейс</MenuItem>
-            </Flex>
+            </Menu>
           </Flex>
           <HeroContent>
             <HeroContentItem1>Mondays</HeroContentItem1>.<br />

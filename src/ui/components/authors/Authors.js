@@ -10,10 +10,16 @@ const SAuthors = styled.div`
   padding: 143px 0 152px;
   background-color: ${p => p.theme.colors.bg};
   color: ${p => p.theme.colors.white};
+  ${p => p.theme.max("sm")`
+      padding: 40px 0 50px;
+  `}
 `;
 
 const Info = styled.div`
   width: 50%;
+  ${p => p.theme.max("sm")`
+      width: 100%;
+  `}
 `;
 const Title = styled.h3`
   margin: 0 0 36px 0;
@@ -21,6 +27,10 @@ const Title = styled.h3`
   font-size: 30px;
   line-height: 40px;
   letter-spacing: 0.04em;
+  ${p => p.theme.max("sm")`
+      text-align: center;
+  `}
+  
 `;
 const Description = styled.div`
   margin-bottom: 60px;
@@ -40,6 +50,9 @@ const Image = styled.img`
   background: #fff;
   transform: translateY(50%);
   object-fit: cover;
+  ${p => p.theme.max("sm")`
+      display: none;
+  `}
 `;
 
 class Authors extends PureComponent {

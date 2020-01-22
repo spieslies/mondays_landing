@@ -26,6 +26,10 @@ const SubTitle = styled.span`
 const StepItem = styled.div`
   display: block;
   width: 339px;
+  ${p => p.theme.max("sm")`
+      width: 100%;
+      margin-bottom: 30px;
+  `}
 `;
 
 const StepItemTitle = styled.div`

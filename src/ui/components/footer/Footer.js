@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
 import styled from "styled-components";
 
-import { Container, Flex, Link } from "ui/atoms";
+import { Container, Flex, Link, Box } from "ui/atoms";
 
 const SFooter = styled.div`
   padding: 24px 0 25px;
@@ -11,12 +11,23 @@ const SFooter = styled.div`
 `;
 const Legals = styled.div`
   margin-left: auto;
-`
+`;
 const FooterLink = styled(Link)`
   color: inherit;
   &:not(:last-child) {
     margin-right: 50px;
   }
+`;
+const CustomFlex = styled(Flex)`
+  ${p => p.theme.max("sm")`
+    flex-direction: column-reverse;
+    align-items: center;
+  `}
+`;
+const Copyright = styled.span`
+  ${p => p.theme.max("sm")`
+      margin-top: 20px;
+  `}
 `;
 
 class Footer extends PureComponent {
@@ -25,13 +36,13 @@ class Footer extends PureComponent {
     return (
       <SFooter>
         <Container>
-          <Flex>
-            <span>© 2019 Premium Cosmetics</span>
+          <CustomFlex>
+            <Copyright>© 2019 Premium Cosmetics</Copyright>
             <Legals>
-            <FooterLink href="#">Условия</FooterLink>
-            <FooterLink href="">Конфиденциальность</FooterLink>
+              <FooterLink href="#">Условия</FooterLink>
+              <FooterLink href="">Конфиденциальность</FooterLink>
             </Legals>
-          </Flex>
+          </CustomFlex>
         </Container>
       </SFooter>
     );

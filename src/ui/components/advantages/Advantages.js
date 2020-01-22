@@ -9,6 +9,9 @@ const SAdvantages = styled.div`
   padding: 60px 0 197px;
   background-color: #1f2033;
   color: ${p => p.theme.colors.white};
+  ${p => p.theme.max("sm")`
+      padding: 30px 0 90px;
+  `}
 `;
 
 const Title = styled.h3`
@@ -28,12 +31,21 @@ const Title = styled.h3`
     transform: translateX(-50%);
     background-color: ${p => p.theme.colors.primary};
   }
+  ${p => p.theme.max("sm")`
+      font-size: 25px;
+  `}
 `;
 
 const AdvantageRow = styled(Flex)`
   &:not(:last-child) {
     margin-bottom: 70px;
+    ${p => p.theme.max("sm")`
+      margin-bottom: 30px;
+  `}
   }
+  ${p => p.theme.max("sm")`
+      flex-direction: column;
+  `}
 `;
 
 class Advantages extends PureComponent {
