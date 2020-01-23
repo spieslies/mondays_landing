@@ -19,6 +19,7 @@ const Info = styled.div`
   width: 50%;
   ${p => p.theme.max("sm")`
       width: 100%;
+      text-align: center;
   `}
 `;
 const Title = styled.h3`

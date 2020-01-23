@@ -20,8 +20,11 @@ const SAdvantageItem = styled.div`
 const AdvantageHead = styled.div`
   margin-bottom: 20px;
 `;
-const AdvantageIcon = styled.div`
-  display: block;
+const AdvantageIconWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
   width: 60px;
   height: 60px;
@@ -34,6 +37,10 @@ const AdvantageIcon = styled.div`
       margin-right: 0;
       margin-bottom: 20px;
   `}
+`;
+const AdvantageIcon = styled.img`
+  width: 100%;
+  height: 23px;
 `;
 const AdvantageTitle = styled.div`
   font-weight: 600;
@@ -48,6 +55,9 @@ const AdvantageDescription = styled.div`
   line-height: 28px;
   color: #8e94a5;
   opacity: 0.7;
+  ${p => p.theme.max("sm")`
+    text-align: center;
+  `}
 `;
 const CustomFlex = styled(Flex)`
   align-items: center;
@@ -63,7 +73,9 @@ class AdvantageItem extends Component {
       <SAdvantageItem>
         <AdvantageHead>
           <CustomFlex>
-            <AdvantageIcon>{icon}</AdvantageIcon>
+            <AdvantageIconWrapper>
+              <AdvantageIcon src={icon}/>
+            </AdvantageIconWrapper>
             <AdvantageTitle>{title}</AdvantageTitle>
           </CustomFlex>
         </AdvantageHead>

@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
 import styled from "styled-components";
 
-import { Container, Flex, Link, Box } from "ui/atoms";
+import { Container, Flex, Link } from "ui/atoms";
 
 const SFooter = styled.div`
   padding: 24px 0 25px;
@@ -11,6 +11,9 @@ const SFooter = styled.div`
 `;
 const Legals = styled.div`
   margin-left: auto;
+  ${p => p.theme.max("sm")`
+    margin-left: 0;
+  `}
 `;
 const FooterLink = styled(Link)`
   color: inherit;
