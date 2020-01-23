@@ -30,6 +30,13 @@ const MenuItem = styled(Link)`
   font-weight: 500;
   z-index: 10;
   color: ${p => p.theme.colors.white};
+  transition: color 133ms ease-in-out;
+  &:hover {
+    color: ${p => p.theme.colors.primary};
+  }
+  ${p => p.theme.max("md")`
+    margin-right: 30px;
+  `}
 `;
 
 const SHero = styled.div`
@@ -53,6 +60,9 @@ const SHero = styled.div`
     z-index: 1;
   }
   ${p => p.theme.max("sm")`
+      background-position: 70% 0;
+  `}
+  ${p => p.theme.between("sm", "md")`
       background-position: 70% 0;
   `}
 `;
@@ -97,6 +107,9 @@ const HeroContent = styled.div`
       transform: translateX(-50%);
       text-align: center;
   `}
+  ${p => p.theme.between("sm", "md")`
+      left: 30px;
+  `}
 `;
 
 const HeroContentItem1 = styled.span`
@@ -124,6 +137,9 @@ const HeroLineItem = styled.div`
   padding: 0 100px 0 35px;
   font-size: 14px;
   font-weight: 600;
+  ${p => p.theme.max("md")`
+    padding: 0 50px 0 0;
+  `}
 `;
 
 class Hero extends PureComponent {
@@ -150,13 +166,13 @@ class Hero extends PureComponent {
           <HeroLine>
             <Flex alignItems="center" justifyContent="space-between">
               <HeroLineItem>
-                Делитесь <Accent>.</Accent>
+                - Делитесь <Accent>.</Accent>
               </HeroLineItem>
               <HeroLineItem>
-                Обучайте<Accent>.</Accent>
+                - Обучайте<Accent>.</Accent>
               </HeroLineItem>
               <HeroLineItem>
-                Зарабатывайте<Accent>.</Accent>
+                - Зарабатывайте<Accent>.</Accent>
               </HeroLineItem>
             </Flex>
           </HeroLine>

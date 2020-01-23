@@ -8,13 +8,15 @@ const SAdvantageItem = styled.div`
   &:not(:last-child) {
     margin-right: 30px;
     ${p => p.theme.max("sm")`
-      width: 100%;
       margin-right: 0;
       margin-bottom: 30px;
   `}
   }
   ${p => p.theme.max("sm")`
       width: 100%;
+  `}
+  ${p => p.theme.between("sm", "md")`
+      width: 50%;
   `}
 `;
 const AdvantageHead = styled.div`
@@ -33,7 +35,7 @@ const AdvantageIconWrapper = styled.div`
   line-height: 60px;
   text-align: center;
   background-color: ${p => p.theme.colors.secondary};
-  ${p => p.theme.max("sm")`
+  ${p => p.theme.max("md")`
       margin-right: 0;
       margin-bottom: 20px;
   `}
@@ -46,7 +48,7 @@ const AdvantageTitle = styled.div`
   font-weight: 600;
   font-size: 16px;
   line-height: 28px;
-  ${p => p.theme.max("sm")`
+  ${p => p.theme.max("md")`
       text-align: center;
   `}
 `;
@@ -55,13 +57,13 @@ const AdvantageDescription = styled.div`
   line-height: 28px;
   color: #8e94a5;
   opacity: 0.7;
-  ${p => p.theme.max("sm")`
+  ${p => p.theme.max("md")`
     text-align: center;
   `}
 `;
 const CustomFlex = styled(Flex)`
   align-items: center;
-  ${p => p.theme.max("sm")`
+  ${p => p.theme.max("md")`
       flex-direction: column;
   `}
 `

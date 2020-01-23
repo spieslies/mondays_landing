@@ -10,7 +10,7 @@ const SAuthors = styled.div`
   padding: 143px 0 152px;
   background-color: ${p => p.theme.colors.bg};
   color: ${p => p.theme.colors.white};
-  ${p => p.theme.max("sm")`
+  ${p => p.theme.max("md")`
       padding: 40px 0 50px;
   `}
 `;
@@ -53,6 +53,11 @@ const Image = styled.img`
   object-fit: cover;
   ${p => p.theme.max("sm")`
       display: none;
+  `}
+  ${p => p.theme.between("sm", "md")`
+      width: 345px;
+      height: 700px;
+      top: -55%;
   `}
 `;
 

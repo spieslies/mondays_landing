@@ -19,6 +19,9 @@ const SAdvantages = styled.div`
   ${p => p.theme.max("sm")`
       padding: 30px 0 90px;
   `}
+  ${p => p.theme.between("sm", "md")`
+      padding: 90px 0 90px;
+  `}
 `;
 
 const Title = styled.h3`

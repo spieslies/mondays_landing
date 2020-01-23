@@ -37,12 +37,16 @@ const StepItem = styled.div`
   width: 339px;
   &:not(:last-child) {
     margin-bottom: 30px;
-    ${p => p.theme.max("sm")`
+    ${p => p.theme.max("md")`
       margin-bottom: 100px;
     `}
   }
-  ${p => p.theme.max("sm")`
+  ${p => p.theme.max("md")`
       width: 100%;
+      transform: translateX(0);
+  `}
+  ${p => p.theme.between("sm", "md")`
+      width: 60%;
       transform: translateX(0);
   `}
   ${p =>
@@ -65,7 +69,7 @@ const StepItemIconWrapper = styled.div`
   background: transparent;
   border: 1px solid rgba(187, 107, 217, 0.5);
   border-radius: 100%;
-  ${p => p.theme.max("sm")`
+  ${p => p.theme.max("md")`
     position: relative;
     top: -30px;
     left: auto;
@@ -106,7 +110,7 @@ const StepItemTitle = styled.div`
   font-size: 20px;
   line-height: 32px;
   font-weight: 700;
-  ${p => p.theme.max("sm")`
+  ${p => p.theme.max("md")`
     text-align: center;
   `}
 `;
@@ -115,7 +119,7 @@ const StepItemDescription = styled.div`
   font-size: 13px;
   line-height: 32px;
   opacity: 0.5;
-  ${p => p.theme.max("sm")`
+  ${p => p.theme.max("md")`
     text-align: center;
   `}
 `;

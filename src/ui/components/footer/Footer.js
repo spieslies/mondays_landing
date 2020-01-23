@@ -17,8 +17,12 @@ const Legals = styled.div`
 `;
 const FooterLink = styled(Link)`
   color: inherit;
+  transition: color 133ms ease-in-out;
   &:not(:last-child) {
     margin-right: 50px;
+  }
+  &:hover {
+    color: ${p => p.theme.colors.white};
   }
 `;
 const CustomFlex = styled(Flex)`
