@@ -17,18 +17,30 @@ const SFeedback = styled.div`
 
 const Shape1 = styled.img`
   position: absolute;
-  top: -47px;
-  left: -60px;
+  top: -55px;
+  left: 0;
+  ${p => p.theme.max("md")`
+    top: -47px;
+    left: -60px;
+  `}
 `;
 const Shape2 = styled.img`
   position: absolute;
-  top: -60px;
+  top: -100px;
   left: 0;
+  ${p => p.theme.max("md")`
+    top: -60px;
+    left: 0;
+  `}
 `;
 const Shape3 = styled.img`
   position: absolute;
   top: -50px;
-  left: -100px;
+  left: 0;
+  ${p => p.theme.max("md")`
+    top: -50px;
+    left: -100px;
+  `}
 `;
 
 class Feedback extends PureComponent {
