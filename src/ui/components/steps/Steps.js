@@ -8,7 +8,7 @@ import BRUSH_C_ICON from "assets/icons/brush_colored.svg";
 import FILE_ICON from "assets/icons/file.svg";
 import SALE_ICON from "assets/icons/sale.svg";
 import STAR_WHITE_ICON from "assets/icons/star_white.svg";
-import SLEEP_IMG from "assets/images/sleep.jpeg";
+import SLEEP_IMG from "assets/images/sleep.jpg";
 import SHAPE_1 from "assets/images/steps-shape.png";
 import SHAPE_2 from "assets/images/steps-shape-1.png";
 import SHAPE_3 from "assets/images/steps-shape-2.png";
