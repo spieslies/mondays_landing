@@ -15,6 +15,41 @@ const SFeedback = styled.div`
   background-image: url(${FEEDBACK_BG});
 `;
 
+const CustomContainer = styled(Container)`
+  padding: 20px 200px;
+  ${p => p.theme.max("md")`
+    padding: 20px;
+  `}
+`
+
+const Title = styled.h3`
+  position: relative;
+  display: block;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 40px;
+  letter-spacing: 0.05em;
+  color: ${p => p.theme.colors.white};
+  ${p => p.theme.max("md")`
+    text-align: center;
+  `}
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: ${p => p.theme.colors.white};
+    opacity: .5;
+    ${p => p.theme.max("md")`
+      left: 50%;
+      transform: translateX(-50%);
+    `}
+  }
+`;
+
 const Shape1 = styled.img`
   position: absolute;
   top: -55px;
@@ -50,7 +85,9 @@ class Feedback extends PureComponent {
         <Shape1 src={SHAPE_1} />
         <Shape2 src={SHAPE_2} />
         <Shape3 src={SHAPE_3} />
-        <Container>feedback</Container>
+        <CustomContainer>
+          <Title>Создайте свой первый марафон</Title>
+        </CustomContainer>
       </SFeedback>
     );
   }
