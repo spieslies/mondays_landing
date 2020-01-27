@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
 import styled from "styled-components";
 
-import { Container } from "ui/atoms";
+import { Container, Button} from "ui/atoms";
 
 import FEEDBACK_BG from "assets/images/feedback-bg.jpg";
 import SHAPE_1 from "assets/images/feedback-shape.png";
@@ -11,16 +11,19 @@ import SHAPE_3 from "assets/images/feedback-shape-2.png";
 const SFeedback = styled.div`
   position: relative;
   height: 400px;
-  padding: 40px 0;
+  padding: 60px 0 40px;
   background-image: url(${FEEDBACK_BG});
 `;
 
 const CustomContainer = styled(Container)`
   padding: 20px 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   ${p => p.theme.max("md")`
     padding: 20px;
   `}
-`
+`;
 
 const Title = styled.h3`
   position: relative;
@@ -30,23 +33,19 @@ const Title = styled.h3`
   line-height: 40px;
   letter-spacing: 0.05em;
   color: ${p => p.theme.colors.white};
-  ${p => p.theme.max("md")`
-    text-align: center;
-  `}
+  text-align: center;
+  margin-bottom: 50px;
   &:after {
     content: "";
     display: block;
     position: absolute;
     bottom: -16px;
-    left: 0;
     width: 60px;
     height: 2px;
     background: ${p => p.theme.colors.white};
-    opacity: .5;
-    ${p => p.theme.max("md")`
-      left: 50%;
-      transform: translateX(-50%);
-    `}
+    opacity: 0.5;
+    left: 50%;
+    transform: translateX(-50%);
   }
 `;
 
@@ -87,6 +86,7 @@ class Feedback extends PureComponent {
         <Shape3 src={SHAPE_3} />
         <CustomContainer>
           <Title>Создайте свой первый марафон</Title>
+          <Button>Создать Mарафон</Button>
         </CustomContainer>
       </SFeedback>
     );
