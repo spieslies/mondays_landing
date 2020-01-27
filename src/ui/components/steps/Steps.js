@@ -250,7 +250,7 @@ const StepsBottom = styled.div`
   width: 30%;
   background: #1f2033;
   border-top-right-radius: 50px;
-  z-index: 100;
+  z-index: 10;
   &:after {
     content: "";
     position: absolute;
