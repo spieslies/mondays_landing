@@ -51,6 +51,7 @@ const Image = styled.img`
   background: #fff;
   transform: translateY(50%);
   object-fit: cover;
+  z-index: 100;
   ${p => p.theme.max("sm")`
       display: none;
   `}
