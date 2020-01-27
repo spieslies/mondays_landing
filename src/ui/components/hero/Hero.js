@@ -3,6 +3,8 @@ import styled from "styled-components";
 
 import { Container, Flex, Button, Link, Accent } from "ui/atoms";
 
+import StripesOverlay from '../stripes-overlay/StripesOverlay'
+
 import TOP_BG from "assets/images/top-image.jpg";
 
 const Logo = styled.div`
@@ -76,7 +78,7 @@ const HeroBottom = styled.div`
   width: 70%;
   background: ${p => p.theme.colors.bg};
   border-top-left-radius: 50px;
-  z-index: 100;
+  z-index: 1;
   &:after {
     content: "";
     position: absolute;
@@ -99,7 +101,7 @@ const HeroContent = styled.div`
   top: 213px;
   left: 150px;
   font-size: 80px;
-  z-index: 10;
+  z-index: 100;
   ${p => p.theme.max("sm")`
       top: 35%;
       left: 50%;
@@ -134,6 +136,7 @@ const HeroLine = styled.div`
 `;
 
 const HeroLineItem = styled.div`
+  width: 25%;
   padding: 0 100px 0 35px;
   font-size: 14px;
   font-weight: 600;
@@ -147,6 +150,7 @@ class Hero extends PureComponent {
     const { t } = this.props;
     return (
       <SHero>
+        <StripesOverlay/>
         <Container>
           <Flex alignItems="center">
             <Logo>Mondays.</Logo>
@@ -166,13 +170,13 @@ class Hero extends PureComponent {
           <HeroLine>
             <Flex alignItems="center" justifyContent="space-between">
               <HeroLineItem>
-                - Делитесь <Accent>.</Accent>
+                Делитесь <Accent>.</Accent>
               </HeroLineItem>
               <HeroLineItem>
-                - Обучайте<Accent>.</Accent>
+                Обучайте<Accent>.</Accent>
               </HeroLineItem>
               <HeroLineItem>
-                - Зарабатывайте<Accent>.</Accent>
+                Зарабатывайте<Accent>.</Accent>
               </HeroLineItem>
             </Flex>
           </HeroLine>

@@ -2,6 +2,7 @@ import React, { PureComponent } from "react";
 import styled from "styled-components";
 
 import { Container, Flex, Accent } from "ui/atoms";
+import StripesOverlay from "../stripes-overlay/StripesOverlay";
 
 import STAR_ICON from "assets/icons/star.svg";
 import BRUSH_C_ICON from "assets/icons/brush_colored.svg";
@@ -26,8 +27,10 @@ const SSteps = styled.div`
 `;
 
 const Title = styled.h2`
+  position: relative;
   font-size: 20px;
   font-weight: 700;
+  z-index: 15;
 `;
 
 const SubTitle = styled.span`
@@ -46,6 +49,7 @@ const StepItem = styled.div`
   display: block;
   width: 339px;
   border-radius: 4px;
+  z-index: 15;
   &:after {
     content: '';
     position: absolute;
@@ -104,11 +108,14 @@ const StepItemIconWrapper = styled.div`
   justify-content: center;
   width: 61px;
   height: 61px;
-  background: red;
+  background: transparent;
   border: 1px solid rgba(187, 107, 217, 0.5);
   border-radius: 100%;
+  ${p => p.theme.max("md")`
   ${p =>
     p.bg ? `background-color: ${p.bg};` : `background-color: transparent;`}
+  `}
+
   ${p => p.theme.max("md")`
     position: relative;
     top: -50px;
@@ -175,6 +182,7 @@ const LastStepItem = styled.div`
   border-radius: 7px;
   max-width: 720px;
   display: block;
+  z-index: 15;
   background-color: ${p => p.theme.colors.primary};
   ${p => p.theme.max("md")`
     width: 100%;
@@ -305,6 +313,7 @@ class Steps extends PureComponent {
         <Shape4 src={SHAPE_4} />
         <Shape5 src={SHAPE_5} />
         <Shape6 src={SHAPE_6} />
+        <StripesOverlay />
         <Container>
           <Flex direction="column" alignItems="center">
             <Title>
