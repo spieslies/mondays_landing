@@ -9,6 +9,12 @@ import FILE_ICON from "assets/icons/file.svg";
 import SALE_ICON from "assets/icons/sale.svg";
 import STAR_WHITE_ICON from "assets/icons/star_white.svg";
 import SLEEP_IMG from "assets/images/sleep.jpeg";
+import SHAPE_1 from "assets/images/steps-shape.png";
+import SHAPE_2 from "assets/images/steps-shape-1.png";
+import SHAPE_3 from "assets/images/steps-shape-2.png";
+import SHAPE_4 from "assets/images/steps-shape-4.png";
+import SHAPE_5 from "assets/images/steps-shape-5.png";
+import SHAPE_6 from "assets/images/steps-shape-6.png";
 
 const SSteps = styled.div`
   position: relative;
@@ -16,6 +22,7 @@ const SSteps = styled.div`
   padding-bottom: 132px;
   background-color: ${p => p.theme.colors.bg};
   color: ${p => p.theme.colors.white};
+  overflow: hidden;
 `;
 
 const Title = styled.h2`
@@ -100,7 +107,8 @@ const StepItemIconWrapper = styled.div`
   background: red;
   border: 1px solid rgba(187, 107, 217, 0.5);
   border-radius: 100%;
-  ${p =>p.bg ? `background-color: ${p.bg};` : `background-color: transparent;`}
+  ${p =>
+    p.bg ? `background-color: ${p.bg};` : `background-color: transparent;`}
   ${p => p.theme.max("md")`
     position: relative;
     top: -50px;
@@ -123,7 +131,7 @@ const StepItemIconWrapper = styled.div`
     border-radius: 100%;
     transform: translateY(-50%);
     ${p => p.theme.max("md")`
-      ${p =>p.bg ? `border-color: ${p.bg};` : `border-color: #373542;`}
+      ${p => (p.bg ? `border-color: ${p.bg};` : `border-color: #373542;`)}
     `}
   }
   ${p =>
@@ -249,11 +257,54 @@ const StepsBottom = styled.div`
   }
 `;
 
+const Shape1 = styled.img`
+  position: absolute;
+  top: -200px;
+  left: -78px;
+  display: block;
+`;
+const Shape2 = styled.img`
+  position: absolute;
+  top: -500px;
+  left: -100px;
+  display: block;
+`;
+const Shape3 = styled.img`
+  position: absolute;
+  display: block;
+  top: -550px;
+  left: -90px;
+`;
+const Shape4 = styled.img`
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  display: block;
+`;
+const Shape5 = styled.img`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+`;
+const Shape6 = styled.img`
+  position: absolute;
+  display: block;
+  bottom: -150px;
+  right: 0;
+`;
+
 class Steps extends PureComponent {
   render() {
     const { t } = this.props;
     return (
       <SSteps>
+        <Shape1 src={SHAPE_1} />
+        <Shape2 src={SHAPE_2} />
+        <Shape3 src={SHAPE_3} />
+        <Shape4 src={SHAPE_4} />
+        <Shape5 src={SHAPE_5} />
+        <Shape6 src={SHAPE_6} />
         <Container>
           <Flex direction="column" alignItems="center">
             <Title>
@@ -329,7 +380,7 @@ class Steps extends PureComponent {
             </LastStepItem>
           </Flex>
         </Container>
-        <StepsBottom/>
+        <StepsBottom />
       </SSteps>
     );
   }
