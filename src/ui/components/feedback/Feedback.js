@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { Container, Button} from "ui/atoms";
 
-import FEEDBACK_BG from "assets/images/feedback-bg.jpg";
+import FEEDBACK_BG from "assets/images/feedback-bg.png";
 import SHAPE_1 from "assets/images/feedback-shape.png";
 import SHAPE_2 from "assets/images/feedback-shape-1.png";
 import SHAPE_3 from "assets/images/feedback-shape-2.png";
@@ -80,7 +80,7 @@ const Shape3 = styled.img`
 class Feedback extends PureComponent {
   render() {
     return (
-      <SFeedback>
+      <SFeedback id="interface">
         <Shape1 src={SHAPE_1} />
         <Shape2 src={SHAPE_2} />
         <Shape3 src={SHAPE_3} />

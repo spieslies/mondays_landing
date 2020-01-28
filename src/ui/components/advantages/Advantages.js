@@ -61,7 +61,7 @@ const AdvantageRow = styled(Flex)`
 class Advantages extends PureComponent {
   render() {
     return (
-      <SAdvantages>
+      <SAdvantages id="advantages">
         <Container>
           <Flex direction="column" alignItems="center">
             <Title>Преимущества</Title>

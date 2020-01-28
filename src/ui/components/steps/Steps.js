@@ -306,7 +306,7 @@ class Steps extends PureComponent {
   render() {
     const { t } = this.props;
     return (
-      <SSteps>
+      <SSteps id="about">
         <Shape1 src={SHAPE_1} />
         <Shape2 src={SHAPE_2} />
         <Shape3 src={SHAPE_3} />

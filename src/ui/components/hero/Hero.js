@@ -1,7 +1,8 @@
 import React, { PureComponent } from "react";
 import styled from "styled-components";
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
-import { Container, Flex, Button, Link, Accent } from "ui/atoms";
+import { Container, Flex, Button, Accent } from "ui/atoms";
 
 import StripesOverlay from '../stripes-overlay/StripesOverlay'
 
@@ -25,12 +26,13 @@ const Menu = styled(Flex)`
   `}
 `;
 
-const MenuItem = styled(Link)`
+const MenuItem = styled(AnchorLink)`
   position: relative;
   margin-right: 60px;
   font-size: 14px;
   font-weight: 500;
   z-index: 10;
+  text-decoration: none;
   color: ${p => p.theme.colors.white};
   transition: color 133ms ease-in-out;
   &:hover {
@@ -155,10 +157,10 @@ class Hero extends PureComponent {
           <Flex alignItems="center">
             <Logo>Mondays.</Logo>
             <Menu center>
-              <MenuItem href="#">О чем это</MenuItem>
-              <MenuItem href="#">Преимущества</MenuItem>
-              <MenuItem href="#">Как это работает</MenuItem>
-              <MenuItem href="#">Интерфейс</MenuItem>
+              <MenuItem href="#about">О чем это</MenuItem>
+              <MenuItem href="#advantages">Преимущества</MenuItem>
+              <MenuItem href="#hiw">Как это работает</MenuItem>
+              <MenuItem href="#interface">Интерфейс</MenuItem>
             </Menu>
           </Flex>
           <HeroContent>

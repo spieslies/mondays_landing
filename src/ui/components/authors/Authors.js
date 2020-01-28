@@ -66,7 +66,7 @@ class Authors extends PureComponent {
   render() {
     const { t } = this.props;
     return (
-      <SAuthors>
+      <SAuthors id="hiw">
         <Container>
           <Flex>
             <Info>
